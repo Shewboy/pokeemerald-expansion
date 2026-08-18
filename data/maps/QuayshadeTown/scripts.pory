@@ -1,0 +1,153 @@
+mapscripts QuayshadeTown_MapScripts {
+}
+
+##### Basic script for obtaining a Pokemon from a Poke Ball
+
+script QuayshadeTown_EventScript_Pokeball{
+    lockall
+    showmonpic(SPECIES_TYROGUE, 10,3)
+    playmoncry(SPECIES_TYROGUE, CRY_MODE_NORMAL)
+    msgbox("Do you want to choose Tyrogue?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_TYROGUE, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Tyrogue")
+            removeobject(5)
+            setflag(FLAG_UNUSED_0x020)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Tyrogue")
+            removeobject(5)
+            setflag(FLAG_UNUSED_0x020)
+            call(NicknamePartyMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No more room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(QuayshadeTown_NotChosen)
+    }
+    setflag(FLAG_SYS_POKEMON_GET)
+    setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+    waitmessage
+    releaseall
+    end
+}
+
+script NicknamePartyMon{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script NicknameBoxMon{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    msgbox("Transferred to PC")
+}
+
+text QuayshadeTown_NotChosen{
+    "Better leave it then."
+}
+
+##### Signposts
+
+script QuayshadeTown_Text_TownSign {
+    lockall
+    msgbox("Quayshade Town")
+    releaseall
+}
+
+script QuayshadeTown_Text_PlayerHouseSign {
+    lockall
+    msgbox("Player's House")
+    releaseall
+}
+
+script QuayshadeTown_Text_CodyHouseSign {
+    lockall
+    msgbox("Cody's House")
+    releaseall
+}
+
+##### Script for the event where your Dad gives you Tyrogue
+
+script QuayshadeTown_Trigger_DadGiveMon {
+    lockall
+    applymovement(1, DadTurn)
+    msgbox(format("Hey bubby! Did Mom send you out here?"))
+    applymovement(1, DadWalk)
+    msgbox(format("Nevermind the yard work. I've got a surprise for you.\pI think you're finally old enough to have your very own Pokemon.\pI got this from one of my old construction buddies. He said to give it a good home!"))
+    givemon(SPECIES_TYROGUE, 5)
+    if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("Received Tyrogue")
+        setflag(FLAG_UNUSED_0x020)
+        call(NicknamePartyMon)
+    }
+    elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("Received Tyrogue")
+        removeobject(5)
+        setflag(FLAG_UNUSED_0x020)
+        call(NicknamePartyMon)
+    }
+    else{
+        hidemonpic
+        msgbox("No more room")
+    }
+        msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pokemon in our backyard?"))
+    setflag(FLAG_SYS_POKEMON_GET)
+    setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+    waitmessage
+    releaseall
+}
+
+movement DadTurn {
+    faceplayer
+}
+
+movement DadWalk {
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+}
+
+##### NPCs
+
+script QuayshadeTown_EventScript_OldWoman {
+    lockall
+    faceplayer
+    msgbox(format("Bronzong Lake is so named because of an old legend.\pThe legend tells of a Bronzong who summoned a rainstorm that lasted thirty days, thus creating the lake."))
+    releaseall
+}
+
+script QuayshadeTown_Dad_GiveMon {
+    lockall
+    applymovement(1, DadWalk)
+}
+
+script QuayshadeTown_Trigger_BlockPathNorth{
+    lockall
+    msgbox("It's not safe.")
+    applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+    waitmovement(0)
+    releaseall
+}
+
+movement StopPlayer {
+    walk_down
+}
