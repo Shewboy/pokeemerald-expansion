@@ -494,86 +494,96 @@ script QuayshadeTown_EventScript_Walking_Boy{
             giveitem(ITEM_FIRE_STONE,1)
             waitfanfare
             setflag(FLAG_GAVE_WALKING_BOY_LAVA_COOKIE)
+            release
             end
         }
         else {
             msgbox(format("....."))
+            release
             end
         }
     }
     else {
-    }
-    checkitem(ITEM_CASTELIACONE,1)
-    if (var(VAR_RESULT) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_CASTELIACONE)) {
-        msgbox(format("Give the walking boy your Casteliacone?"), MSGBOX_YESNO)
-        if (var(VAR_RESULT) == YES) {
-            msgbox(format(".....!"))
-            removeitem(ITEM_CASTELIACONE,1)
-            giveitem(ITEM_ICE_STONE,1)
-            waitfanfare
-            setflag(FLAG_GAVE_WALKING_BOY_CASTELIACONE)
-            end
+        checkitem(ITEM_CASTELIACONE,1)
+        if (var(VAR_RESULT) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_CASTELIACONE)) {
+            msgbox(format("Give the walking boy your Casteliacone?"), MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                msgbox(format(".....!"))
+                removeitem(ITEM_CASTELIACONE,1)
+                giveitem(ITEM_ICE_STONE,1)
+                waitfanfare
+                setflag(FLAG_GAVE_WALKING_BOY_CASTELIACONE)
+                release
+                end
+            }
+            else {
+                msgbox(format("....."))
+                release
+                end
+            }
         }
         else {
-            msgbox(format("....."))
-            end
-        }
-    }
-    else {
-    }
-    checkitem(ITEM_FRESH_WATER,1)
-    if (var(VAR_RESULT) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_FRESH_WATER)) {
-        msgbox(format("Give the walking boy your Fresh Water?"), MSGBOX_YESNO)
-        if (var(VAR_RESULT) == YES) {
-            msgbox(format(".....!"))
-            removeitem(ITEM_FRESH_WATER,1)
-            giveitem(ITEM_WATER_STONE,1)
-            waitfanfare
-            setflag(FLAG_GAVE_WALKING_BOY_FRESH_WATER)
-            end
-        }
-        else {
-            msgbox(format("....."))
-            end
-        }
-    }
-    else {
-    }
-    checkitem(ITEM_LEMONADE,1)
-    if (var(VAR_RESULT) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_LEMONADE)) {
-        msgbox(format("Give the walking boy your Lemonade?"), MSGBOX_YESNO)
-        if (var(VAR_RESULT) == YES) {
-            msgbox(format(".....!"))
-            removeitem(ITEM_LEMONADE,1)
-            giveitem(ITEM_THUNDERSTONE,1)
-            waitfanfare
-            setflag(FLAG_GAVE_WALKING_BOY_LEMONADE)
-            end
-        }
-        else {
-            msgbox(format("....."))
-            end
-        }
-    }
-    else {
-    }
-    checkitem(ITEM_RAGE_CANDY_BAR,1)
-    if (var(VAR_RESULT) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR)) {
-        msgbox(format("Give the walking boy your Rage Candy Bar?"), MSGBOX_YESNO)
-        if (var(VAR_RESULT) == YES) {
-            msgbox(format(".....!"))
-            removeitem(ITEM_RAGE_CANDY_BAR,1)
-            giveitem(ITEM_MOON_STONE,1)
-            waitfanfare
-            setflag(FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR)
-            end
-        }
-        else {
-            msgbox(format("....."))
-            end
-        }
-    }
-    else {
+            checkitem(ITEM_FRESH_WATER,1)
+            if (var(VAR_RESULT) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_FRESH_WATER)) {
+                msgbox(format("Give the walking boy your Fresh Water?"), MSGBOX_YESNO)
+                if (var(VAR_RESULT) == YES) {
+                    msgbox(format(".....!"))
+                    removeitem(ITEM_FRESH_WATER,1)
+                    giveitem(ITEM_WATER_STONE,1)
+                    waitfanfare
+                    setflag(FLAG_GAVE_WALKING_BOY_FRESH_WATER)
+                    release
+                    end
+                }
+                else {
+                    msgbox(format("....."))
+                    release
+                    end
+                }
+            }
+            else {
+                checkitem(ITEM_LEMONADE,1)
+                    if (var(VAR_RESULT) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_LEMONADE)) {
+                        msgbox(format("Give the walking boy your Lemonade?"), MSGBOX_YESNO)
+                        if (var(VAR_RESULT) == YES) {
+                            msgbox(format(".....!"))
+                            removeitem(ITEM_LEMONADE,1)
+                            giveitem(ITEM_THUNDERSTONE,1)
+                            waitfanfare
+                            setflag(FLAG_GAVE_WALKING_BOY_LEMONADE)
+                            release
+                            end
+                        }
+                        else {
+                            msgbox(format("....."))
+                            release
+                            end
+                        }
+                    }
+                    else {
+                    checkitem(ITEM_RAGE_CANDY_BAR,1)
+                        if (var(VAR_RESULT) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR)) {
+                            msgbox(format("Give the walking boy your Rage Candy Bar?"), MSGBOX_YESNO)
+                            if (var(VAR_RESULT) == YES) {
+                                msgbox(format(".....!"))
+                                removeitem(ITEM_RAGE_CANDY_BAR,1)
+                                giveitem(ITEM_MOON_STONE,1)
+                                waitfanfare
+                                setflag(FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR)
+                                release
+                                end
+                            }
+                            else {
+                                msgbox(format("....."))
+                                release
+                                end
+                            }
+                        }
+                        else {
+                        }
+                    }
+                }
+            }
     }
     release
 }
