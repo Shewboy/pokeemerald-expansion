@@ -9328,7 +9328,7 @@
       "id": "LAYOUT_QUAYSHADE_TOWN",
       "name": "QuayshadeTown_Layout",
       "width": 28,
-      "height": 33,
+      "height": 26,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/QuayshadeTown/border.bin",

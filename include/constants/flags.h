@@ -51,11 +51,11 @@
 
 #else
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
+#define FLAG_GAVE_WALKING_BOY_LAVA_COOKIE    0x20 // Defined by DShew
+#define FLAG_GAVE_WALKING_BOY_CASTELIACONE    0x21 // Defined by DShew
+#define FLAG_GAVE_WALKING_BOY_FRESH_WATER    0x22 // Defined by DShew
+#define FLAG_GAVE_WALKING_BOY_LEMONADE    0x23 // Defined by DShew
+#define FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR    0x24 // Defined by DShew
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
