@@ -246,7 +246,7 @@ QuayshadeTown_Trigger_DadGiveMon2_4:
 # 167 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 168 "data/maps/QuayshadeTown/scripts.pory"
-	setvar VAR_QUAYSHADE_TOWN_STATE, 1
+	setvar VAR_QUAYSHADE_INTRO_STATE, 2
 # 169 "data/maps/QuayshadeTown/scripts.pory"
 	waitmessage
 # 170 "data/maps/QuayshadeTown/scripts.pory"
@@ -316,7 +316,7 @@ QuayshadeTown_Trigger_DadGiveMon3_4:
 # 210 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 211 "data/maps/QuayshadeTown/scripts.pory"
-	setvar VAR_QUAYSHADE_TOWN_STATE, 1
+	setvar VAR_QUAYSHADE_INTRO_STATE, 2
 # 212 "data/maps/QuayshadeTown/scripts.pory"
 	waitmessage
 # 213 "data/maps/QuayshadeTown/scripts.pory"
@@ -386,7 +386,7 @@ QuayshadeTown_Trigger_DadGiveMon4_4:
 # 253 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 254 "data/maps/QuayshadeTown/scripts.pory"
-	setvar VAR_QUAYSHADE_TOWN_STATE, 1
+	setvar VAR_QUAYSHADE_INTRO_STATE, 2
 # 255 "data/maps/QuayshadeTown/scripts.pory"
 	waitmessage
 # 256 "data/maps/QuayshadeTown/scripts.pory"
@@ -456,7 +456,7 @@ QuayshadeTown_Trigger_DadGiveMon5_4:
 # 296 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 297 "data/maps/QuayshadeTown/scripts.pory"
-	setvar VAR_QUAYSHADE_TOWN_STATE, 1
+	setvar VAR_QUAYSHADE_INTRO_STATE, 2
 # 298 "data/maps/QuayshadeTown/scripts.pory"
 	waitmessage
 # 299 "data/maps/QuayshadeTown/scripts.pory"
@@ -526,7 +526,7 @@ QuayshadeTown_Trigger_DadGiveMon6_4:
 # 339 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 340 "data/maps/QuayshadeTown/scripts.pory"
-	setvar VAR_QUAYSHADE_TOWN_STATE, 1
+	setvar VAR_QUAYSHADE_INTRO_STATE, 2
 # 341 "data/maps/QuayshadeTown/scripts.pory"
 	waitmessage
 # 342 "data/maps/QuayshadeTown/scripts.pory"
@@ -596,7 +596,7 @@ QuayshadeTown_Trigger_DadGiveMon7_4:
 # 382 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 383 "data/maps/QuayshadeTown/scripts.pory"
-	setvar VAR_QUAYSHADE_TOWN_STATE, 1
+	setvar VAR_QUAYSHADE_INTRO_STATE, 2
 # 384 "data/maps/QuayshadeTown/scripts.pory"
 	waitmessage
 # 385 "data/maps/QuayshadeTown/scripts.pory"
@@ -666,7 +666,7 @@ QuayshadeTown_Trigger_DadGiveMon8_4:
 # 425 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 426 "data/maps/QuayshadeTown/scripts.pory"
-	setvar VAR_QUAYSHADE_TOWN_STATE, 1
+	setvar VAR_QUAYSHADE_INTRO_STATE, 2
 # 427 "data/maps/QuayshadeTown/scripts.pory"
 	waitmessage
 # 428 "data/maps/QuayshadeTown/scripts.pory"
@@ -736,7 +736,7 @@ QuayshadeTown_Trigger_DadGiveMon9_4:
 # 460 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 461 "data/maps/QuayshadeTown/scripts.pory"
-	setvar VAR_QUAYSHADE_TOWN_STATE, 1
+	setvar VAR_QUAYSHADE_INTRO_STATE, 2
 # 462 "data/maps/QuayshadeTown/scripts.pory"
 	waitmessage
 # 463 "data/maps/QuayshadeTown/scripts.pory"
@@ -785,58 +785,121 @@ QuayshadeTown_EventScript_Walking_Boy::
 	faceplayer
 # 487 "data/maps/QuayshadeTown/scripts.pory"
 	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_0
-# 488 "data/maps/QuayshadeTown/scripts.pory"
 	checkitem ITEM_LAVA_COOKIE, 1
-# 489 "data/maps/QuayshadeTown/scripts.pory"
+# 0 "data/maps/QuayshadeTown/scripts.pory"
 	compare VAR_RESULT, TRUE
-	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_4
-QuayshadeTown_EventScript_Walking_Boy_3:
-# 507 "data/maps/QuayshadeTown/scripts.pory"
+	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_19
+QuayshadeTown_EventScript_Walking_Boy_17:
 	checkitem ITEM_CASTELIACONE, 1
-# 508 "data/maps/QuayshadeTown/scripts.pory"
+# 0 "data/maps/QuayshadeTown/scripts.pory"
 	compare VAR_RESULT, TRUE
-	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_12
-QuayshadeTown_EventScript_Walking_Boy_11:
-# 526 "data/maps/QuayshadeTown/scripts.pory"
+	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_16
+QuayshadeTown_EventScript_Walking_Boy_14:
 	checkitem ITEM_FRESH_WATER, 1
-# 527 "data/maps/QuayshadeTown/scripts.pory"
+# 0 "data/maps/QuayshadeTown/scripts.pory"
 	compare VAR_RESULT, TRUE
-	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_20
-QuayshadeTown_EventScript_Walking_Boy_19:
-# 545 "data/maps/QuayshadeTown/scripts.pory"
+	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_13
+QuayshadeTown_EventScript_Walking_Boy_11:
 	checkitem ITEM_LEMONADE, 1
-# 546 "data/maps/QuayshadeTown/scripts.pory"
+# 0 "data/maps/QuayshadeTown/scripts.pory"
 	compare VAR_RESULT, TRUE
-	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_28
-QuayshadeTown_EventScript_Walking_Boy_27:
-# 564 "data/maps/QuayshadeTown/scripts.pory"
+	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_10
+QuayshadeTown_EventScript_Walking_Boy_8:
 	checkitem ITEM_RAGE_CANDY_BAR, 1
-# 565 "data/maps/QuayshadeTown/scripts.pory"
+# 0 "data/maps/QuayshadeTown/scripts.pory"
 	compare VAR_RESULT, TRUE
-	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_36
-QuayshadeTown_EventScript_Walking_Boy_35:
-# 588 "data/maps/QuayshadeTown/scripts.pory"
+	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_7
+QuayshadeTown_EventScript_Walking_Boy_6:
+# 579 "data/maps/QuayshadeTown/scripts.pory"
 	release
 	return
 
-QuayshadeTown_EventScript_Walking_Boy_2:
+QuayshadeTown_EventScript_Walking_Boy_1:
 # 490 "data/maps/QuayshadeTown/scripts.pory"
 	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_1, MSGBOX_YESNO
 # 491 "data/maps/QuayshadeTown/scripts.pory"
 	compare VAR_RESULT, YES
-	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_7
+	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_22
 # 501 "data/maps/QuayshadeTown/scripts.pory"
 	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_3
 # 502 "data/maps/QuayshadeTown/scripts.pory"
 	release
 	end
 
+QuayshadeTown_EventScript_Walking_Boy_2:
+# 508 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_4, MSGBOX_YESNO
+# 509 "data/maps/QuayshadeTown/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_25
+# 519 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_3
+# 520 "data/maps/QuayshadeTown/scripts.pory"
+	release
+	end
+
+QuayshadeTown_EventScript_Walking_Boy_3:
+# 526 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_5, MSGBOX_YESNO
+# 527 "data/maps/QuayshadeTown/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_28
+# 537 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_3
+# 538 "data/maps/QuayshadeTown/scripts.pory"
+	release
+	end
+
 QuayshadeTown_EventScript_Walking_Boy_4:
-# 489 "data/maps/QuayshadeTown/scripts.pory"
-	goto_if_unset FLAG_GAVE_WALKING_BOY_LAVA_COOKIE, QuayshadeTown_EventScript_Walking_Boy_2
-	goto QuayshadeTown_EventScript_Walking_Boy_3
+# 544 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_6, MSGBOX_YESNO
+# 545 "data/maps/QuayshadeTown/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_31
+# 555 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_3
+# 556 "data/maps/QuayshadeTown/scripts.pory"
+	release
+	end
+
+QuayshadeTown_EventScript_Walking_Boy_5:
+# 562 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_7, MSGBOX_YESNO
+# 563 "data/maps/QuayshadeTown/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_34
+# 573 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_3
+# 574 "data/maps/QuayshadeTown/scripts.pory"
+	release
+	end
 
 QuayshadeTown_EventScript_Walking_Boy_7:
+# 561 "data/maps/QuayshadeTown/scripts.pory"
+	goto_if_unset FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR, QuayshadeTown_EventScript_Walking_Boy_5
+	goto QuayshadeTown_EventScript_Walking_Boy_6
+
+QuayshadeTown_EventScript_Walking_Boy_10:
+# 543 "data/maps/QuayshadeTown/scripts.pory"
+	goto_if_unset FLAG_GAVE_WALKING_BOY_LEMONADE, QuayshadeTown_EventScript_Walking_Boy_4
+	goto QuayshadeTown_EventScript_Walking_Boy_8
+
+QuayshadeTown_EventScript_Walking_Boy_13:
+# 525 "data/maps/QuayshadeTown/scripts.pory"
+	goto_if_unset FLAG_GAVE_WALKING_BOY_FRESH_WATER, QuayshadeTown_EventScript_Walking_Boy_3
+	goto QuayshadeTown_EventScript_Walking_Boy_11
+
+QuayshadeTown_EventScript_Walking_Boy_16:
+# 507 "data/maps/QuayshadeTown/scripts.pory"
+	goto_if_unset FLAG_GAVE_WALKING_BOY_CASTELIACONE, QuayshadeTown_EventScript_Walking_Boy_2
+	goto QuayshadeTown_EventScript_Walking_Boy_14
+
+QuayshadeTown_EventScript_Walking_Boy_19:
+# 489 "data/maps/QuayshadeTown/scripts.pory"
+	goto_if_unset FLAG_GAVE_WALKING_BOY_LAVA_COOKIE, QuayshadeTown_EventScript_Walking_Boy_1
+	goto QuayshadeTown_EventScript_Walking_Boy_17
+
+QuayshadeTown_EventScript_Walking_Boy_22:
 # 492 "data/maps/QuayshadeTown/scripts.pory"
 	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_2
 # 493 "data/maps/QuayshadeTown/scripts.pory"
@@ -851,152 +914,84 @@ QuayshadeTown_EventScript_Walking_Boy_7:
 	release
 	end
 
-QuayshadeTown_EventScript_Walking_Boy_10:
-# 509 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_4, MSGBOX_YESNO
+QuayshadeTown_EventScript_Walking_Boy_25:
 # 510 "data/maps/QuayshadeTown/scripts.pory"
-	compare VAR_RESULT, YES
-	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_15
-# 520 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_3
-# 521 "data/maps/QuayshadeTown/scripts.pory"
-	release
-	end
-
-QuayshadeTown_EventScript_Walking_Boy_12:
-# 508 "data/maps/QuayshadeTown/scripts.pory"
-	goto_if_unset FLAG_GAVE_WALKING_BOY_CASTELIACONE, QuayshadeTown_EventScript_Walking_Boy_10
-	goto QuayshadeTown_EventScript_Walking_Boy_11
-
-QuayshadeTown_EventScript_Walking_Boy_15:
+	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_2
 # 511 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_2
-# 512 "data/maps/QuayshadeTown/scripts.pory"
 	removeitem ITEM_CASTELIACONE, 1
-# 513 "data/maps/QuayshadeTown/scripts.pory"
+# 512 "data/maps/QuayshadeTown/scripts.pory"
 	giveitem ITEM_ICE_STONE, 1
+# 513 "data/maps/QuayshadeTown/scripts.pory"
+	waitfanfare
 # 514 "data/maps/QuayshadeTown/scripts.pory"
-	waitfanfare
-# 515 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_GAVE_WALKING_BOY_CASTELIACONE
-# 516 "data/maps/QuayshadeTown/scripts.pory"
-	release
-	end
-
-QuayshadeTown_EventScript_Walking_Boy_18:
-# 528 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_5, MSGBOX_YESNO
-# 529 "data/maps/QuayshadeTown/scripts.pory"
-	compare VAR_RESULT, YES
-	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_23
-# 539 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_3
-# 540 "data/maps/QuayshadeTown/scripts.pory"
-	release
-	end
-
-QuayshadeTown_EventScript_Walking_Boy_20:
-# 527 "data/maps/QuayshadeTown/scripts.pory"
-	goto_if_unset FLAG_GAVE_WALKING_BOY_FRESH_WATER, QuayshadeTown_EventScript_Walking_Boy_18
-	goto QuayshadeTown_EventScript_Walking_Boy_19
-
-QuayshadeTown_EventScript_Walking_Boy_23:
-# 530 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_2
-# 531 "data/maps/QuayshadeTown/scripts.pory"
-	removeitem ITEM_FRESH_WATER, 1
-# 532 "data/maps/QuayshadeTown/scripts.pory"
-	giveitem ITEM_WATER_STONE, 1
-# 533 "data/maps/QuayshadeTown/scripts.pory"
-	waitfanfare
-# 534 "data/maps/QuayshadeTown/scripts.pory"
-	setflag FLAG_GAVE_WALKING_BOY_FRESH_WATER
-# 535 "data/maps/QuayshadeTown/scripts.pory"
-	release
-	end
-
-QuayshadeTown_EventScript_Walking_Boy_26:
-# 547 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_6, MSGBOX_YESNO
-# 548 "data/maps/QuayshadeTown/scripts.pory"
-	compare VAR_RESULT, YES
-	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_31
-# 558 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_3
-# 559 "data/maps/QuayshadeTown/scripts.pory"
+# 515 "data/maps/QuayshadeTown/scripts.pory"
 	release
 	end
 
 QuayshadeTown_EventScript_Walking_Boy_28:
-# 546 "data/maps/QuayshadeTown/scripts.pory"
-	goto_if_unset FLAG_GAVE_WALKING_BOY_LEMONADE, QuayshadeTown_EventScript_Walking_Boy_26
-	goto QuayshadeTown_EventScript_Walking_Boy_27
+# 528 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_2
+# 529 "data/maps/QuayshadeTown/scripts.pory"
+	removeitem ITEM_FRESH_WATER, 1
+# 530 "data/maps/QuayshadeTown/scripts.pory"
+	giveitem ITEM_WATER_STONE, 1
+# 531 "data/maps/QuayshadeTown/scripts.pory"
+	waitfanfare
+# 532 "data/maps/QuayshadeTown/scripts.pory"
+	setflag FLAG_GAVE_WALKING_BOY_FRESH_WATER
+# 533 "data/maps/QuayshadeTown/scripts.pory"
+	release
+	end
 
 QuayshadeTown_EventScript_Walking_Boy_31:
-# 549 "data/maps/QuayshadeTown/scripts.pory"
+# 546 "data/maps/QuayshadeTown/scripts.pory"
 	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_2
-# 550 "data/maps/QuayshadeTown/scripts.pory"
+# 547 "data/maps/QuayshadeTown/scripts.pory"
 	removeitem ITEM_LEMONADE, 1
-# 551 "data/maps/QuayshadeTown/scripts.pory"
+# 548 "data/maps/QuayshadeTown/scripts.pory"
 	giveitem ITEM_THUNDERSTONE, 1
-# 552 "data/maps/QuayshadeTown/scripts.pory"
+# 549 "data/maps/QuayshadeTown/scripts.pory"
 	waitfanfare
-# 553 "data/maps/QuayshadeTown/scripts.pory"
+# 550 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_GAVE_WALKING_BOY_LEMONADE
-# 554 "data/maps/QuayshadeTown/scripts.pory"
+# 551 "data/maps/QuayshadeTown/scripts.pory"
 	release
 	end
 
 QuayshadeTown_EventScript_Walking_Boy_34:
-# 566 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_7, MSGBOX_YESNO
-# 567 "data/maps/QuayshadeTown/scripts.pory"
-	compare VAR_RESULT, YES
-	goto_if_eq QuayshadeTown_EventScript_Walking_Boy_39
-# 577 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_3
-# 578 "data/maps/QuayshadeTown/scripts.pory"
-	release
-	end
-
-QuayshadeTown_EventScript_Walking_Boy_36:
-# 565 "data/maps/QuayshadeTown/scripts.pory"
-	goto_if_unset FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR, QuayshadeTown_EventScript_Walking_Boy_34
-	goto QuayshadeTown_EventScript_Walking_Boy_35
-
-QuayshadeTown_EventScript_Walking_Boy_39:
-# 568 "data/maps/QuayshadeTown/scripts.pory"
+# 564 "data/maps/QuayshadeTown/scripts.pory"
 	msgbox QuayshadeTown_EventScript_Walking_Boy_Text_2
-# 569 "data/maps/QuayshadeTown/scripts.pory"
+# 565 "data/maps/QuayshadeTown/scripts.pory"
 	removeitem ITEM_RAGE_CANDY_BAR, 1
-# 570 "data/maps/QuayshadeTown/scripts.pory"
+# 566 "data/maps/QuayshadeTown/scripts.pory"
 	giveitem ITEM_MOON_STONE, 1
-# 571 "data/maps/QuayshadeTown/scripts.pory"
+# 567 "data/maps/QuayshadeTown/scripts.pory"
 	waitfanfare
-# 572 "data/maps/QuayshadeTown/scripts.pory"
+# 568 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR
-# 573 "data/maps/QuayshadeTown/scripts.pory"
+# 569 "data/maps/QuayshadeTown/scripts.pory"
 	release
 	end
 
 
 QuayshadeTown_Trigger_BlockPathNorth::
-# 596 "data/maps/QuayshadeTown/scripts.pory"
+# 588 "data/maps/QuayshadeTown/scripts.pory"
 	lock
-# 597 "data/maps/QuayshadeTown/scripts.pory"
+# 589 "data/maps/QuayshadeTown/scripts.pory"
 	msgbox QuayshadeTown_Trigger_BlockPathNorth_Text_0
-# 598 "data/maps/QuayshadeTown/scripts.pory"
+# 590 "data/maps/QuayshadeTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
-# 599 "data/maps/QuayshadeTown/scripts.pory"
+# 591 "data/maps/QuayshadeTown/scripts.pory"
 	waitmovement 0
-# 600 "data/maps/QuayshadeTown/scripts.pory"
+# 592 "data/maps/QuayshadeTown/scripts.pory"
 	release
 	return
 
 
-# 603 "data/maps/QuayshadeTown/scripts.pory"
+# 595 "data/maps/QuayshadeTown/scripts.pory"
 StopPlayer:
-# 604 "data/maps/QuayshadeTown/scripts.pory"
+# 596 "data/maps/QuayshadeTown/scripts.pory"
 	walk_down
 	step_end
 
@@ -1193,24 +1188,24 @@ QuayshadeTown_EventScript_Walking_Boy_Text_3:
 	.string ".....$"
 
 QuayshadeTown_EventScript_Walking_Boy_Text_4:
-# 509 "data/maps/QuayshadeTown/scripts.pory"
+# 508 "data/maps/QuayshadeTown/scripts.pory"
 	.string "Give the walking boy your Casteliacone?$"
 
 QuayshadeTown_EventScript_Walking_Boy_Text_5:
-# 528 "data/maps/QuayshadeTown/scripts.pory"
+# 526 "data/maps/QuayshadeTown/scripts.pory"
 	.string "Give the walking boy your Fresh Water?$"
 
 QuayshadeTown_EventScript_Walking_Boy_Text_6:
-# 547 "data/maps/QuayshadeTown/scripts.pory"
+# 544 "data/maps/QuayshadeTown/scripts.pory"
 	.string "Give the walking boy your Lemonade?$"
 
 QuayshadeTown_EventScript_Walking_Boy_Text_7:
-# 566 "data/maps/QuayshadeTown/scripts.pory"
+# 562 "data/maps/QuayshadeTown/scripts.pory"
 	.string "Give the walking boy your Rage Candy\n"
 	.string "Bar?$"
 
 QuayshadeTown_Trigger_BlockPathNorth_Text_0:
-# 597 "data/maps/QuayshadeTown/scripts.pory"
+# 589 "data/maps/QuayshadeTown/scripts.pory"
 	.string "It's not safe.$"
 
 QuayshadeTown_NotChosen::

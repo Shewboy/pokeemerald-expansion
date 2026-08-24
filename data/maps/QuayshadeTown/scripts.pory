@@ -165,7 +165,7 @@ script QuayshadeTown_Trigger_DadGiveMon2 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -208,7 +208,7 @@ script QuayshadeTown_Trigger_DadGiveMon3 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -251,7 +251,7 @@ script QuayshadeTown_Trigger_DadGiveMon4 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -294,7 +294,7 @@ script QuayshadeTown_Trigger_DadGiveMon5 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -337,7 +337,7 @@ script QuayshadeTown_Trigger_DadGiveMon6 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -380,7 +380,7 @@ script QuayshadeTown_Trigger_DadGiveMon7 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -423,7 +423,7 @@ script QuayshadeTown_Trigger_DadGiveMon8 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -458,7 +458,7 @@ script QuayshadeTown_Trigger_DadGiveMon9 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -485,6 +485,7 @@ script QuayshadeTown_EventScript_Walking_Boy{
     lock
     faceplayer
     msgbox(format(".....\p..................................\p...................................................................?"))
+    // LAVA COOKIE -> FIRE STINE
     if (checkitem(ITEM_LAVA_COOKIE,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_LAVA_COOKIE)) {
         msgbox(format("Give the walking boy your Lava Cookie?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
@@ -502,6 +503,7 @@ script QuayshadeTown_EventScript_Walking_Boy{
             end
         }
     }
+    // CASTELIACONE -> ICE STONE
     elif (checkitem(ITEM_CASTELIACONE,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_CASTELIACONE)) {
         msgbox(format("Give the walking boy your Casteliacone?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
@@ -519,6 +521,7 @@ script QuayshadeTown_EventScript_Walking_Boy{
             end
         }
     }
+    // FRESH WATER -> WATER STONE
     elif (checkitem(ITEM_FRESH_WATER,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_FRESH_WATER)) {
         msgbox(format("Give the walking boy your Fresh Water?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
@@ -536,6 +539,7 @@ script QuayshadeTown_EventScript_Walking_Boy{
             end
         }
     }
+    // LEMONADE -> THUNDER STONE
     elif (checkitem(ITEM_LEMONADE,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_LEMONADE)) {
         msgbox(format("Give the walking boy your Lemonade?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
@@ -553,6 +557,7 @@ script QuayshadeTown_EventScript_Walking_Boy{
             end
         }
     }
+    // RAGE CANDY BAR -> MOON STONE
     elif (checkitem(ITEM_RAGE_CANDY_BAR,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR)) {
         msgbox(format("Give the walking boy your Rage Candy Bar?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
