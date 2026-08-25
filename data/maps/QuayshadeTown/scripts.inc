@@ -975,25 +975,41 @@ QuayshadeTown_EventScript_Walking_Boy_34:
 	end
 
 
-QuayshadeTown_Trigger_BlockPathNorth::
-# 588 "data/maps/QuayshadeTown/scripts.pory"
+QuayshadeTown_EventScript_Policeman::
+# 584 "data/maps/QuayshadeTown/scripts.pory"
 	lock
-# 589 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_Trigger_BlockPathNorth_Text_0
-# 590 "data/maps/QuayshadeTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
-# 591 "data/maps/QuayshadeTown/scripts.pory"
-	waitmovement 0
+# 585 "data/maps/QuayshadeTown/scripts.pory"
+	applymovement 4, QuayshadeTown_Trigger_DadGiveMon9_Movement_0
+# 588 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Policeman_Text_0
+	return
+
+
+QuayshadeTown_EventScript_Science_Rules::
 # 592 "data/maps/QuayshadeTown/scripts.pory"
+	lock
+# 593 "data/maps/QuayshadeTown/scripts.pory"
+	applymovement 5, QuayshadeTown_Trigger_DadGiveMon9_Movement_0
+# 596 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Science_Rules_Text_0
+# 597 "data/maps/QuayshadeTown/scripts.pory"
 	release
 	return
 
 
-# 595 "data/maps/QuayshadeTown/scripts.pory"
-StopPlayer:
-# 596 "data/maps/QuayshadeTown/scripts.pory"
-	walk_down
-	step_end
+QuayshadeTown_Trigger_BlockPathNorth::
+# 603 "data/maps/QuayshadeTown/scripts.pory"
+	lock
+# 604 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_Trigger_BlockPathNorth_Text_0
+# 605 "data/maps/QuayshadeTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, QuayshadeTown_Trigger_BlockPathNorth_Movement_0
+# 608 "data/maps/QuayshadeTown/scripts.pory"
+	waitmovement 0
+# 609 "data/maps/QuayshadeTown/scripts.pory"
+	release
+	return
+
 
 # 96 "data/maps/QuayshadeTown/scripts.pory"
 QuayshadeTown_Trigger_DadGiveMon1_Movement_0:
@@ -1095,6 +1111,12 @@ QuayshadeTown_Trigger_DadGiveMon8_Movement_0:
 QuayshadeTown_Trigger_DadGiveMon9_Movement_0:
 # 438 "data/maps/QuayshadeTown/scripts.pory"
 	face_player
+	step_end
+
+# 605 "data/maps/QuayshadeTown/scripts.pory"
+QuayshadeTown_Trigger_BlockPathNorth_Movement_0:
+# 606 "data/maps/QuayshadeTown/scripts.pory"
+	walk_down
 	step_end
 
 QuayshadeTown_EventScript_Pokeball_Text_0:
@@ -1204,9 +1226,22 @@ QuayshadeTown_EventScript_Walking_Boy_Text_7:
 	.string "Give the walking boy your Rage Candy\n"
 	.string "Bar?$"
 
+QuayshadeTown_EventScript_Policeman_Text_0:
+# 588 "data/maps/QuayshadeTown/scripts.pory"
+	.string "We've seen a lot of criminal activity on\n"
+	.string "Route 11.\p"
+	.string "So, we're only allowing trainers with at\n"
+	.string "least seven badges to pass.$"
+
+QuayshadeTown_EventScript_Science_Rules_Text_0:
+# 596 "data/maps/QuayshadeTown/scripts.pory"
+	.string "The power of science is amazing!\p"
+	.string "Now you can make your very own Pokémon\n"
+	.string "game!$"
+
 QuayshadeTown_Trigger_BlockPathNorth_Text_0:
-# 589 "data/maps/QuayshadeTown/scripts.pory"
-	.string "It's not safe.$"
+# 604 "data/maps/QuayshadeTown/scripts.pory"
+	.string "Hey, kid! It's not safe past here.$"
 
 QuayshadeTown_NotChosen::
 # 63 "data/maps/QuayshadeTown/scripts.pory"

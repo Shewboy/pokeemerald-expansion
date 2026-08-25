@@ -9337,7 +9337,7 @@
     {
       "id": "LAYOUT_QUAYSHADE_TOWN_PLAYERS_HOUSE_1F",
       "name": "QuayshadeTown_PlayersHouse_1F_Layout",
-      "width": 13,
+      "width": 11,
       "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
@@ -9354,6 +9354,26 @@
       "border_filepath": "data/layouts/QuayshadeTown_PlayersHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/QuayshadeTown_PlayersHouse_2F/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_QUAYSHADE_TOWN_CODY_HOUSE_1F",
+      "name": "QuayshadeTown_CodyHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/QuayshadeTown_CodyHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/QuayshadeTown_CodyHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUAYSHADE_TOWN_THIRD_HOUSE_1F",
+      "name": "QuayshadeTown_ThirdHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/QuayshadeTown_ThirdHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/QuayshadeTown_ThirdHouse_1F/map.bin"
     }
   ]
 }

@@ -16,7 +16,7 @@ script QuayshadeTown_PlayersHouse_1F_Mom_Go_Help_Dad{
         face_left
     ))
     applymovement(1, moves(
-        walk_right * 7
+        walk_right * 5
     ))
     waitmovement(0)
     msgbox(format("Your father is in the backyard doing yard work. Why don't you lend him a hand?"))
@@ -31,6 +31,7 @@ script QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave{
             face_player
         ))
         msgbox(format("Really? Your dad could use your help!"))
+        closemessage
         applymovement(OBJ_EVENT_ID_PLAYER, moves(
             walk_up
         ))
@@ -72,6 +73,11 @@ script QuayshadeTown_PlayersHouse_1F_EventScript_Mom{
     }
 }
 
-script Little_Sister_Rare_Mon{
-    
+script QuayshadeTown_PlayersHouse_1F_Little_Sister{
+    lock
+    applymovement(2, moves(
+        face_player
+    ))
+    msgbox(format("I saw a rare Pok\emon in our backyard!\pMom doesn't believe me though..."))
+    release
 }

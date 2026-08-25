@@ -49,63 +49,73 @@ QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave_1:
 # 33 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	msgbox QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave_Text_0
 # 34 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	closemessage
+# 35 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave_Movement_1
-# 37 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	waitmovement 0
 # 38 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	waitmovement 0
+# 39 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	release
 	return
 
 
 QuayshadeTown_PlayersHouse_1F_EventScript_Mom::
-# 45 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+# 46 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	compare VAR_QUAYSHADE_INTRO_STATE, 1
 	goto_if_eq QuayshadeTown_PlayersHouse_1F_EventScript_Mom_1
-# 53 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+# 54 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	compare VAR_QUAYSHADE_INTRO_STATE, 2
 	goto_if_eq QuayshadeTown_PlayersHouse_1F_EventScript_Mom_2
-# 66 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	lock
 # 67 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	lock
+# 68 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	applymovement 1, QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave_Movement_0
-# 70 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	msgbox QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_3
 # 71 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	msgbox QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_3
+# 72 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	release
 	return
 
 QuayshadeTown_PlayersHouse_1F_EventScript_Mom_1:
-# 46 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	lock
 # 47 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	lock
+# 48 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	applymovement 1, QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave_Movement_0
-# 50 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	msgbox QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_0
 # 51 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	msgbox QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_0
+# 52 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	release
 	return
 
 QuayshadeTown_PlayersHouse_1F_EventScript_Mom_2:
-# 54 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	lock
 # 55 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	lock
+# 56 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	applymovement 1, QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave_Movement_0
-# 58 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	msgbox QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_1
 # 59 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	giveitem ITEM_POKE_BALL, 5
+	msgbox QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_1
 # 60 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	waitfanfare
+	giveitem ITEM_POKE_BALL, 5
 # 61 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	msgbox QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_2
+	waitfanfare
 # 62 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	setvar VAR_QUAYSHADE_INTRO_STATE, 3
+	msgbox QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_2
 # 63 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	setvar VAR_QUAYSHADE_INTRO_STATE, 3
+# 64 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	release
 	return
 
 
-Little_Sister_Rare_Mon::
+QuayshadeTown_PlayersHouse_1F_Little_Sister::
+# 77 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	lock
+# 78 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	applymovement 2, QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave_Movement_0
+# 81 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	msgbox QuayshadeTown_PlayersHouse_1F_Little_Sister_Text_0
+# 82 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	release
 	return
 
 
@@ -133,10 +143,6 @@ QuayshadeTown_PlayersHouse_1F_Mom_Go_Help_Dad_Movement_2:
 	walk_right
 # 19 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	walk_right
-# 19 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	walk_right
-# 19 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-	walk_right
 	step_end
 
 # 30 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
@@ -145,9 +151,9 @@ QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave_Movement_0:
 	face_player
 	step_end
 
-# 34 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
-QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave_Movement_1:
 # 35 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave_Movement_1:
+# 36 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	walk_up
 	step_end
 
@@ -166,11 +172,11 @@ QuayshadeTown_PlayersHouse_1F_Trigger_Dont_Leave_Text_0:
 	.string "Really? Your dad could use your help!$"
 
 QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_0:
-# 50 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+# 51 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	.string "Why don't you lend your father a hand?$"
 
 QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_1:
-# 58 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+# 59 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	.string "So, were you surprised? I hope I didn't\n"
 	.string "spoil it!\p"
 	.string "Did Dad give you any Poké Balls?\p"
@@ -178,14 +184,19 @@ QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_1:
 	.string "he forgot.$"
 
 QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_2:
-# 61 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+# 62 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	.string "Dad has been trying to get you a\n"
 	.string "Pokémon for a while now.\p"
 	.string "You deserve it!$"
 
 QuayshadeTown_PlayersHouse_1F_EventScript_Mom_Text_3:
-# 70 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+# 71 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
 	.string "The world is your Cloyster now, honey.\p"
 	.string "Just don't forget to call us once in a\n"
 	.string "while, okay?\p"
 	.string "And be safe!$"
+
+QuayshadeTown_PlayersHouse_1F_Little_Sister_Text_0:
+# 81 "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.pory"
+	.string "I saw a rare Pokémon in our backyard!\p"
+	.string "Mom doesn't believe me though...$"

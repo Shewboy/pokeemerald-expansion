@@ -1165,6 +1165,8 @@
   ],
   "gMapGroup_IndoorQuayshade": [
     "QuayshadeTown_PlayersHouse_1F",
-    "QuayshadeTown_PlayersHouse_2F"
+    "QuayshadeTown_PlayersHouse_2F",
+    "QuayshadeTown_CodyHouse_1F",
+    "QuayshadeTown_ThirdHouse_1F"
   ]
 }

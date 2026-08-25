@@ -1744,3 +1744,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.inc"
 
 	.include "data/maps/QuayshadeTown_PlayersHouse_2F/scripts.inc"
+
+	.include "data/maps/QuayshadeTown_CodyHouse_1F/scripts.inc"
+
+	.include "data/maps/QuayshadeTown_ThirdHouse_1F/scripts.inc"

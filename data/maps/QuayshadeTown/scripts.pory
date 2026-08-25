@@ -580,18 +580,32 @@ script QuayshadeTown_EventScript_Walking_Boy{
     }
 }   
 
-
-##### Blocks path north
-
-
-script QuayshadeTown_Trigger_BlockPathNorth{
+script QuayshadeTown_EventScript_Policeman {
     lock
-    msgbox("It's not safe.")
-    applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
-    waitmovement(0)
+    applymovement(4, moves(
+        face_player
+    ))
+    msgbox(format("We've seen a lot of criminal activity on Route 11.\pSo, we're only allowing trainers with at least seven badges to pass."))
     release
 }
 
-movement StopPlayer {
-    walk_down
+script QuayshadeTown_EventScript_Science_Rules {
+    lock
+    applymovement(5, moves(
+        face_player
+    ))
+    msgbox(format("The power of science is amazing!\pNow you can make your very own Pok\emon game!"))
+    release
+}
+
+##### Blocks path north
+
+script QuayshadeTown_Trigger_BlockPathNorth{
+    lock
+    msgbox("Hey, kid! It's not safe past here.")
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(
+        walk_down
+    ))
+    waitmovement(0)
+    release
 }
