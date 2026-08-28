@@ -1,11 +1,11 @@
-mapscripts QuayshadeTown_MapScripts {
+mapscripts ShaydwellTown_Frlg_MapScripts {
 }
 
 
 ##### Basic script for obtaining a Pokemon from a Poke Ball
 
 
-// script QuayshadeTown_EventScript_Pokeball{
+// script ShaydwellTown_EventScript_Pokeball{
     //lockall
     //showmonpic(SPECIES_TYROGUE, 10,3)
     //playmoncry(SPECIES_TYROGUE, CRY_MODE_NORMAL)
@@ -33,34 +33,34 @@ mapscripts QuayshadeTown_MapScripts {
     //}
     //else{
         //hidemonpic
-        //msgbox(QuayshadeTown_NotChosen)
+        //msgbox(ShaydwellTown_NotChosen)
     //}
     //setflag(FLAG_SYS_POKEMON_GET)
-    //setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+    //setvar(VAR_SHAYDWELL_TOWN_STATE, 1)
     //waitmessage
     //releaseall
     //end
 //}
 
-//script NicknamePartyMon{
-    //msgbox("Give it a nickname?", MSGBOX_YESNO)
-    //hidemonpic
-    //if(var(VAR_RESULT) == YES){
-        //call(Common_EventScript_GetGiftMonPartySlot)
-        //call(Common_EventScript_NameReceivedPartyMon)
-    //}
-//}
+script NicknamePartyMon{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
 
-//script NicknameBoxMon{
-    //msgbox("Give it a nickname?", MSGBOX_YESNO)
-    //hidemonpic
-    //if(var(VAR_RESULT) == YES){
-        //call(Common_EventScript_NameReceivedBoxMon)
-    //}
-    //msgbox("Transferred to PC")
-//}
+script NicknameBoxMon{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    msgbox("Transferred to PC")
+}
 
-text QuayshadeTown_NotChosen{
+text ShaydwellTown_NotChosen{
     "Better leave it then."
 }
 
@@ -68,19 +68,19 @@ text QuayshadeTown_NotChosen{
 ##### Signposts
 
 
-script QuayshadeTown_Text_TownSign {
+script ShaydwellTown_Text_TownSign {
     lockall
-    msgbox("Quayshade Town", MSGBOX_SIGN)
+    msgbox("Shaydwell Town", MSGBOX_SIGN)
     releaseall
 }
 
-script QuayshadeTown_Text_PlayerHouseSign {
+script ShaydwellTown_Text_PlayerHouseSign {
     lockall
     msgbox("Player's House", MSGBOX_SIGN)
     releaseall
 }
 
-script QuayshadeTown_Text_CodyHouseSign {
+script ShaydwellTown_Text_CodyHouseSign {
     lockall
     msgbox("Cody's House", MSGBOX_SIGN)
     releaseall
@@ -90,7 +90,7 @@ script QuayshadeTown_Text_CodyHouseSign {
 ##### Scripts for the event where your Dad gives you Tyrogue
 
 
-script QuayshadeTown_Trigger_DadGiveMon1 {
+script ShaydwellTown_Trigger_DadGiveMon1 {
     if(!flag(FLAG_SYS_POKEMON_GET)){
         lock
         applymovement(1, moves(
@@ -122,7 +122,7 @@ script QuayshadeTown_Trigger_DadGiveMon1 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_TOWN_STATE, 1)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 1)
         waitmessage
         release
         }
@@ -130,7 +130,7 @@ script QuayshadeTown_Trigger_DadGiveMon1 {
         }
 }
 
-script QuayshadeTown_Trigger_DadGiveMon2 {
+script ShaydwellTown_Trigger_DadGiveMon2 {
     if(!flag(FLAG_SYS_POKEMON_GET)){
         lock
         applymovement(1, moves(
@@ -165,7 +165,7 @@ script QuayshadeTown_Trigger_DadGiveMon2 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -173,7 +173,7 @@ script QuayshadeTown_Trigger_DadGiveMon2 {
         }
 }
 
-script QuayshadeTown_Trigger_DadGiveMon3 {
+script ShaydwellTown_Trigger_DadGiveMon3 {
     if(!flag(FLAG_SYS_POKEMON_GET)){
         lock
         applymovement(1, moves(
@@ -208,7 +208,7 @@ script QuayshadeTown_Trigger_DadGiveMon3 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -216,7 +216,7 @@ script QuayshadeTown_Trigger_DadGiveMon3 {
         }
 }
 
-script QuayshadeTown_Trigger_DadGiveMon4 {
+script ShaydwellTown_Trigger_DadGiveMon4 {
     if(!flag(FLAG_SYS_POKEMON_GET)){
         lock
         applymovement(1, moves(
@@ -251,7 +251,7 @@ script QuayshadeTown_Trigger_DadGiveMon4 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -259,7 +259,7 @@ script QuayshadeTown_Trigger_DadGiveMon4 {
         }
 }
 
-script QuayshadeTown_Trigger_DadGiveMon5 {
+script ShaydwellTown_Trigger_DadGiveMon5 {
     if(!flag(FLAG_SYS_POKEMON_GET)){
         lock
         applymovement(1, moves(
@@ -294,7 +294,7 @@ script QuayshadeTown_Trigger_DadGiveMon5 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -302,7 +302,7 @@ script QuayshadeTown_Trigger_DadGiveMon5 {
         }
 }
 
-script QuayshadeTown_Trigger_DadGiveMon6 {
+script ShaydwellTown_Trigger_DadGiveMon6 {
    if(!flag(FLAG_SYS_POKEMON_GET)){
         lock
         applymovement(1, moves(
@@ -337,7 +337,7 @@ script QuayshadeTown_Trigger_DadGiveMon6 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -345,7 +345,7 @@ script QuayshadeTown_Trigger_DadGiveMon6 {
         }
 }
 
-script QuayshadeTown_Trigger_DadGiveMon7 {
+script ShaydwellTown_Trigger_DadGiveMon7 {
     if(!flag(FLAG_SYS_POKEMON_GET)){
         lock
         applymovement(1, moves(
@@ -380,7 +380,7 @@ script QuayshadeTown_Trigger_DadGiveMon7 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -388,7 +388,7 @@ script QuayshadeTown_Trigger_DadGiveMon7 {
         }
 }
 
-script QuayshadeTown_Trigger_DadGiveMon8 {
+script ShaydwellTown_Trigger_DadGiveMon8 {
     if(!flag(FLAG_SYS_POKEMON_GET)){
         lock
         applymovement(1, moves(
@@ -423,7 +423,7 @@ script QuayshadeTown_Trigger_DadGiveMon8 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -431,7 +431,7 @@ script QuayshadeTown_Trigger_DadGiveMon8 {
         }
 }
 
-script QuayshadeTown_Trigger_DadGiveMon9 {
+script ShaydwellTown_Trigger_DadGiveMon9 {
     if(!flag(FLAG_SYS_POKEMON_GET)){
         lock
         applymovement(1, moves(
@@ -458,7 +458,7 @@ script QuayshadeTown_Trigger_DadGiveMon9 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_QUAYSHADE_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
         waitmessage
         release
         }
@@ -474,14 +474,14 @@ script QuayshadeTown_Trigger_DadGiveMon9 {
 ##### NPCs
 
 
-script QuayshadeTown_EventScript_OldWoman {
+script ShaydwellTown_EventScript_OldWoman {
     lock
     faceplayer
     msgbox(format("Bronzong Lake is so named because of an old legend.\pThe legend tells of a Bronzong who summoned a rainstorm that lasted thirty days, thus creating the lake."))
     release
 }
 
-script QuayshadeTown_EventScript_Walking_Boy{
+script ShaydwellTown_EventScript_Walking_Boy{
     lock
     faceplayer
     msgbox(format(".....\p..................................\p...................................................................?"))
@@ -580,7 +580,7 @@ script QuayshadeTown_EventScript_Walking_Boy{
     }
 }   
 
-script QuayshadeTown_EventScript_Policeman {
+script ShaydwellTown_EventScript_Policeman {
     lock
     applymovement(4, moves(
         face_player
@@ -589,7 +589,7 @@ script QuayshadeTown_EventScript_Policeman {
     release
 }
 
-script QuayshadeTown_EventScript_Science_Rules {
+script ShaydwellTown_EventScript_Science_Rules {
     lock
     applymovement(5, moves(
         face_player
@@ -600,7 +600,7 @@ script QuayshadeTown_EventScript_Science_Rules {
 
 ##### Blocks path north
 
-script QuayshadeTown_Trigger_BlockPathNorth{
+script ShaydwellTown_Trigger_BlockPathNorth{
     lock
     msgbox("Hey, kid! It's not safe past here.")
     applymovement(OBJ_EVENT_ID_PLAYER, moves(

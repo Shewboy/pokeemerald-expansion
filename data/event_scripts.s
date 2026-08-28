@@ -1738,13 +1738,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/wild_encounter.inc"
-
-	.include "data/maps/QuayshadeTown/scripts.inc"
-
-	.include "data/maps/QuayshadeTown_PlayersHouse_1F/scripts.inc"
-
-	.include "data/maps/QuayshadeTown_PlayersHouse_2F/scripts.inc"
-
-	.include "data/maps/QuayshadeTown_CodyHouse_1F/scripts.inc"
-
-	.include "data/maps/QuayshadeTown_ThirdHouse_1F/scripts.inc"
+	.include "data/maps/ShaydwellTown_Frlg/scripts.inc"
+	.include "data/maps/ShaydwellTown_Frlg/text.inc"

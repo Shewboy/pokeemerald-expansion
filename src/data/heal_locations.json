@@ -349,6 +349,22 @@
       "y": 6,
       "respawn_map": "MAP_SEVEN_ISLAND_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_SEVEN_ISLAND_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_QUAYSHADE_TOWN",
+      "map": "MAP_QUAYSHADE_TOWN",
+      "x": 14,
+      "y": 13,
+      "respawn_map": "MAP_QUAYSHADE_TOWN",
+      "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_SHAYDWELL_TOWN",
+      "map": "MAP_SHAYDWELL_TOWN_FRLG",
+      "x": 14,
+      "y": 13,
+      "respawn_map": "MAP_SHAYDWELL_TOWN_FRLG",
+      "respawn_npc": "1"
     }
   ]
 }

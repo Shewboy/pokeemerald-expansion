@@ -3,6 +3,7 @@
   "name": "QuayshadeTown_CodyHouse_1F",
   "layout": "LAYOUT_QUAYSHADE_TOWN_CODY_HOUSE_1F",
   "music": "MUS_LITTLEROOT",
+  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

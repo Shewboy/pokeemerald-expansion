@@ -2,112 +2,6 @@ QuayshadeTown_MapScripts::
 	.byte 0
 
 
-QuayshadeTown_EventScript_Pokeball::
-# 9 "data/maps/QuayshadeTown/scripts.pory"
-	lockall
-# 10 "data/maps/QuayshadeTown/scripts.pory"
-	showmonpic SPECIES_TYROGUE, 10, 3
-# 11 "data/maps/QuayshadeTown/scripts.pory"
-	playmoncry SPECIES_TYROGUE, CRY_MODE_NORMAL
-# 12 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_0, MSGBOX_YESNO
-# 13 "data/maps/QuayshadeTown/scripts.pory"
-	compare VAR_RESULT, YES
-	goto_if_eq QuayshadeTown_EventScript_Pokeball_2
-# 35 "data/maps/QuayshadeTown/scripts.pory"
-	hidemonpic
-# 36 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_NotChosen
-QuayshadeTown_EventScript_Pokeball_1:
-# 38 "data/maps/QuayshadeTown/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
-# 39 "data/maps/QuayshadeTown/scripts.pory"
-	setvar VAR_QUAYSHADE_TOWN_STATE, 1
-# 40 "data/maps/QuayshadeTown/scripts.pory"
-	waitmessage
-# 41 "data/maps/QuayshadeTown/scripts.pory"
-	releaseall
-	end
-
-QuayshadeTown_EventScript_Pokeball_2:
-# 14 "data/maps/QuayshadeTown/scripts.pory"
-	givemon SPECIES_TYROGUE, 5
-# 15 "data/maps/QuayshadeTown/scripts.pory"
-	compare VAR_RESULT, MON_GIVEN_TO_PARTY
-	goto_if_eq QuayshadeTown_EventScript_Pokeball_5
-# 22 "data/maps/QuayshadeTown/scripts.pory"
-	compare VAR_RESULT, MON_GIVEN_TO_PC
-	goto_if_eq QuayshadeTown_EventScript_Pokeball_6
-# 30 "data/maps/QuayshadeTown/scripts.pory"
-	hidemonpic
-# 31 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_2
-	goto QuayshadeTown_EventScript_Pokeball_1
-
-QuayshadeTown_EventScript_Pokeball_5:
-# 16 "data/maps/QuayshadeTown/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 17 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_1
-# 18 "data/maps/QuayshadeTown/scripts.pory"
-	removeobject 5
-# 19 "data/maps/QuayshadeTown/scripts.pory"
-	setflag FLAG_UNUSED_0x025
-# 20 "data/maps/QuayshadeTown/scripts.pory"
-	call NicknamePartyMon
-	goto QuayshadeTown_EventScript_Pokeball_1
-
-QuayshadeTown_EventScript_Pokeball_6:
-# 23 "data/maps/QuayshadeTown/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 24 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_1
-# 25 "data/maps/QuayshadeTown/scripts.pory"
-	removeobject 5
-# 26 "data/maps/QuayshadeTown/scripts.pory"
-	setflag FLAG_UNUSED_0x025
-# 27 "data/maps/QuayshadeTown/scripts.pory"
-	call NicknamePartyMon
-	goto QuayshadeTown_EventScript_Pokeball_1
-
-
-NicknamePartyMon::
-# 46 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
-# 47 "data/maps/QuayshadeTown/scripts.pory"
-	hidemonpic
-# 48 "data/maps/QuayshadeTown/scripts.pory"
-	compare VAR_RESULT, YES
-	goto_if_eq NicknamePartyMon_1
-	return
-
-NicknamePartyMon_1:
-# 49 "data/maps/QuayshadeTown/scripts.pory"
-	call Common_EventScript_GetGiftMonPartySlot
-# 50 "data/maps/QuayshadeTown/scripts.pory"
-	call Common_EventScript_NameReceivedPartyMon
-	return
-
-
-NicknameBoxMon::
-# 55 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
-# 56 "data/maps/QuayshadeTown/scripts.pory"
-	hidemonpic
-# 57 "data/maps/QuayshadeTown/scripts.pory"
-	compare VAR_RESULT, YES
-	goto_if_eq NicknameBoxMon_2
-NicknameBoxMon_1:
-# 60 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox NicknameBoxMon_Text_0
-	return
-
-NicknameBoxMon_2:
-# 58 "data/maps/QuayshadeTown/scripts.pory"
-	call Common_EventScript_NameReceivedBoxMon
-	goto NicknameBoxMon_1
-
-
 QuayshadeTown_Text_TownSign::
 # 72 "data/maps/QuayshadeTown/scripts.pory"
 	lockall
@@ -169,10 +63,10 @@ QuayshadeTown_Trigger_DadGiveMon1_1:
 # 120 "data/maps/QuayshadeTown/scripts.pory"
 	hidemonpic
 # 121 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_2
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
 QuayshadeTown_Trigger_DadGiveMon1_4:
 # 123 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_4
 # 124 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 125 "data/maps/QuayshadeTown/scripts.pory"
@@ -239,10 +133,10 @@ QuayshadeTown_Trigger_DadGiveMon2_1:
 # 163 "data/maps/QuayshadeTown/scripts.pory"
 	hidemonpic
 # 164 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_2
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
 QuayshadeTown_Trigger_DadGiveMon2_4:
 # 166 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_4
 # 167 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 168 "data/maps/QuayshadeTown/scripts.pory"
@@ -309,10 +203,10 @@ QuayshadeTown_Trigger_DadGiveMon3_1:
 # 206 "data/maps/QuayshadeTown/scripts.pory"
 	hidemonpic
 # 207 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_2
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
 QuayshadeTown_Trigger_DadGiveMon3_4:
 # 209 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_4
 # 210 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 211 "data/maps/QuayshadeTown/scripts.pory"
@@ -379,10 +273,10 @@ QuayshadeTown_Trigger_DadGiveMon4_1:
 # 249 "data/maps/QuayshadeTown/scripts.pory"
 	hidemonpic
 # 250 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_2
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
 QuayshadeTown_Trigger_DadGiveMon4_4:
 # 252 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_4
 # 253 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 254 "data/maps/QuayshadeTown/scripts.pory"
@@ -449,10 +343,10 @@ QuayshadeTown_Trigger_DadGiveMon5_1:
 # 292 "data/maps/QuayshadeTown/scripts.pory"
 	hidemonpic
 # 293 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_2
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
 QuayshadeTown_Trigger_DadGiveMon5_4:
 # 295 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_4
 # 296 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 297 "data/maps/QuayshadeTown/scripts.pory"
@@ -519,10 +413,10 @@ QuayshadeTown_Trigger_DadGiveMon6_1:
 # 335 "data/maps/QuayshadeTown/scripts.pory"
 	hidemonpic
 # 336 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_2
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
 QuayshadeTown_Trigger_DadGiveMon6_4:
 # 338 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_4
 # 339 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 340 "data/maps/QuayshadeTown/scripts.pory"
@@ -589,10 +483,10 @@ QuayshadeTown_Trigger_DadGiveMon7_1:
 # 378 "data/maps/QuayshadeTown/scripts.pory"
 	hidemonpic
 # 379 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_2
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
 QuayshadeTown_Trigger_DadGiveMon7_4:
 # 381 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_4
 # 382 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 383 "data/maps/QuayshadeTown/scripts.pory"
@@ -659,10 +553,10 @@ QuayshadeTown_Trigger_DadGiveMon8_1:
 # 421 "data/maps/QuayshadeTown/scripts.pory"
 	hidemonpic
 # 422 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_2
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
 QuayshadeTown_Trigger_DadGiveMon8_4:
 # 424 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_4
 # 425 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 426 "data/maps/QuayshadeTown/scripts.pory"
@@ -729,10 +623,10 @@ QuayshadeTown_Trigger_DadGiveMon9_1:
 # 456 "data/maps/QuayshadeTown/scripts.pory"
 	hidemonpic
 # 457 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Pokeball_Text_2
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
 QuayshadeTown_Trigger_DadGiveMon9_4:
 # 459 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_3
+	msgbox QuayshadeTown_Trigger_DadGiveMon1_Text_4
 # 460 "data/maps/QuayshadeTown/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 461 "data/maps/QuayshadeTown/scripts.pory"
@@ -982,31 +876,33 @@ QuayshadeTown_EventScript_Policeman::
 	applymovement 4, QuayshadeTown_Trigger_DadGiveMon9_Movement_0
 # 588 "data/maps/QuayshadeTown/scripts.pory"
 	msgbox QuayshadeTown_EventScript_Policeman_Text_0
+# 589 "data/maps/QuayshadeTown/scripts.pory"
+	release
 	return
 
 
 QuayshadeTown_EventScript_Science_Rules::
-# 592 "data/maps/QuayshadeTown/scripts.pory"
-	lock
 # 593 "data/maps/QuayshadeTown/scripts.pory"
+	lock
+# 594 "data/maps/QuayshadeTown/scripts.pory"
 	applymovement 5, QuayshadeTown_Trigger_DadGiveMon9_Movement_0
-# 596 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_EventScript_Science_Rules_Text_0
 # 597 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_EventScript_Science_Rules_Text_0
+# 598 "data/maps/QuayshadeTown/scripts.pory"
 	release
 	return
 
 
 QuayshadeTown_Trigger_BlockPathNorth::
-# 603 "data/maps/QuayshadeTown/scripts.pory"
-	lock
 # 604 "data/maps/QuayshadeTown/scripts.pory"
-	msgbox QuayshadeTown_Trigger_BlockPathNorth_Text_0
+	lock
 # 605 "data/maps/QuayshadeTown/scripts.pory"
+	msgbox QuayshadeTown_Trigger_BlockPathNorth_Text_0
+# 606 "data/maps/QuayshadeTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, QuayshadeTown_Trigger_BlockPathNorth_Movement_0
-# 608 "data/maps/QuayshadeTown/scripts.pory"
-	waitmovement 0
 # 609 "data/maps/QuayshadeTown/scripts.pory"
+	waitmovement 0
+# 610 "data/maps/QuayshadeTown/scripts.pory"
 	release
 	return
 
@@ -1113,31 +1009,11 @@ QuayshadeTown_Trigger_DadGiveMon9_Movement_0:
 	face_player
 	step_end
 
-# 605 "data/maps/QuayshadeTown/scripts.pory"
-QuayshadeTown_Trigger_BlockPathNorth_Movement_0:
 # 606 "data/maps/QuayshadeTown/scripts.pory"
+QuayshadeTown_Trigger_BlockPathNorth_Movement_0:
+# 607 "data/maps/QuayshadeTown/scripts.pory"
 	walk_down
 	step_end
-
-QuayshadeTown_EventScript_Pokeball_Text_0:
-# 12 "data/maps/QuayshadeTown/scripts.pory"
-	.string "Do you want to choose Tyrogue?$"
-
-QuayshadeTown_EventScript_Pokeball_Text_1:
-# 17 "data/maps/QuayshadeTown/scripts.pory"
-	.string "Received Tyrogue$"
-
-QuayshadeTown_EventScript_Pokeball_Text_2:
-# 31 "data/maps/QuayshadeTown/scripts.pory"
-	.string "No more room$"
-
-NicknamePartyMon_Text_0:
-# 46 "data/maps/QuayshadeTown/scripts.pory"
-	.string "Give it a nickname?$"
-
-NicknameBoxMon_Text_0:
-# 60 "data/maps/QuayshadeTown/scripts.pory"
-	.string "Transferred to PC$"
 
 QuayshadeTown_Text_TownSign_Text_0:
 # 73 "data/maps/QuayshadeTown/scripts.pory"
@@ -1170,6 +1046,10 @@ QuayshadeTown_Trigger_DadGiveMon1_Text_2:
 	.string "Received Tyrogue!$"
 
 QuayshadeTown_Trigger_DadGiveMon1_Text_3:
+# 121 "data/maps/QuayshadeTown/scripts.pory"
+	.string "No more room$"
+
+QuayshadeTown_Trigger_DadGiveMon1_Text_4:
 # 123 "data/maps/QuayshadeTown/scripts.pory"
 	.string "It feels like just yesterday you were\n"
 	.string "taking your first steps! Time really\l"
@@ -1234,13 +1114,13 @@ QuayshadeTown_EventScript_Policeman_Text_0:
 	.string "least seven badges to pass.$"
 
 QuayshadeTown_EventScript_Science_Rules_Text_0:
-# 596 "data/maps/QuayshadeTown/scripts.pory"
+# 597 "data/maps/QuayshadeTown/scripts.pory"
 	.string "The power of science is amazing!\p"
 	.string "Now you can make your very own Pokémon\n"
 	.string "game!$"
 
 QuayshadeTown_Trigger_BlockPathNorth_Text_0:
-# 604 "data/maps/QuayshadeTown/scripts.pory"
+# 605 "data/maps/QuayshadeTown/scripts.pory"
 	.string "Hey, kid! It's not safe past here.$"
 
 QuayshadeTown_NotChosen::

@@ -1541,3 +1541,14 @@ const struct Tileset gTileset_HallOfFame =
 };
 
 #endif // IS_FRLG
+
+const struct Tileset gTileset_ShaydwellTown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ShaydwellTown,
+    .palettes = gTilesetPalettes_ShaydwellTown,
+    .metatiles = gMetatiles_ShaydwellTown,
+    .metatileAttributes = gMetatileAttributes_ShaydwellTown,
+    .callback = NULL,
+};
