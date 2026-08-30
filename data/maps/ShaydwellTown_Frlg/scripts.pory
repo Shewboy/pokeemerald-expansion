@@ -434,9 +434,7 @@ script ShaydwellTown_Trigger_DadGiveMon8 {
 script ShaydwellTown_Trigger_DadGiveMon9 {
     if(!flag(FLAG_SYS_POKEMON_GET)){
         lock
-        applymovement(1, moves(
-            face_player
-        ))
+        faceplayer
         msgbox(format("Hey bubby! Did Mom send you out here?"))
         msgbox(format("Nevermind the yard work. I've got a surprise for you.\pI think you're finally old enough to have your very own Pok\emon.\pI got this from one of my old construction buddies. He said to give it a good home!"))
         givemon(SPECIES_TYROGUE, 5)
@@ -582,14 +580,14 @@ script ShaydwellTown_EventScript_Walking_Boy{
 
 script ShaydwellTown_EventScript_Policeman {
     lock
-    face_player
+    faceplayer
     msgbox(format("We've seen a lot of criminal activity on Route 11.\pSo, we're only allowing trainers with at least seven badges to pass."))
     release
 }
 
 script ShaydwellTown_EventScript_Science_Rules {
     lock
-    face_player
+    faceplayer
     msgbox(format("The power of science is amazing!\pNow you can make your very own Pok\emon game!"))
     release
 }
@@ -598,6 +596,9 @@ script ShaydwellTown_EventScript_Science_Rules {
 
 script ShaydwellTown_Trigger_BlockPathNorth{
     lock
+    applymovement(4, moves(
+        face_player
+    ))
     msgbox("Hey, kid! It's not safe past here.")
     applymovement(OBJ_EVENT_ID_PLAYER, moves(
         walk_down

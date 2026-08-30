@@ -31,20 +31,6 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
-      "x": 18,
-      "y": 2,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ShaydwellTown_EventScript_Policeman",
-      "flag": "0"
-    },
-    {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_FRLG",
       "x": 6,
       "y": 12,
@@ -69,6 +55,34 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ShaydwellTown_EventScript_OldWoman",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ShaydwellTown_EventScript_Policeman",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_FRLG",
+      "x": 18,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 3,
+      "movement_range_y": 3,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ShaydwellTown_EventScript_Science_Rules",
       "flag": "0"
     }
   ],
@@ -109,7 +123,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon8"
     },
     {
@@ -118,7 +132,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon7"
     },
     {
@@ -127,7 +141,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon6"
     },
     {
@@ -136,7 +150,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon5"
     },
     {
@@ -145,7 +159,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon4"
     },
     {
@@ -154,7 +168,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon3"
     },
     {
@@ -163,7 +177,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon2"
     },
     {
@@ -172,7 +186,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "0",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon1"
     },
     {

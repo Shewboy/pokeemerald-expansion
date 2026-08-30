@@ -630,13 +630,13 @@ ShaydwellTown_Trigger_DadGiveMon8_6:
 ShaydwellTown_Trigger_DadGiveMon9::
 # 435 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	goto_if_unset FLAG_SYS_POKEMON_GET, ShaydwellTown_Trigger_DadGiveMon9_1
-# 466 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 464 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	lock
-# 467 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 465 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	faceplayer
-# 468 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 466 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_Trigger_DadGiveMon9_Text_0
-# 469 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 467 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	return
 
@@ -644,77 +644,77 @@ ShaydwellTown_Trigger_DadGiveMon9_1:
 # 436 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	lock
 # 437 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	applymovement 1, ShaydwellTown_Trigger_DadGiveMon9_Movement_0
-# 440 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+	faceplayer
+# 438 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_Trigger_DadGiveMon1_Text_0
-# 441 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 439 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_Trigger_DadGiveMon1_Text_1
-# 442 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 440 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	givemon SPECIES_TYROGUE, 5
-# 443 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 441 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq ShaydwellTown_Trigger_DadGiveMon9_5
-# 449 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 447 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq ShaydwellTown_Trigger_DadGiveMon9_6
-# 456 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 454 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	hidemonpic
-# 457 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 455 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_Trigger_DadGiveMon1_Text_3
 ShaydwellTown_Trigger_DadGiveMon9_4:
-# 459 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 457 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_Trigger_DadGiveMon1_Text_4
-# 460 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 458 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
-# 461 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 459 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setvar VAR_SHAYDWELL_INTRO_STATE, 2
-# 462 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 460 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitmessage
-# 463 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 461 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	return
 
 ShaydwellTown_Trigger_DadGiveMon9_5:
-# 444 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 442 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 445 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 443 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_Trigger_DadGiveMon1_Text_2
-# 446 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 444 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitfanfare
-# 447 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 445 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	call NicknamePartyMon
 	goto ShaydwellTown_Trigger_DadGiveMon9_4
 
 ShaydwellTown_Trigger_DadGiveMon9_6:
-# 450 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 448 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 451 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 449 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_Trigger_DadGiveMon1_Text_2
-# 452 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 450 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitfanfare
-# 453 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 451 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	call NicknamePartyMon
 	goto ShaydwellTown_Trigger_DadGiveMon9_4
 
 
 ShaydwellTown_EventScript_OldWoman::
-# 478 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 476 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	lock
-# 479 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 477 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	faceplayer
-# 480 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 478 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_OldWoman_Text_0
-# 481 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 479 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	return
 
 
 ShaydwellTown_EventScript_Walking_Boy::
-# 485 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 483 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	lock
-# 486 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 484 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	faceplayer
-# 487 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 485 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_0
 	checkitem ITEM_LAVA_COOKIE, 1
 # 0 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -741,205 +741,207 @@ ShaydwellTown_EventScript_Walking_Boy_8:
 	compare VAR_RESULT, TRUE
 	goto_if_eq ShaydwellTown_EventScript_Walking_Boy_7
 ShaydwellTown_EventScript_Walking_Boy_6:
-# 579 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 577 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	return
 
 ShaydwellTown_EventScript_Walking_Boy_1:
-# 490 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 488 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_1, MSGBOX_YESNO
-# 491 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 489 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ShaydwellTown_EventScript_Walking_Boy_22
-# 501 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 499 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_3
-# 502 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 500 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	end
 
 ShaydwellTown_EventScript_Walking_Boy_2:
-# 508 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 506 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_4, MSGBOX_YESNO
-# 509 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 507 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ShaydwellTown_EventScript_Walking_Boy_25
-# 519 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 517 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_3
-# 520 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 518 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	end
 
 ShaydwellTown_EventScript_Walking_Boy_3:
-# 526 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 524 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_5, MSGBOX_YESNO
-# 527 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 525 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ShaydwellTown_EventScript_Walking_Boy_28
-# 537 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 535 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_3
-# 538 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 536 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	end
 
 ShaydwellTown_EventScript_Walking_Boy_4:
-# 544 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 542 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_6, MSGBOX_YESNO
-# 545 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 543 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ShaydwellTown_EventScript_Walking_Boy_31
-# 555 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 553 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_3
-# 556 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 554 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	end
 
 ShaydwellTown_EventScript_Walking_Boy_5:
-# 562 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 560 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_7, MSGBOX_YESNO
-# 563 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 561 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ShaydwellTown_EventScript_Walking_Boy_34
-# 573 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 571 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_3
-# 574 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 572 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	end
 
 ShaydwellTown_EventScript_Walking_Boy_7:
-# 561 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 559 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	goto_if_unset FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR, ShaydwellTown_EventScript_Walking_Boy_5
 	goto ShaydwellTown_EventScript_Walking_Boy_6
 
 ShaydwellTown_EventScript_Walking_Boy_10:
-# 543 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 541 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	goto_if_unset FLAG_GAVE_WALKING_BOY_LEMONADE, ShaydwellTown_EventScript_Walking_Boy_4
 	goto ShaydwellTown_EventScript_Walking_Boy_8
 
 ShaydwellTown_EventScript_Walking_Boy_13:
-# 525 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 523 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	goto_if_unset FLAG_GAVE_WALKING_BOY_FRESH_WATER, ShaydwellTown_EventScript_Walking_Boy_3
 	goto ShaydwellTown_EventScript_Walking_Boy_11
 
 ShaydwellTown_EventScript_Walking_Boy_16:
-# 507 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 505 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	goto_if_unset FLAG_GAVE_WALKING_BOY_CASTELIACONE, ShaydwellTown_EventScript_Walking_Boy_2
 	goto ShaydwellTown_EventScript_Walking_Boy_14
 
 ShaydwellTown_EventScript_Walking_Boy_19:
-# 489 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 487 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	goto_if_unset FLAG_GAVE_WALKING_BOY_LAVA_COOKIE, ShaydwellTown_EventScript_Walking_Boy_1
 	goto ShaydwellTown_EventScript_Walking_Boy_17
 
 ShaydwellTown_EventScript_Walking_Boy_22:
-# 492 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 490 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_2
-# 493 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 491 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	removeitem ITEM_LAVA_COOKIE, 1
-# 494 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 492 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	giveitem ITEM_FIRE_STONE, 1
-# 495 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 493 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitfanfare
-# 496 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 494 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_GAVE_WALKING_BOY_LAVA_COOKIE
-# 497 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 495 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	end
 
 ShaydwellTown_EventScript_Walking_Boy_25:
-# 510 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 508 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_2
-# 511 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 509 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	removeitem ITEM_CASTELIACONE, 1
-# 512 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 510 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	giveitem ITEM_ICE_STONE, 1
-# 513 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 511 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitfanfare
-# 514 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 512 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_GAVE_WALKING_BOY_CASTELIACONE
-# 515 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 513 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	end
 
 ShaydwellTown_EventScript_Walking_Boy_28:
-# 528 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 526 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_2
-# 529 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 527 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	removeitem ITEM_FRESH_WATER, 1
-# 530 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 528 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	giveitem ITEM_WATER_STONE, 1
-# 531 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 529 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitfanfare
-# 532 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 530 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_GAVE_WALKING_BOY_FRESH_WATER
-# 533 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 531 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	end
 
 ShaydwellTown_EventScript_Walking_Boy_31:
-# 546 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 544 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_2
-# 547 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 545 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	removeitem ITEM_LEMONADE, 1
-# 548 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 546 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	giveitem ITEM_THUNDERSTONE, 1
-# 549 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 547 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitfanfare
-# 550 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 548 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_GAVE_WALKING_BOY_LEMONADE
-# 551 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 549 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	end
 
 ShaydwellTown_EventScript_Walking_Boy_34:
-# 564 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 562 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Walking_Boy_Text_2
-# 565 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 563 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	removeitem ITEM_RAGE_CANDY_BAR, 1
-# 566 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 564 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	giveitem ITEM_MOON_STONE, 1
-# 567 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 565 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitfanfare
-# 568 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 566 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR
-# 569 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 567 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	end
 
 
 ShaydwellTown_EventScript_Policeman::
-# 584 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 582 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	lock
-# 585 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	face_player
-# 586 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 583 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+	faceplayer
+# 584 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Policeman_Text_0
-# 587 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 585 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	return
 
 
 ShaydwellTown_EventScript_Science_Rules::
-# 591 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 589 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	lock
-# 592 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	face_player
-# 593 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 590 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+	faceplayer
+# 591 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Science_Rules_Text_0
-# 594 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 592 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	return
 
 
 ShaydwellTown_Trigger_BlockPathNorth::
-# 600 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 598 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	lock
-# 601 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	msgbox ShaydwellTown_Trigger_BlockPathNorth_Text_0
+# 599 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+	applymovement 4, ShaydwellTown_Trigger_BlockPathNorth_Movement_0
 # 602 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ShaydwellTown_Trigger_BlockPathNorth_Movement_0
-# 605 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	waitmovement 0
+	msgbox ShaydwellTown_Trigger_BlockPathNorth_Text_0
+# 603 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ShaydwellTown_Trigger_BlockPathNorth_Movement_1
 # 606 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+	waitmovement 0
+# 607 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	return
 
@@ -1040,15 +1042,15 @@ ShaydwellTown_Trigger_DadGiveMon8_Movement_0:
 	walk_right
 	step_end
 
-# 437 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-ShaydwellTown_Trigger_DadGiveMon9_Movement_0:
-# 438 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 599 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+ShaydwellTown_Trigger_BlockPathNorth_Movement_0:
+# 600 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	face_player
 	step_end
 
-# 602 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-ShaydwellTown_Trigger_BlockPathNorth_Movement_0:
 # 603 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+ShaydwellTown_Trigger_BlockPathNorth_Movement_1:
+# 604 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	walk_down
 	step_end
 
@@ -1104,12 +1106,12 @@ ShaydwellTown_Trigger_DadGiveMon1_Text_4:
 	.string "backyard?$"
 
 ShaydwellTown_Trigger_DadGiveMon9_Text_0:
-# 468 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 466 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "I love you, bubby! You make me proud\n"
 	.string "every day.$"
 
 ShaydwellTown_EventScript_OldWoman_Text_0:
-# 480 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 478 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "Bronzong Lake is so named because of\n"
 	.string "an old legend.\p"
 	.string "The legend tells of a Bronzong who\n"
@@ -1117,55 +1119,55 @@ ShaydwellTown_EventScript_OldWoman_Text_0:
 	.string "thirty days, thus creating the lake.$"
 
 ShaydwellTown_EventScript_Walking_Boy_Text_0:
-# 487 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 485 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string ".....\p"
 	.string "..................................\p"
 	.string ".................................................................{PAUSE 30}.{PAUSE 30}.{PAUSE 30}?$"
 
 ShaydwellTown_EventScript_Walking_Boy_Text_1:
-# 490 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 488 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "Give the walking boy your Lava Cookie?$"
 
 ShaydwellTown_EventScript_Walking_Boy_Text_2:
-# 492 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 490 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string ".....!$"
 
 ShaydwellTown_EventScript_Walking_Boy_Text_3:
-# 501 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 499 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string ".....$"
 
 ShaydwellTown_EventScript_Walking_Boy_Text_4:
-# 508 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 506 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "Give the walking boy your Casteliacone?$"
 
 ShaydwellTown_EventScript_Walking_Boy_Text_5:
-# 526 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 524 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "Give the walking boy your Fresh Water?$"
 
 ShaydwellTown_EventScript_Walking_Boy_Text_6:
-# 544 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 542 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "Give the walking boy your Lemonade?$"
 
 ShaydwellTown_EventScript_Walking_Boy_Text_7:
-# 562 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 560 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "Give the walking boy your Rage Candy\n"
 	.string "Bar?$"
 
 ShaydwellTown_EventScript_Policeman_Text_0:
-# 586 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 584 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "We've seen a lot of criminal activity on\n"
 	.string "Route 11.\p"
 	.string "So, we're only allowing trainers with at\n"
 	.string "least seven badges to pass.$"
 
 ShaydwellTown_EventScript_Science_Rules_Text_0:
-# 593 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 591 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "The power of science is amazing!\p"
 	.string "Now you can make your very own Pokémon\n"
 	.string "game!$"
 
 ShaydwellTown_Trigger_BlockPathNorth_Text_0:
-# 601 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 602 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "Hey, kid! It's not safe past here.$"
 
 ShaydwellTown_NotChosen::

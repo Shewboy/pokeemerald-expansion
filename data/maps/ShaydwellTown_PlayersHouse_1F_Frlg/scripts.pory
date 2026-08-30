@@ -1,0 +1,78 @@
+mapscripts ShaydwellTown_PlayersHouse_1F_Frlg_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_SHAYDWELL_INTRO_STATE, 0: ShaydwellTown_PlayersHouse_1F_Mom_Go_Help_Dad
+        ]
+}
+
+script ShaydwellTown_PlayersHouse_1F_Mom_Go_Help_Dad{
+    lock
+    applymovement(1, moves(
+            face_right
+    ))
+    waitmovement(0)
+    msgbox(format("Oh good, {PLAYER}, you're awake."))
+    closemessage
+    applymovement(LOCALID_PLAYER, moves(
+        face_left
+    ))
+    applymovement(1, moves(
+        walk_right * 5
+    ))
+    waitmovement(0)
+    msgbox(format("Your father is in the backyard doing yard work. Why don't you lend him a hand?"))
+    setvar(VAR_SHAYDWELL_INTRO_STATE, 1)
+    release
+}
+
+script ShaydwellTown_PlayersHouse_1F_Trigger_Dont_Leave{
+    if (var(VAR_SHAYDWELL_INTRO_STATE) == 1) {
+        lock
+        applymovement(1, moves(
+            face_player
+        ))
+        msgbox(format("Really? Your dad could use your help!"))
+        closemessage
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(
+            walk_up
+        ))
+        waitmovement(0)
+        release
+    }
+    else {
+    }
+}
+
+script ShaydwellTown_PlayersHouse_1F_EventScript_Mom{
+    if (var(VAR_SHAYDWELL_INTRO_STATE) == 1) {
+        lock
+        faceplayer
+        msgbox(format("Why don't you lend your father a hand?"))
+        release
+    }
+    elif (var(VAR_SHAYDWELL_INTRO_STATE) == 2) {
+        lock
+        faceplayer
+        msgbox(format("So, were you surprised? I hope I didn't spoil it!\pDid Dad give you any Pok\e Balls?\pHe must have gotten so worked up that he forgot."))
+        giveitem(ITEM_POKE_BALL,5)
+        waitfanfare
+        msgbox(format("The world is your Cloyster now, honey.\pJust don't forget to call us once in a while, okay?\pAnd be safe!"))
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 3)
+        release
+    }
+    else {
+        lock
+        faceplayer
+        msgbox(format("You look tired. Why don't you rest up some?"))
+        closemessage
+	    call(Common_EventScript_OutOfCenterPartyHeal)
+        msgbox(format("Much better! Keep doing your best, {PLAYER}."))
+        release
+    }
+}
+
+script ShaydwellTown_PlayersHouse_1F_Little_Sister{
+    lock
+    faceplayer
+    msgbox(format("I saw a rare Pok\emon in our backyard!\pMom doesn't believe me though..."))
+    release
+}
