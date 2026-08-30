@@ -45,20 +45,6 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_FRLG",
-      "x": 17,
-      "y": 12,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 3,
-      "movement_range_y": 3,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ShaydwellTown_EventScript_Science_Rules",
-      "flag": "0"
-    },
-    {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_FRLG",
       "x": 6,
       "y": 12,
@@ -91,14 +77,14 @@
       "x": 10,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_QUAYSHADE_TOWN_PLAYERS_HOUSE_1F",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_SHAYDWELL_TOWN_PLAYERS_HOUSE_1F_FRLG",
+      "dest_warp_id": "1"
     },
     {
       "x": 9,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_QUAYSHADE_TOWN_PLAYERS_HOUSE_1F",
+      "dest_map": "MAP_SHAYDWELL_TOWN_PLAYERS_HOUSE_1F_FRLG",
       "dest_warp_id": "0"
     },
     {

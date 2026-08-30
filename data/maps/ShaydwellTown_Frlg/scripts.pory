@@ -76,7 +76,7 @@ script ShaydwellTown_Text_TownSign {
 
 script ShaydwellTown_Text_PlayerHouseSign {
     lockall
-    msgbox("Player's House", MSGBOX_SIGN)
+    msgbox("{PLAYER}'s House", MSGBOX_SIGN)
     releaseall
 }
 
@@ -484,7 +484,7 @@ script ShaydwellTown_EventScript_OldWoman {
 script ShaydwellTown_EventScript_Walking_Boy{
     lock
     faceplayer
-    msgbox(format(".....\p..................................\p...................................................................?"))
+    msgbox(format(".....\p..................................\p.................................................................{PAUSE 30}.{PAUSE 30}.{PAUSE 30}?"))
     // LAVA COOKIE -> FIRE STINE
     if (checkitem(ITEM_LAVA_COOKIE,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_LAVA_COOKIE)) {
         msgbox(format("Give the walking boy your Lava Cookie?"), MSGBOX_YESNO)
@@ -582,18 +582,14 @@ script ShaydwellTown_EventScript_Walking_Boy{
 
 script ShaydwellTown_EventScript_Policeman {
     lock
-    applymovement(4, moves(
-        face_player
-    ))
+    face_player
     msgbox(format("We've seen a lot of criminal activity on Route 11.\pSo, we're only allowing trainers with at least seven badges to pass."))
     release
 }
 
 script ShaydwellTown_EventScript_Science_Rules {
     lock
-    applymovement(5, moves(
-        face_player
-    ))
+    face_player
     msgbox(format("The power of science is amazing!\pNow you can make your very own Pok\emon game!"))
     release
 }

@@ -75,7 +75,8 @@
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
-    "gMapGroup_IndoorQuayshade"
+    "gMapGroup_IndoorQuayshade",
+    "gMapGroup_IndoorShaydwell_Frlg"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1169,5 +1170,9 @@
     "QuayshadeTown_PlayersHouse_2F",
     "QuayshadeTown_CodyHouse_1F",
     "QuayshadeTown_ThirdHouse_1F"
+  ],
+  "gMapGroup_IndoorShaydwell_Frlg": [
+    "ShaydwellTown_PlayersHouse_1F_Frlg",
+    "ShaydwellTown_PlayersHouse_2F_Frlg"
   ]
 }

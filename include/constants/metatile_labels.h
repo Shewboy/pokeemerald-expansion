@@ -896,6 +896,9 @@
 #define METATILE_SeviiIslands67_DottedHoleDoor_Closed  0x357
 #define METATILE_SeviiIslands67_DottedHoleDoor_Open    0x358
 
+// gTileset_ShaydwellTown
+#define METATILE_ShaydwellTown_Door  0x2A3
+
 // gTileset_Shop
 #define METATILE_Shop_Door_Elevator   0x285
 #define METATILE_Shop_Laptop1_Flash   0x258

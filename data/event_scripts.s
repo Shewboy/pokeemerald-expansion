@@ -1740,3 +1740,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/wild_encounter.inc"
 	.include "data/maps/ShaydwellTown_Frlg/scripts.inc"
 	.include "data/maps/ShaydwellTown_Frlg/text.inc"
+
+	.include "data/maps/ShaydwellTown_PlayersHouse_1F_Frlg/scripts.inc"
+	.include "data/maps/ShaydwellTown_PlayersHouse_1F_Frlg/text.inc"
+
+	.include "data/maps/ShaydwellTown_PlayersHouse_2F_Frlg/scripts.inc"
+	.include "data/maps/ShaydwellTown_PlayersHouse_2F_Frlg/text.inc"

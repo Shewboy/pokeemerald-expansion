@@ -10224,8 +10224,8 @@
       "name": "QuayshadeTown_PlayersHouse_1F_Layout",
       "width": 11,
       "height": 9,
-      "border_width": 0,
-      "border_height": 0,
+      "border_width": 2,
+      "border_height": 2,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/QuayshadeTown_PlayersHouse_1F/border.bin",
@@ -10282,6 +10282,30 @@
       "secondary_tileset": "gTileset_ShaydwellTown",
       "border_filepath": "data/layouts/ShaydwellTown_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/ShaydwellTown_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_SHAYDWELL_TOWN_PLAYERS_HOUSE_1F_FRLG",
+      "name": "ShaydwellTown_PlayersHouse_1F_Frlg_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/ShaydwellTown_PlayersHouse_1F_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ShaydwellTown_PlayersHouse_1F_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_SHAYDWELL_TOWN_PLAYERS_HOUSE_2F_FRLG",
+      "name": "ShaydwellTown_PlayersHouse_2F_Frlg_Layout",
+      "width": 12,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/ShaydwellTown_PlayersHouse_2F_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ShaydwellTown_PlayersHouse_2F_Frlg/map.bin"
     }
   ]
 }

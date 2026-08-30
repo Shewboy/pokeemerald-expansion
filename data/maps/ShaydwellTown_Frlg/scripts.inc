@@ -910,36 +910,36 @@ ShaydwellTown_EventScript_Policeman::
 # 584 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	lock
 # 585 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	applymovement 4, ShaydwellTown_Trigger_DadGiveMon9_Movement_0
-# 588 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+	face_player
+# 586 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Policeman_Text_0
-# 589 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 587 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	return
 
 
 ShaydwellTown_EventScript_Science_Rules::
-# 593 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 591 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	lock
-# 594 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	applymovement 5, ShaydwellTown_Trigger_DadGiveMon9_Movement_0
-# 597 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 592 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+	face_player
+# 593 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_EventScript_Science_Rules_Text_0
-# 598 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 594 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	return
 
 
 ShaydwellTown_Trigger_BlockPathNorth::
-# 604 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 600 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	lock
-# 605 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 601 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	msgbox ShaydwellTown_Trigger_BlockPathNorth_Text_0
-# 606 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 602 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ShaydwellTown_Trigger_BlockPathNorth_Movement_0
-# 609 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 605 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitmovement 0
-# 610 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 606 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	release
 	return
 
@@ -1046,9 +1046,9 @@ ShaydwellTown_Trigger_DadGiveMon9_Movement_0:
 	face_player
 	step_end
 
-# 606 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 602 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 ShaydwellTown_Trigger_BlockPathNorth_Movement_0:
-# 607 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 603 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	walk_down
 	step_end
 
@@ -1066,7 +1066,7 @@ ShaydwellTown_Text_TownSign_Text_0:
 
 ShaydwellTown_Text_PlayerHouseSign_Text_0:
 # 79 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	.string "Player's House$"
+	.string "{PLAYER}'s House$"
 
 ShaydwellTown_Text_CodyHouseSign_Text_0:
 # 85 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -1120,7 +1120,7 @@ ShaydwellTown_EventScript_Walking_Boy_Text_0:
 # 487 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string ".....\p"
 	.string "..................................\p"
-	.string "...................................................................?$"
+	.string ".................................................................{PAUSE 30}.{PAUSE 30}.{PAUSE 30}?$"
 
 ShaydwellTown_EventScript_Walking_Boy_Text_1:
 # 490 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -1152,20 +1152,20 @@ ShaydwellTown_EventScript_Walking_Boy_Text_7:
 	.string "Bar?$"
 
 ShaydwellTown_EventScript_Policeman_Text_0:
-# 588 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 586 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "We've seen a lot of criminal activity on\n"
 	.string "Route 11.\p"
 	.string "So, we're only allowing trainers with at\n"
 	.string "least seven badges to pass.$"
 
 ShaydwellTown_EventScript_Science_Rules_Text_0:
-# 597 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 593 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "The power of science is amazing!\p"
 	.string "Now you can make your very own Pokémon\n"
 	.string "game!$"
 
 ShaydwellTown_Trigger_BlockPathNorth_Text_0:
-# 605 "data/maps/ShaydwellTown_Frlg/scripts.pory"
+# 601 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	.string "Hey, kid! It's not safe past here.$"
 
 ShaydwellTown_NotChosen::
