@@ -10250,8 +10250,8 @@
       "name": "QuayshadeTown_CodyHouse_1F_Layout",
       "width": 11,
       "height": 9,
-      "border_width": 0,
-      "border_height": 0,
+      "border_width": 2,
+      "border_height": 2,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/QuayshadeTown_CodyHouse_1F/border.bin",
@@ -10263,8 +10263,8 @@
       "name": "QuayshadeTown_ThirdHouse_1F_Layout",
       "width": 11,
       "height": 9,
-      "border_width": 0,
-      "border_height": 0,
+      "border_width": 2,
+      "border_height": 2,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/QuayshadeTown_ThirdHouse_1F/border.bin",
@@ -10306,6 +10306,30 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/ShaydwellTown_PlayersHouse_2F_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/ShaydwellTown_PlayersHouse_2F_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_SHAYDWELL_TOWN_CODYS_HOUSE_1F_FRLG",
+      "name": "ShaydwellTown_CodysHouse_1F_Frlg_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/ShaydwellTown_CodysHouse_1F_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ShaydwellTown_CodysHouse_1F_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_SHAYDWELL_TOWN_THIRD_HOUSE_1F_FRLG",
+      "name": "ShaydwellTown_ThirdHouse_1F_Frlg_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/ShaydwellTown_ThirdHouse_1F_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ShaydwellTown_ThirdHouse_1F_Frlg/map.bin"
     }
   ]
 }

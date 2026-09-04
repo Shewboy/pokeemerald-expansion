@@ -1,0 +1,9 @@
+mapscripts ShaydwellTown_CodysHouse_1F_Frlg_MapScripts {
+}
+
+script ShaydwellTown_CodysHouse_1F_CodyMom{
+    lock
+    faceplayer
+    msgbox(format("Hm? Cody? He's fishing down at Bronzong Lake.\pThat boy is always outside!"))
+    release
+}

@@ -1173,6 +1173,8 @@
   ],
   "gMapGroup_IndoorShaydwell_Frlg": [
     "ShaydwellTown_PlayersHouse_1F_Frlg",
-    "ShaydwellTown_PlayersHouse_2F_Frlg"
+    "ShaydwellTown_PlayersHouse_2F_Frlg",
+    "ShaydwellTown_CodysHouse_1F_Frlg",
+    "ShaydwellTown_ThirdHouse_1F_Frlg"
   ]
 }

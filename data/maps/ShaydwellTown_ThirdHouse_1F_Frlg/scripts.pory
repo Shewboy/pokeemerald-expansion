@@ -1,0 +1,24 @@
+mapscripts ShaydwellTown_ThirdHouse_1F_Frlg_MapScripts {
+}
+
+script ShaydwellTown_ThirdHouse_1F_Woman{
+    lock
+    faceplayer
+    msgbox(format("We heard this was a great place to raise a family, so we up and moved from Insinvi City.\pThe crime there just became too much to handle."))
+    release
+}
+
+script ShaydwellTown_ThirdHouse_1F_Man{
+    lock
+    faceplayer
+    msgbox(format("It's much quieter here compared to Insinvi."))
+    release
+}
+
+script ShaydwellTown_ThirdHouse_1F_Meowth{
+    lock
+    faceplayer
+    playmoncry(SPECIES_MEOWTH, CRY_MODE_NORMAL)
+    msgbox(format("Meow!"))
+    release
+}
