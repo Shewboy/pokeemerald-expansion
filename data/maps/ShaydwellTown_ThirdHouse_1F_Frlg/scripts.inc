@@ -21,19 +21,21 @@ ShaydwellTown_ThirdHouse_1F_Man::
 	faceplayer
 # 14 "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/scripts.pory"
 	msgbox ShaydwellTown_ThirdHouse_1F_Man_Text_0
+# 15 "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/scripts.pory"
+	release
 	return
 
 
 ShaydwellTown_ThirdHouse_1F_Meowth::
-# 18 "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/scripts.pory"
-	lock
 # 19 "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/scripts.pory"
-	faceplayer
+	lock
 # 20 "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/scripts.pory"
-	playmoncry SPECIES_MEOWTH, CRY_MODE_NORMAL
+	faceplayer
 # 21 "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/scripts.pory"
-	msgbox ShaydwellTown_ThirdHouse_1F_Meowth_Text_0
+	playmoncry SPECIES_MEOWTH, CRY_MODE_NORMAL
 # 22 "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/scripts.pory"
+	msgbox ShaydwellTown_ThirdHouse_1F_Meowth_Text_0
+# 23 "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/scripts.pory"
 	release
 	return
 
@@ -52,5 +54,5 @@ ShaydwellTown_ThirdHouse_1F_Man_Text_0:
 	.string "Insinvi.$"
 
 ShaydwellTown_ThirdHouse_1F_Meowth_Text_0:
-# 21 "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/scripts.pory"
+# 22 "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/scripts.pory"
 	.string "Meow!$"
