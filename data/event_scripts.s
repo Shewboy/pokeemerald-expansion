@@ -1752,3 +1752,6 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 
 	.include "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/scripts.inc"
 	.include "data/maps/ShaydwellTown_ThirdHouse_1F_Frlg/text.inc"
+
+	.include "data/maps/BronzongLake_Frlg/scripts.inc"
+	.include "data/maps/BronzongLake_Frlg/text.inc"

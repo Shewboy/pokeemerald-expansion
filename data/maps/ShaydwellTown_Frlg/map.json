@@ -13,7 +13,13 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_BRONZONG_LAKE_FRLG",
+      "offset": -1,
+      "direction": "left"
+    }
+  ],
   "object_events": [
     {
       "type": "object",
@@ -119,15 +125,6 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 12,
-      "y": 7,
-      "elevation": 0,
-      "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "1",
-      "script": "ShaydwellTown_Trigger_DadGiveMon8"
-    },
-    {
-      "type": "trigger",
       "x": 11,
       "y": 7,
       "elevation": 0,
@@ -215,6 +212,15 @@
       "var": "VAR_SHAYDWELL_TOWN_STATE",
       "var_value": "0",
       "script": "ShaydwellTown_Trigger_BlockPathNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_SHAYDWELL_INTRO_STATE",
+      "var_value": "1",
+      "script": "ShaydwellTown_Trigger_DadGiveMon8"
     }
   ],
   "bg_events": [

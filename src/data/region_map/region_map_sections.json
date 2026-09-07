@@ -1630,6 +1630,10 @@
     {
       "id": "MAPSEC_SHAYDWELL_TOWN",
       "name": "SHAYDWELL TOWN"
+    },
+    {
+      "id": "MAPSEC_BRONZONG_LAKE",
+      "name": "BRONZONG LAKE"
     }
   ]
 }
