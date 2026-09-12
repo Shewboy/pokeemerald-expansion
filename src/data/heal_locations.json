@@ -361,7 +361,7 @@
     {
       "id": "HEAL_LOCATION_SHAYDWELL_TOWN",
       "map": "MAP_SHAYDWELL_TOWN_FRLG",
-      "x": 14,
+      "x": 20,
       "y": 13,
       "respawn_map": "MAP_SHAYDWELL_TOWN_FRLG",
       "respawn_npc": "1"

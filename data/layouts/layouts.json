@@ -10274,7 +10274,7 @@
     {
       "id": "LAYOUT_SHAYDWELL_TOWN_FRLG",
       "name": "ShaydwellTown_Frlg_Layout",
-      "width": 28,
+      "width": 34,
       "height": 26,
       "border_width": 2,
       "border_height": 2,
@@ -10334,7 +10334,7 @@
     {
       "id": "LAYOUT_BRONZONG_LAKE_FRLG",
       "name": "BronzongLake_Frlg_Layout",
-      "width": 36,
+      "width": 17,
       "height": 32,
       "border_width": 2,
       "border_height": 2,
@@ -10342,6 +10342,18 @@
       "secondary_tileset": "gTileset_ShaydwellTown",
       "border_filepath": "data/layouts/BronzongLake_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/BronzongLake_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_BRONZONG_LAKE_WEST_FRLG",
+      "name": "BronzongLakeWest_Frlg_Layout",
+      "width": 13,
+      "height": 32,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General_Frlg",
+      "secondary_tileset": "gTileset_ShaydwellTown",
+      "border_filepath": "data/layouts/BronzongLakeWest_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/BronzongLakeWest_Frlg/map.bin"
     }
   ]
 }

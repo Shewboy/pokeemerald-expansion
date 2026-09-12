@@ -1,0 +1,48 @@
+mapscripts BronzongLake_Frlg_MapScripts {
+}
+
+
+#### NPCs
+
+
+# Proud Dad
+script BronzongLake_EventScript_ProudDad {
+    lock
+    msgbox(format("Great job, son! Now let's see a BUTTERFREE stroke."))
+    release
+}
+
+# Proud Mom
+script BronzongLake_EventScript_ProudMom {
+    lock
+    faceplayer
+    msgbox(format("Our little boy is like a POLIWAG the way he swims.\pBefore we know it, he'll be doing laps-just like his father used to!"))
+    release
+}
+
+# Tuber
+script BronzongLake_EventScript_Tuber {
+    lock
+    faceplayer
+    msgbox(format("Where's your bathing suit?"))
+    release
+}
+
+# Old Woman
+script BronzongLake_EventScript_OldWoman {
+    lock
+    faceplayer
+    msgbox(format("Lots of people my age complain about how rowdy children can be.\pBut not me! It warms my heart to see them enjoying their youth."))
+    release
+}
+
+
+#### SIGNPOSTS
+
+
+# Swim Club
+script BronzongLake_Text_SwimClubSign {
+    lockall
+    msgbox("Bronzong Lake Community Swim Club", MSGBOX_SIGN)
+    releaseall
+}
