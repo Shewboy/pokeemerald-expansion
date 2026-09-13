@@ -56,7 +56,7 @@
 #define FLAG_GAVE_WALKING_BOY_FRESH_WATER    0x22 // Defined by DShew
 #define FLAG_GAVE_WALKING_BOY_LEMONADE    0x23 // Defined by DShew
 #define FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR    0x24 // Defined by DShew
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
+#define FLAG_BRONZONG_LAKE_ULTRA_BALL    0x25 // Defined by DShew
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag

@@ -154,7 +154,7 @@
 #define FLAG_GAVE_WALKING_BOY_FRESH_WATER                  0x0B1
 #define FLAG_GAVE_WALKING_BOY_LEMONADE                     0x0B2
 #define FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR               0x0B3
-#define FLAG_0x0B4               0x0B4
+#define FLAG_0x0B4                                         0x0B4
 #define FLAG_0x0B5               0x0B5
 #define FLAG_0x0B6               0x0B6
 #define FLAG_0x0B7               0x0B7
@@ -1188,7 +1188,7 @@
 #define FLAG_HIDDEN_ITEM_SSANNE_EXTERIOR_LAVA_COOKIE                       (FLAG_HIDDEN_ITEMS_START + 190)
 
 // Unused hidden item flags
-#define FLAG_UNUSED_0x4A7               0x4A7 // Unused Flag
+#define FLAG_BRONZONG_LAKE_ULTRA_BALL   0x4A7 // Unused Flag
 #define FLAG_UNUSED_0x4A8               0x4A8 // Unused Flag
 #define FLAG_UNUSED_0x4A9               0x4A9 // Unused Flag
 #define FLAG_UNUSED_0x4AA               0x4AA // Unused Flag

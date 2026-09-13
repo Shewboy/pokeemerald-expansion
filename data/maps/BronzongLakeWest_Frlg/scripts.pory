@@ -1,0 +1,12 @@
+mapscripts BronzongLakeWest_Frlg_MapScripts {
+}
+
+
+#### TRAINERS
+
+
+# Fisherboy Cody
+script BronzongLake_EventScript_CodyBattle{
+    trainerbattle_single(TRAINER_FISHERBOY_CODY, "YO!", "Aw man!")
+    release
+}
