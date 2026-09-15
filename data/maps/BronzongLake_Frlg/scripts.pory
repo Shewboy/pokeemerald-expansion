@@ -8,7 +8,7 @@ mapscripts BronzongLake_Frlg_MapScripts {
 # Proud Dad
 script BronzongLake_EventScript_ProudDad {
     lock
-    msgbox(format("Great job, son! Now let's see a BUTTERFREE stroke."))
+    msgbox(format("Great job, son! Now let's see a BEAUTIFLY stroke."))
     release
 }
 
@@ -16,7 +16,7 @@ script BronzongLake_EventScript_ProudDad {
 script BronzongLake_EventScript_ProudMom {
     lock
     faceplayer
-    msgbox(format("Our little boy is like a POLIWAG the way he swims.\pBefore we know it, he'll be doing laps-just like his father used to!"))
+    msgbox(format("Our little boy is like a POLIWAG the way he swims.\pBefore we know it, he'll be doing laps - just like his father used to!"))
     release
 }
 

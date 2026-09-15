@@ -61,14 +61,14 @@ BronzongLake_Text_SwimClubSign::
 BronzongLake_EventScript_ProudDad_Text_0:
 # 11 "data/maps/BronzongLake_Frlg/scripts.pory"
 	.string "Great job, son! Now let's see a\n"
-	.string "BUTTERFREE stroke.$"
+	.string "BEAUTIFLY stroke.$"
 
 BronzongLake_EventScript_ProudMom_Text_0:
 # 19 "data/maps/BronzongLake_Frlg/scripts.pory"
 	.string "Our little boy is like a POLIWAG the way\n"
 	.string "he swims.\p"
-	.string "Before we know it, he'll be doing\n"
-	.string "laps-just like his father used to!$"
+	.string "Before we know it, he'll be doing laps -\n"
+	.string "just like his father used to!$"
 
 BronzongLake_EventScript_Tuber_Text_0:
 # 27 "data/maps/BronzongLake_Frlg/scripts.pory"

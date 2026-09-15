@@ -7,6 +7,7 @@ mapscripts BronzongLakeWest_Frlg_MapScripts {
 
 # Fisherboy Cody
 script BronzongLake_EventScript_CodyBattle{
-    trainerbattle_single(TRAINER_FISHERBOY_CODY, "YO!", "Aw man!")
+    trainerbattle_single(TRAINER_FISHERBOY_CODY, format("Hiya, {PLAYER}! I'm trying to catch a ginormous Whiscash!\pBut so far I've only snagged Chewtle..."), "Aw, man!")
+    msgbox(format("That was fun! Come back once you've trained some more and we can battle again."))
     release
 }
