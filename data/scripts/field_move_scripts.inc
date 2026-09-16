@@ -474,3 +474,57 @@ Text_MonUsedRockClimb:
 Text_CantRockClimb:
 	.string "The cliff is steep.\n"
 	.string "A Pokémon may be able to climb it.$"
+
+EventScript_Headbutt::
+	lockall
+	checkfieldmove FIELD_MOVE_HEADBUTT
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantHeadbutt
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
+	msgbox Text_WantToHeadbutt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelHeadbutt
+	msgbox Text_MonUsedHeadbutt, MSGBOX_DEFAULT
+	closemessage
+	dofieldeffect FLDEFF_USE_STRENGTH
+	waitstate
+	delay 5
+	playse SE_M_HEADBUTT
+	waitse
+	delay 16
+	setvar VAR_0x8004, 0  @ vertical pan
+	setvar VAR_0x8005, 2   @ horizontal pan
+	setvar VAR_0x8006, 3  @ num shakes
+	setvar VAR_0x8007, 1   @ shake delay
+	special ShakeCamera
+	waitstate
+	delay 10
+	special RockSmashWildEncounter
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Headbutt_NoEncounter
+	waitstate
+	releaseall
+	end
+
+EventScript_CantHeadbutt::
+	msgbox Text_CantHeadbutt, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EventScript_CancelHeadbutt::
+	closemessage
+	releaseall
+	end
+
+EventScript_Headbutt_NoEncounter::
+	releaseall
+	end
+
+Text_WantToHeadbutt::
+.string "A Pokémon could be in this tree.\n"
+.string "Want to Headbutt it?$"
+
+Text_MonUsedHeadbutt:
+	.string "{STR_VAR_1} used Headbutt!$"
+
+Text_CantHeadbutt:
+.string "A Pokémon could be in this tree.$"
