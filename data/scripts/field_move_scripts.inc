@@ -475,6 +475,7 @@ Text_CantRockClimb:
 	.string "The cliff is steep.\n"
 	.string "A Pokémon may be able to climb it.$"
 
+@ Interact with headbuttable tree
 EventScript_Headbutt::
 	lockall
 	checkfieldmove FIELD_MOVE_HEADBUTT
@@ -504,6 +505,39 @@ EventScript_Headbutt::
 	waitstate
 	releaseall
 	end
+EventScript_HeadbuttCommon:
+	@ check if follower should use the field move
+	isfollowerfieldmoveuser VAR_0x8004
+	setfieldeffectargument 3, VAR_0x8004 @ skip pose if so
+	dofieldeffect FLDEFF_USE_STRENGTH
+	waitstate
+EventScript_Headbutt2:: @ fallthrough
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	call_if_eq VAR_0x8004, TRUE, EventScript_FollowerFieldMove
+	dofieldeffect FLDEFF_USE_STRENGTH
+	waitstate
+	delay 5
+	playse SE_M_HEADBUTT
+	waitse
+	delay 16
+	setvar VAR_0x8004, 0  @ vertical pan
+	setvar VAR_0x8005, 2   @ horizontal pan
+	setvar VAR_0x8006, 3  @ num shakes
+	setvar VAR_0x8007, 1   @ shake delay
+	special ShakeCamera
+	waitstate
+	delay 10
+	special RockSmashWildEncounter
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_Headbutt_NoEncounter
+	waitstate
+	releaseall
+	end
+
+@ Use headbutt from party menu
+EventScript_UseHeadbutt::
+	lockall
+	goto EventScript_HeadbuttCommon
 
 EventScript_CantHeadbutt::
 	msgbox Text_CantHeadbutt, MSGBOX_DEFAULT
