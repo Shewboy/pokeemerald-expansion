@@ -13,13 +13,7 @@
   "show_map_name": false,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_BRONZONG_LAKE_FRLG",
-      "offset": 0,
-      "direction": "right"
-    }
-  ],
+  "connections": null,
   "object_events": [
     {
       "type": "object",
