@@ -486,25 +486,6 @@ EventScript_Headbutt::
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelHeadbutt
 	msgbox Text_MonUsedHeadbutt, MSGBOX_DEFAULT
 	closemessage
-	dofieldeffect FLDEFF_USE_STRENGTH
-	waitstate
-	delay 5
-	playse SE_M_HEADBUTT
-	waitse
-	delay 16
-	setvar VAR_0x8004, 0  @ vertical pan
-	setvar VAR_0x8005, 2   @ horizontal pan
-	setvar VAR_0x8006, 3  @ num shakes
-	setvar VAR_0x8007, 1   @ shake delay
-	special ShakeCamera
-	waitstate
-	delay 10
-	special RockSmashWildEncounter
-	compare VAR_RESULT, 0
-	goto_if_eq EventScript_Headbutt_NoEncounter
-	waitstate
-	releaseall
-	end
 EventScript_HeadbuttCommon:
 	@ check if follower should use the field move
 	isfollowerfieldmoveuser VAR_0x8004
@@ -514,8 +495,6 @@ EventScript_HeadbuttCommon:
 EventScript_Headbutt2:: @ fallthrough
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	call_if_eq VAR_0x8004, TRUE, EventScript_FollowerFieldMove
-	dofieldeffect FLDEFF_USE_STRENGTH
-	waitstate
 	delay 5
 	playse SE_M_HEADBUTT
 	waitse
@@ -527,7 +506,7 @@ EventScript_Headbutt2:: @ fallthrough
 	special ShakeCamera
 	waitstate
 	delay 10
-	special RockSmashWildEncounter
+	special HeadbuttWildEncounter
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_Headbutt_NoEncounter
 	waitstate

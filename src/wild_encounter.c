@@ -340,6 +340,74 @@ static u32 ChooseWildMonIndex_Fishing(u8 rod)
     return wildMonIndex;
 }
 
+// HEADBUTT_WILD_COUNT
+u32 ChooseWildMonIndex_Headbutt(void)
+{
+    u32 wildMonIndex = 0;
+    bool8 swap = FALSE;
+    u8 rand = Random() % ENCOUNTER_CHANCE_HEADBUTT_MONS_TOTAL;
+
+    if (rand < ENCOUNTER_CHANCE_HEADBUTT_MONS_SLOT_0)
+        wildMonIndex = 0;
+    else if (rand >= ENCOUNTER_CHANCE_HEADBUTT_MONS_SLOT_0 && rand < ENCOUNTER_CHANCE_ROCK_SMASH_MONS_SLOT_1)
+        wildMonIndex = 1;
+    else if (rand >= ENCOUNTER_CHANCE_HEADBUTT_MONS_SLOT_1 && rand < ENCOUNTER_CHANCE_ROCK_SMASH_MONS_SLOT_2)
+        wildMonIndex = 2;
+    else if (rand >= ENCOUNTER_CHANCE_HEADBUTT_MONS_SLOT_2 && rand < ENCOUNTER_CHANCE_ROCK_SMASH_MONS_SLOT_3)
+        wildMonIndex = 3;
+    else
+        wildMonIndex = 4;
+
+    if (LURE_STEP_COUNT != 0 && (Random() % 10 < 2))
+        swap = TRUE;
+
+    if (swap)
+        wildMonIndex = 4 - wildMonIndex;
+
+    return wildMonIndex;
+}
+
+// LONG_GRASS_WILD_COUNT
+u32 ChooseWildMonIndex_LongGrass(void)
+{
+    u8 wildMonIndex = 0;
+    bool8 swap = FALSE;
+    u8 rand = Random() % ENCOUNTER_CHANCE_LONG_GRASS_MONS_TOTAL;
+
+    if (rand < ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_0)
+        wildMonIndex = 0;
+    else if (rand >= ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_0 && rand < ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_1)
+        wildMonIndex = 1;
+    else if (rand >= ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_1 && rand < ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_2)
+        wildMonIndex = 2;
+    else if (rand >= ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_2 && rand < ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_3)
+        wildMonIndex = 3;
+    else if (rand >= ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_3 && rand < ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_4)
+        wildMonIndex = 4;
+    else if (rand >= ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_4 && rand < ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_5)
+        wildMonIndex = 5;
+    else if (rand >= ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_5 && rand < ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_6)
+        wildMonIndex = 6;
+    else if (rand >= ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_6 && rand < ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_7)
+        wildMonIndex = 7;
+    else if (rand >= ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_7 && rand < ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_8)
+        wildMonIndex = 8;
+    else if (rand >= ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_8 && rand < ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_9)
+        wildMonIndex = 9;
+    else if (rand >= ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_9 && rand < ENCOUNTER_CHANCE_LONG_GRASS_MONS_SLOT_10)
+        wildMonIndex = 10;
+    else
+        wildMonIndex = 11;
+
+    if (LURE_STEP_COUNT != 0 && (Random() % 10 < 2))
+        swap = TRUE;
+
+    if (swap)
+        wildMonIndex = 11 - wildMonIndex;
+
+    return wildMonIndex;
+}
+
 u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIndex, enum WildPokemonArea area)
 {
     u8 min;
@@ -540,6 +608,24 @@ bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, enum WildPok
     default:
     case WILD_AREA_FISHING:
     case WILD_AREA_HIDDEN:
+    case WILD_AREA_HEADBUTT:
+        wildMonIndex = ChooseWildMonIndex_Headbutt();
+        break;
+    case WILD_AREA_LONG_GRASS:
+        if (TRY_GET_ABILITY_INFLUENCED_WILD_MON_INDEX(wildMonInfo->wildPokemon, TYPE_STEEL, ABILITY_MAGNET_PULL, &wildMonIndex, LONG_GRASS_WILD_COUNT))
+            break;
+        if (TRY_GET_ABILITY_INFLUENCED_WILD_MON_INDEX(wildMonInfo->wildPokemon, TYPE_ELECTRIC, ABILITY_STATIC, &wildMonIndex, LONG_GRASS_WILD_COUNT))
+            break;
+        if (OW_LIGHTNING_ROD >= GEN_8 && TRY_GET_ABILITY_INFLUENCED_WILD_MON_INDEX(wildMonInfo->wildPokemon, TYPE_ELECTRIC, ABILITY_LIGHTNING_ROD, &wildMonIndex, LONG_GRASS_WILD_COUNT))
+            break;
+        if (OW_FLASH_FIRE >= GEN_8 && TRY_GET_ABILITY_INFLUENCED_WILD_MON_INDEX(wildMonInfo->wildPokemon, TYPE_FIRE, ABILITY_FLASH_FIRE, &wildMonIndex, LONG_GRASS_WILD_COUNT))
+            break;
+        if (OW_HARVEST >= GEN_8 && TRY_GET_ABILITY_INFLUENCED_WILD_MON_INDEX(wildMonInfo->wildPokemon, TYPE_GRASS, ABILITY_HARVEST, &wildMonIndex, LONG_GRASS_WILD_COUNT))
+            break;
+        if (OW_STORM_DRAIN >= GEN_8 && TRY_GET_ABILITY_INFLUENCED_WILD_MON_INDEX(wildMonInfo->wildPokemon, TYPE_WATER, ABILITY_STORM_DRAIN, &wildMonIndex, LONG_GRASS_WILD_COUNT))
+            break;
+
+        wildMonIndex = ChooseWildMonIndex_LongGrass();
         break;
     }
 
@@ -707,7 +793,55 @@ bool8 StandardWildEncounter(u16 curMetatileBehavior, u16 prevMetatileBehavior)
     }
     else
     {
-        if (MetatileBehavior_IsLandWildEncounter(curMetatileBehavior) == TRUE)
+        if (MetatileBehavior_IsLongGrass(curMetatileBehavior) == TRUE)
+        {
+            timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_LONG_GRASS);
+
+            if (gWildMonHeaders[headerId].encounterTypes[timeOfDay].longGrassMonsInfo == NULL)
+                return FALSE;
+            else if (prevMetatileBehavior != curMetatileBehavior && !AllowWildCheckOnNewMetatile())
+                return FALSE;
+            else if (WildEncounterCheck(gWildMonHeaders[headerId].encounterTypes[timeOfDay].longGrassMonsInfo->encounterRate, FALSE) != TRUE)
+                return FALSE;
+
+            if (TryStartRoamerEncounter())
+            {
+                roamer = &gSaveBlock1Ptr->roamer[gEncounteredRoamerIndex];
+                if (!IsWildLevelAllowedByRepel(roamer->level))
+                    return FALSE;
+
+                BattleSetup_StartRoamerBattle();
+                return TRUE;
+            }
+            else
+            {
+                if (DoMassOutbreakEncounterTest() == TRUE && SetUpMassOutbreakEncounter(WILD_CHECK_REPEL | WILD_CHECK_KEEN_EYE) == TRUE)
+                {
+                    BattleSetup_StartWildBattle();
+                    return TRUE;
+                }
+
+                // try a regular wild long grass encounter
+                if (TryGenerateWildMon(gWildMonHeaders[headerId].encounterTypes[timeOfDay].longGrassMonsInfo, WILD_AREA_LONG_GRASS, WILD_CHECK_REPEL | WILD_CHECK_KEEN_EYE) == TRUE)
+                {
+                    if (TryDoDoubleWildBattle())
+                    {
+                        struct Pokemon mon1 = gParties[B_TRAINER_OPPONENT_A][0];
+                        TryGenerateWildMon(gWildMonHeaders[headerId].encounterTypes[timeOfDay].longGrassMonsInfo, WILD_AREA_LONG_GRASS, WILD_CHECK_KEEN_EYE);
+                        gParties[B_TRAINER_OPPONENT_A][1] = mon1;
+                        BattleSetup_StartDoubleWildBattle();
+                    }
+                    else
+                    {
+                        BattleSetup_StartWildBattle();
+                    }
+                    return TRUE;
+                }
+
+                return FALSE;
+            }
+        }
+        else if (MetatileBehavior_IsLandWildEncounter(curMetatileBehavior) == TRUE)
         {
             timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_LAND);
 
@@ -827,6 +961,48 @@ void RockSmashWildEncounter(void)
             {
                 struct Pokemon mon1 = gParties[B_TRAINER_OPPONENT_A][0];
                 TryGenerateWildMon(wildPokemonInfo, WILD_AREA_ROCKS, WILD_CHECK_REPEL | WILD_CHECK_KEEN_EYE);
+                gParties[B_TRAINER_OPPONENT_A][1] = mon1;
+                BattleSetup_StartDoubleWildBattle();
+                gSpecialVar_Result = TRUE;
+            }
+            else {
+                BattleSetup_StartWildBattle();
+                gSpecialVar_Result = TRUE;
+            }
+        }
+        else
+        {
+            gSpecialVar_Result = FALSE;
+        }
+    }
+    else
+    {
+        gSpecialVar_Result = FALSE;
+    }
+}
+
+void HeadbuttWildEncounter(void)
+{
+    u32 headerId = GetCurrentMapWildMonHeaderId();
+    enum TimeOfDay timeOfDay;
+
+    if (headerId != HEADER_NONE)
+    {
+        timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_HEADBUTT);
+
+        const struct WildPokemonInfo *wildPokemonInfo = gWildMonHeaders[headerId].encounterTypes[timeOfDay].headbuttMonsInfo;
+
+        if (wildPokemonInfo == NULL)
+        {
+            gSpecialVar_Result = FALSE;
+        }
+        else if (WildEncounterCheck(wildPokemonInfo->encounterRate, TRUE) == TRUE
+         && TryGenerateWildMon(wildPokemonInfo, WILD_AREA_HEADBUTT, WILD_CHECK_REPEL | WILD_CHECK_KEEN_EYE) == TRUE)
+        {
+            if (TryDoDoubleWildBattle())
+            {
+                struct Pokemon mon1 = gParties[B_TRAINER_OPPONENT_A][0];
+                TryGenerateWildMon(wildPokemonInfo, WILD_AREA_HEADBUTT, WILD_CHECK_REPEL | WILD_CHECK_KEEN_EYE);
                 gParties[B_TRAINER_OPPONENT_A][1] = mon1;
                 BattleSetup_StartDoubleWildBattle();
                 gSpecialVar_Result = TRUE;

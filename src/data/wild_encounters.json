@@ -84,6 +84,33 @@
               11
             ]
           }
+        },
+        {
+          "type": "headbutt_mons",
+          "encounter_rates": [
+            60,
+            30,
+            5,
+            4,
+            1
+          ]
+        },
+        {
+          "type": "long_grass_mons",
+          "encounter_rates": [
+            20,
+            20,
+            10,
+            10,
+            10,
+            10,
+            5,
+            5,
+            4,
+            4,
+            1,
+            1
+          ]
         }
       ],
       "encounters": [
@@ -43617,7 +43644,7 @@
           "map": "MAP_SHAYDWELL_TOWN_FRLG",
           "base_label": "gShaydwellTown_FireRed_Day",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 21,
             "mons": [
               {
                 "min_level": 2,
@@ -43681,7 +43708,7 @@
               }
             ]
           },
-          "rock_smash_mons": {
+          "headbutt_mons": {
             "encounter_rate": 50,
             "mons": [
               {
@@ -43716,7 +43743,7 @@
           "map": "MAP_SHAYDWELL_TOWN_FRLG",
           "base_label": "gShaydwellTown_FireRed_Morning",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 21,
             "mons": [
               {
                 "min_level": 2,
@@ -43779,13 +43806,43 @@
                 "species": "SPECIES_SNIVY"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 50,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SEEDOT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NINCADA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SEEDOT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SEEDOT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SEEDOT"
+              }
+            ]
           }
         },
         {
           "map": "MAP_SHAYDWELL_TOWN_FRLG",
           "base_label": "gShaydwellTown_FireRed_Night",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 21,
             "mons": [
               {
                 "min_level": 2,
@@ -43848,13 +43905,43 @@
                 "species": "SPECIES_SNIVY"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 90,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SEEDOT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SEEDOT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SEEDOT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SEEDOT"
+              }
+            ]
           }
         },
         {
           "map": "MAP_BRONZONG_LAKE_FRLG",
           "base_label": "gBronzongLake_FireRed_Day",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 21,
             "mons": [
               {
                 "min_level": 2,
@@ -44045,6 +44132,71 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_WHISCASH"
+              }
+            ]
+          },
+          "long_grass_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_LOMBRE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_LOMBRE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BIBAREL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BIBAREL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SWANNA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SWANNA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SCYTHER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SCYTHER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_YANMA"
               }
             ]
           }
@@ -44053,7 +44205,7 @@
           "map": "MAP_BRONZONG_LAKE_FRLG",
           "base_label": "gBronzongLake_FireRed_Morning",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 21,
             "mons": [
               {
                 "min_level": 2,
@@ -44244,6 +44396,71 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_WHISCASH"
+              }
+            ]
+          },
+          "long_grass_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_LOMBRE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_LOMBRE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BIBAREL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BIBAREL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SWANNA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SWANNA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SCYTHER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SCYTHER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_YANMA"
               }
             ]
           }
@@ -44252,7 +44469,7 @@
           "map": "MAP_BRONZONG_LAKE_FRLG",
           "base_label": "gBronzongLake_FireRed_Night",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 21,
             "mons": [
               {
                 "min_level": 2,
@@ -44445,13 +44662,78 @@
                 "species": "SPECIES_WHISCASH"
               }
             ]
+          },
+          "long_grass_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_KRICKETUNE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_KRICKETUNE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_GOLBAT"
+              }
+            ]
           }
         },
         {
           "map": "MAP_BRONZONG_LAKE_WEST_FRLG",
           "base_label": "gBronzongLakeWest_FireRed_Day",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 21,
             "mons": [
               {
                 "min_level": 5,
@@ -44650,7 +44932,7 @@
           "map": "MAP_BRONZONG_LAKE_WEST_FRLG",
           "base_label": "gBronzongLakeWest_FireRed_Morning",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 21,
             "mons": [
               {
                 "min_level": 5,
@@ -44849,7 +45131,7 @@
           "map": "MAP_BRONZONG_LAKE_WEST_FRLG",
           "base_label": "gBronzongLakeWest_FireRed_Night",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 21,
             "mons": [
               {
                 "min_level": 5,
