@@ -21,6 +21,7 @@
 #include "constants/moves.h"
 #include "constants/item_effects.h"
 #include "constants/hold_effects.h"
+#include "random.h"
 
 #define DUMMY_PC_BAG_POCKET                 \
 {                                           \
@@ -987,4 +988,14 @@ bool32 IsItemShopCriteriaFulfilled(u32 itemId)
         return TRUE;
 
     return func(SanitizeItemId(itemId));
+}
+
+void TrashcanGenerateItem(void)
+{
+    if (Random() % 100 > 49) {
+        gSpecialVar_Result = TRUE;
+    } 
+    else {
+        gSpecialVar_Result = FALSE;
+    }  
 }

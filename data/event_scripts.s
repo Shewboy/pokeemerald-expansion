@@ -1679,7 +1679,7 @@ Common_EventScript_TrashcanEncounter::
 	msgbox Text_WantToTrashcan, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelTrashcan
 	special RockSmashWildEncounter
-	goto_if_eq VAR_RESULT, FALSE, EventScript_EndTrashcan
+	goto_if_eq VAR_RESULT, FALSE, EventScript_TrashcanItem
 	waitstate
 	releaseall
 	end
@@ -1690,6 +1690,13 @@ Text_WantToTrashcan::
 
 EventScript_CancelTrashcan::
 	closemessage
+	releaseall
+	end
+
+EventScript_TrashcanItem::
+	special TrashcanGenerateItem
+	goto_if_eq VAR_RESULT, FALSE, EventScript_EndTrashcan
+	giveitem ITEM_POTION, 1
 	releaseall
 	end
 
