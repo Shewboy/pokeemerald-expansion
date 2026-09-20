@@ -18,15 +18,41 @@ Pic: Brendan
 Gender: Male
 Music: Male
 
-Buffie (Wobbuffet)
-Brave Nature
+Bibarel
 Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Def / 6 SpA
-- Earthquake
-- Flamethrower
-- Celebrate
-- Celebrate
+EVs: 252 Atk / 6 Def / 252 Spe
+- Cut
+- Flash
+- Strength
+- Rock Smash
+
+Bibarel
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 6 Def / 252 Spe
+- Dive
+- Surf
+- Fly
+- Waterfall
+
+Bibarel
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 6 Def / 252 Spe
+- Headbutt
+- Teleport
+- Dig
+- Secret Power
+
+Bibarel
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 6 Def / 252 Spe
+- Softboiled
+- Sweet Scent
+- Defog
+- Headbutt
 
 === DEBUG_TRAINER_AI ===
 Name: Debugger

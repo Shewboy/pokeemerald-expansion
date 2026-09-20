@@ -1085,7 +1085,6 @@ EventScript_AfterWhiteOutHealMsg::
 
 EventScript_AfterWhiteOutMomHeal::
 	lockall
-	textcolor NPC_TEXT_COLOR_FEMALE
 	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	msgbox gText_HadQuiteAnExperienceTakeRest
@@ -1426,27 +1425,20 @@ gText_MonsHealed::
 	.string "We hope you excel!$"
 
 gText_HadQuiteAnExperienceTakeRest::
-	.string "MOM: {PLAYER}!\n"
-	.string "Welcome home.\p"
+	.string "{PLAYER}!\n"
+	.string "Are you alright?\p"
 	.string "It sounds like you had quite\n"
 	.string "an experience.\p"
 	.string "Maybe you should take a quick\n"
 	.string "rest.$"
 
 gText_MomExplainHPGetPotions::
-	.string "MOM: Oh, good! You and your\n"
+	.string "Oh, good! You and your\n"
 	.string "POKéMON are looking great.\p"
-	.string "I just heard from {STR_VAR_1}.\p"
-	.string "He said that POKéMON's energy is\n"
-	.string "measured in HP.\p"
-	.string "If your POKéMON lose their HP,\n"
-	.string "you can restore them at any\l"
-	.string "POKéMON CENTER.\p"
-	.string "If you're going to travel far away,\n"
-	.string "the smart TRAINER stocks up on\l"
-	.string "POTIONS at the POKéMON MART.\p"
-	.string "Make me proud, honey!\p"
-	.string "Take care!$"
+	.string "You're just getting started,\n"
+	.string "so don't be too hard on yourself.\p"
+	.string "Progress takes time.\p"
+	.string "You got this!$"
 
 gText_RegisteredTrainerinPokeNav::
 	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
@@ -1682,6 +1674,32 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	releaseall
 	end
 
+Common_EventScript_TrashcanEncounter::
+	lockall
+	msgbox Text_WantToTrashcan, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelTrashcan
+	special RockSmashWildEncounter
+	goto_if_eq VAR_RESULT, FALSE, EventScript_EndTrashcan
+	waitstate
+	releaseall
+	end
+
+Text_WantToTrashcan::
+	.string "There's a foul stench...\p"
+	.string "Look inside?$"
+
+EventScript_CancelTrashcan::
+	closemessage
+	releaseall
+	end
+
+EventScript_EndTrashcan::
+	msgbox Text_Yuck
+	releaseall
+	end
+
+Text_Yuck::
+	.string "Yuck! Wish I hadn't!$"
 
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"

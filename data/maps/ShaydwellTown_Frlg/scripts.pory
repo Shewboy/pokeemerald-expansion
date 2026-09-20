@@ -70,7 +70,7 @@ text ShaydwellTown_NotChosen{
 
 script ShaydwellTown_Text_TownSign {
     lockall
-    msgbox("Shaydwell Town", MSGBOX_SIGN)
+    msgbox("Shaydwell Town\n\qoA premier community\qc", MSGBOX_SIGN)
     releaseall
 }
 
@@ -122,7 +122,7 @@ script ShaydwellTown_Trigger_DadGiveMon1 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_SHAYDWELL_INTRO_STATE, 1)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 3)
         waitmessage
         release
         }
@@ -165,7 +165,7 @@ script ShaydwellTown_Trigger_DadGiveMon2 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 3)
         waitmessage
         release
         }
@@ -208,7 +208,7 @@ script ShaydwellTown_Trigger_DadGiveMon3 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 3)
         waitmessage
         release
         }
@@ -251,7 +251,7 @@ script ShaydwellTown_Trigger_DadGiveMon4 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 3)
         waitmessage
         release
         }
@@ -294,7 +294,7 @@ script ShaydwellTown_Trigger_DadGiveMon5 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 3)
         waitmessage
         release
         }
@@ -337,7 +337,7 @@ script ShaydwellTown_Trigger_DadGiveMon6 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 3)
         waitmessage
         release
         }
@@ -380,7 +380,7 @@ script ShaydwellTown_Trigger_DadGiveMon7 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 3)
         waitmessage
         release
         }
@@ -423,7 +423,7 @@ script ShaydwellTown_Trigger_DadGiveMon8 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 3)
         waitmessage
         release
         }
@@ -456,7 +456,7 @@ script ShaydwellTown_Trigger_DadGiveMon9 {
         }
             msgbox(format("It feels like just yesterday you were taking your first steps! Time really does fly, huh?\pAnyway, why don't you practice battling against some of the Pok\emon in our backyard?"))
         setflag(FLAG_SYS_POKEMON_GET)
-        setvar(VAR_SHAYDWELL_INTRO_STATE, 2)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 3)
         waitmessage
         release
         }

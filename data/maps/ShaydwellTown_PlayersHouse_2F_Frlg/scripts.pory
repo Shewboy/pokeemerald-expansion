@@ -1,0 +1,13 @@
+mapscripts ShaydwellTown_PlayersHouse_2F_Frlg_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ShaydwellTown_PlayersHouse_2F_EventScript_SetRespawn
+}
+
+script ShaydwellTown_PlayersHouse_2F_EventScript_SetRespawn {
+    setrespawn(HEAL_LOCATION_SHAYDWELL_TOWN_FRLG)
+    end
+}
+
+script ShaydwellTown_PlayersHouse_2F_Text_PlayedWithNES{
+    msgbox(format("{PLAYER} played with the NES.\p...Okay!\nIt's time to go!"))
+    release
+}

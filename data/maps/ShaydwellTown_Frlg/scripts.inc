@@ -107,7 +107,7 @@ ShaydwellTown_Trigger_DadGiveMon1_4:
 # 124 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 125 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	setvar VAR_SHAYDWELL_INTRO_STATE, 1
+	setvar VAR_SHAYDWELL_INTRO_STATE, 3
 # 126 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitmessage
 # 127 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -177,7 +177,7 @@ ShaydwellTown_Trigger_DadGiveMon2_4:
 # 167 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 168 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	setvar VAR_SHAYDWELL_INTRO_STATE, 2
+	setvar VAR_SHAYDWELL_INTRO_STATE, 3
 # 169 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitmessage
 # 170 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -247,7 +247,7 @@ ShaydwellTown_Trigger_DadGiveMon3_4:
 # 210 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 211 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	setvar VAR_SHAYDWELL_INTRO_STATE, 2
+	setvar VAR_SHAYDWELL_INTRO_STATE, 3
 # 212 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitmessage
 # 213 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -317,7 +317,7 @@ ShaydwellTown_Trigger_DadGiveMon4_4:
 # 253 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 254 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	setvar VAR_SHAYDWELL_INTRO_STATE, 2
+	setvar VAR_SHAYDWELL_INTRO_STATE, 3
 # 255 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitmessage
 # 256 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -387,7 +387,7 @@ ShaydwellTown_Trigger_DadGiveMon5_4:
 # 296 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 297 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	setvar VAR_SHAYDWELL_INTRO_STATE, 2
+	setvar VAR_SHAYDWELL_INTRO_STATE, 3
 # 298 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitmessage
 # 299 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -457,7 +457,7 @@ ShaydwellTown_Trigger_DadGiveMon6_4:
 # 339 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 340 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	setvar VAR_SHAYDWELL_INTRO_STATE, 2
+	setvar VAR_SHAYDWELL_INTRO_STATE, 3
 # 341 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitmessage
 # 342 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -527,7 +527,7 @@ ShaydwellTown_Trigger_DadGiveMon7_4:
 # 382 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 383 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	setvar VAR_SHAYDWELL_INTRO_STATE, 2
+	setvar VAR_SHAYDWELL_INTRO_STATE, 3
 # 384 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitmessage
 # 385 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -597,7 +597,7 @@ ShaydwellTown_Trigger_DadGiveMon8_4:
 # 425 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 426 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	setvar VAR_SHAYDWELL_INTRO_STATE, 2
+	setvar VAR_SHAYDWELL_INTRO_STATE, 3
 # 427 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitmessage
 # 428 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -667,7 +667,7 @@ ShaydwellTown_Trigger_DadGiveMon9_4:
 # 458 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 459 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	setvar VAR_SHAYDWELL_INTRO_STATE, 2
+	setvar VAR_SHAYDWELL_INTRO_STATE, 3
 # 460 "data/maps/ShaydwellTown_Frlg/scripts.pory"
 	waitmessage
 # 461 "data/maps/ShaydwellTown_Frlg/scripts.pory"
@@ -1064,7 +1064,7 @@ NicknameBoxMon_Text_0:
 
 ShaydwellTown_Text_TownSign_Text_0:
 # 73 "data/maps/ShaydwellTown_Frlg/scripts.pory"
-	.string "Shaydwell Town$"
+	.string "Shaydwell Town\n“A premier community”$"
 
 ShaydwellTown_Text_PlayerHouseSign_Text_0:
 # 79 "data/maps/ShaydwellTown_Frlg/scripts.pory"

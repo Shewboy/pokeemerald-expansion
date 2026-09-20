@@ -359,12 +359,14 @@
       "respawn_npc": "1"
     },
     {
-      "id": "HEAL_LOCATION_SHAYDWELL_TOWN",
+      "id": "HEAL_LOCATION_SHAYDWELL_TOWN_FRLG",
       "map": "MAP_SHAYDWELL_TOWN_FRLG",
-      "x": 20,
-      "y": 13,
-      "respawn_map": "MAP_SHAYDWELL_TOWN_FRLG",
-      "respawn_npc": "1"
+      "x": 15,
+      "y": 14,
+      "respawn_map": "MAP_SHAYDWELL_TOWN_PLAYERS_HOUSE_1F_FRLG",
+      "respawn_npc": "LOCALID_PLAYERS_HOUSE_1F_MOM",
+      "respawn_x": 2,
+      "respawn_y": 3
     }
   ]
 }
