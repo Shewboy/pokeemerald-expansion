@@ -43702,9 +43702,9 @@
                 "species": "SPECIES_FLETCHLING"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_SNIVY"
+                "min_level": 2,
+                "max_level": 3,
+                "species": "SPECIES_FLETCHLING"
               }
             ]
           },
@@ -43735,36 +43735,6 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_SEEDOT"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 50,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_TRUBBISH"
               }
             ]
           }
@@ -43831,9 +43801,9 @@
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_SNIVY"
+                "min_level": 2,
+                "max_level": 3,
+                "species": "SPECIES_PIDGEY"
               }
             ]
           },
@@ -43912,11 +43882,6 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_ZIGZAGOON"
-              },
-              {
-                "min_level": 2,
-                "max_level": 3,
                 "species": "SPECIES_ZUBAT"
               },
               {
@@ -43930,9 +43895,14 @@
                 "species": "SPECIES_ZUBAT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_SNIVY"
+                "min_level": 2,
+                "max_level": 3,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 2,
+                "max_level": 3,
+                "species": "SPECIES_ZUBAT"
               }
             ]
           },

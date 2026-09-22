@@ -7,7 +7,7 @@ ShaydwellTown_PlayersHouse_1F_Frlg_MapScripts::
 
 ShaydwellTown_PlayersHouse_1F_Frlg_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 4 "data/maps/ShaydwellTown_PlayersHouse_1F_Frlg/scripts.pory"
-	map_script_2 VAR_SHAYDWELL_INTRO_STATE, 1, ShaydwellTown_PlayersHouse_1F_Mom_Go_Help_Dad
+	map_script_2 VAR_SHAYDWELL_INTRO_STATE, 0, ShaydwellTown_PlayersHouse_1F_Mom_Go_Help_Dad
 	.2byte 0
 
 

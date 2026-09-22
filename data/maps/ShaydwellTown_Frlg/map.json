@@ -132,20 +132,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_Headbutt",
       "flag": "0"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CUBONE",
-      "x": 18,
-      "y": 16,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Common_EventScript_TrashcanEncounter",
-      "flag": "0"
     }
   ],
   "warp_events": [
@@ -185,7 +171,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "2",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon7"
     },
     {
@@ -194,7 +180,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "2",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon6"
     },
     {
@@ -203,7 +189,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "2",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon5"
     },
     {
@@ -212,7 +198,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "2",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon4"
     },
     {
@@ -221,7 +207,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "2",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon2"
     },
     {
@@ -230,7 +216,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "2",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon1"
     },
     {
@@ -266,7 +252,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "2",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon8"
     },
     {
@@ -275,7 +261,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_SHAYDWELL_INTRO_STATE",
-      "var_value": "2",
+      "var_value": "1",
       "script": "ShaydwellTown_Trigger_DadGiveMon3"
     }
   ],

@@ -1,7 +1,7 @@
 mapscripts ShaydwellTown_PlayersHouse_1F_Frlg_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ShaydwellTown_PlayersHouse_1F_EventScript_SetRespawn
     MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_SHAYDWELL_INTRO_STATE, 1: ShaydwellTown_PlayersHouse_1F_Mom_Go_Help_Dad
+        VAR_SHAYDWELL_INTRO_STATE, 0: ShaydwellTown_PlayersHouse_1F_Mom_Go_Help_Dad
         ]
 }
 
