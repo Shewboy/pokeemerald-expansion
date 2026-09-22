@@ -102,6 +102,12 @@ struct TmHmIndexKey
     enum Move moveId;
 };
 
+struct TrashcanItem
+{
+    enum Item itemId;
+    u8 percentage[9];
+};
+
 extern const u8 gQuestionMarksItemName[];
 extern const struct ItemInfo gItemsInfo[];
 extern struct BagPocket gBagPockets[];

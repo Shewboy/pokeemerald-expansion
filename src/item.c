@@ -990,11 +990,63 @@ bool32 IsItemShopCriteriaFulfilled(u32 itemId)
     return func(SanitizeItemId(itemId));
 }
 
+static const struct TrashcanItem sTrashcanTable[] = 
+{//   Item                      0    1    2    3    4    5    6    7    8     Badges
+    { ITEM_POTION,          {  100,  0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_TINY_MUSHROOM,   {   0, 100,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_REPEL,           {   0,   0, 100,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_SUPER_POTION,    {   0,   0,   0, 100,   0,   0,   0,   0,   0, } },
+    { ITEM_POKE_DOLL,       {   0,   0,   0,   0, 100,   0,   0,   0,   0, } },
+    { ITEM_BIG_MUSHROOM,    {   0,   0,   0,   0,   0, 100,   0,   0,   0, } },
+    { ITEM_SUPER_REPEL,     {   0,   0,   0,   0,   0,   0, 100,   0,   0, } },
+    { ITEM_FULL_HEAL,       {   0,   0,   0,   0,   0,   0,   0, 100,   0, } },
+    { ITEM_REVIVE,          {   0,   0,   0,   0,   0,   0,   0,   0, 100, } },
+    { ITEM_HYPER_POTION,    {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_ETHER,           {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_MAX_REPEL,       {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_MOON_STONE,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_SUN_STONE,       {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_RARE_CANDY,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_NUGGET,          {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_MAX_POTION,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_MAX_ETHER,       {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_PP_UP,           {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_BIG_NUGGET,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_DESTINY_KNOT,    {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_LEFTOVERS,       {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_MENTAL_HERB,     {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_POWER_HERB,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_WHITE_HERB,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_BALM_MUSHROOM,   {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_MAX_REVIVE,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_ELIXIR,          {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_MAX_ELIXIR,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_BOTTLE_CAP,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+};
+
 void TrashcanGenerateItem(void)
 {
+    u8 badgeCount = 0;
+        for (u32 i = FLAG_BADGE01_GET; i < FLAG_BADGE01_GET + NUM_BADGES; i++)
+        {
+            if (FlagGet(i))
+                badgeCount++;
+        }
     if (Random() % 100 > 49) {
-        gSpecialVar_Result = TRUE;
-    } 
+        u32 rand = Random() % 100;
+        u32 percentTotal = 0;
+        u32 j;
+
+        for (j = 0; j < ARRAY_COUNT(sTrashcanTable); j++)
+        {
+            percentTotal += sTrashcanTable[j].percentage[badgeCount];
+            if (rand < percentTotal)
+            {
+                gSpecialVar_Result = sTrashcanTable[j].itemId;
+                break;
+            }
+        }
+    }
     else {
         gSpecialVar_Result = FALSE;
     }  
