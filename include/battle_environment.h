@@ -15,7 +15,10 @@ struct BattleEnvironment
     u16 camouflageBlend;
     struct BattleBackgroundEntry entry;
     struct BattleBackground background;
+    const void *palMorning;
     const void *palette;
+    const void *palEvening;
+    const void *palNight;
     TaskFunc battleIntroSlide;
 };
 

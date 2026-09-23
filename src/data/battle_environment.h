@@ -1,4 +1,5 @@
 #include "battle_anim_scripts.h"
+#include "rtc.h"
 
 #define ENVIRONMENT_BACKGROUND(Background)             \
 {                                                      \
@@ -83,7 +84,10 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageBlend = RGB(12, 24, 2),
         .entry = ENVIRONMENT_ENTRY(TallGrass),
         .background = ENVIRONMENT_BACKGROUND(TallGrass),
-        .palette = gBattleEnvironmentPalette_TallGrass,
+        .palMorning = gBattleEnvironmentPalette_Sand,
+        .palette = gBattleEnvironmentPalette_Underwater,
+        .palEvening = gBattleEnvironmentPalette_TallGrass,
+        .palNight = gBattleEnvironmentPalette_Cave,
         .battleIntroSlide = BattleIntroSlide1,
     },
 
@@ -103,7 +107,10 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageBlend = RGB(0, 15, 2),
         .entry = ENVIRONMENT_ENTRY(LongGrass),
         .background = ENVIRONMENT_BACKGROUND(LongGrass),
-        .palette = gBattleEnvironmentPalette_LongGrass,
+        .palMorning = gBattleEnvironmentPalette_Sand,
+        .palette = gBattleEnvironmentPalette_Underwater,
+        .palEvening = gBattleEnvironmentPalette_TallGrass,
+        .palNight = gBattleEnvironmentPalette_Cave,
         .battleIntroSlide = BattleIntroSlide1,
     },
 
@@ -117,7 +124,10 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageBlend = RGB(30, 24, 11),
         .entry = ENVIRONMENT_ENTRY(Sand),
         .background = ENVIRONMENT_BACKGROUND(Sand),
-        .palette = gBattleEnvironmentPalette_Sand,
+        .palMorning = gBattleEnvironmentPalette_Sand,
+        .palette = gBattleEnvironmentPalette_Underwater,
+        .palEvening = gBattleEnvironmentPalette_TallGrass,
+        .palNight = gBattleEnvironmentPalette_Cave,
         .battleIntroSlide = BattleIntroSlide2,
     },
 
@@ -145,7 +155,10 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageBlend = RGB(11, 22, 31),
         .entry = ENVIRONMENT_ENTRY(Water),
         .background = ENVIRONMENT_BACKGROUND(Water),
-        .palette = gBattleEnvironmentPalette_Water,
+        .palMorning = gBattleEnvironmentPalette_Sand,
+        .palette = gBattleEnvironmentPalette_Underwater,
+        .palEvening = gBattleEnvironmentPalette_TallGrass,
+        .palNight = gBattleEnvironmentPalette_Cave,
         .battleIntroSlide = BattleIntroSlide2,
     },
 
@@ -159,7 +172,10 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageBlend = RGB(11, 22, 31),
         .entry = ENVIRONMENT_ENTRY(PondWater),
         .background = ENVIRONMENT_BACKGROUND(PondWater),
-        .palette = gBattleEnvironmentPalette_PondWater,
+        .palMorning = gBattleEnvironmentPalette_Sand,
+        .palette = gBattleEnvironmentPalette_Underwater,
+        .palEvening = gBattleEnvironmentPalette_TallGrass,
+        .palNight = gBattleEnvironmentPalette_Cave,
         .battleIntroSlide = BattleIntroSlide1,
     },
 
@@ -185,7 +201,10 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageBlend = RGB(22, 16, 10),
         .entry = ENVIRONMENT_ENTRY(Rock),
         .background = ENVIRONMENT_BACKGROUND(Rock),
-        .palette = gBattleEnvironmentPalette_Rock,
+        .palMorning = gBattleEnvironmentPalette_Sand,
+        .palette = gBattleEnvironmentPalette_Underwater,
+        .palEvening = gBattleEnvironmentPalette_TallGrass,
+        .palNight = gBattleEnvironmentPalette_Cave,
         .battleIntroSlide = BattleIntroSlide1,
     },
 
@@ -227,7 +246,10 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageBlend = PLAIN_CAMOUFLAGE_BLEND,
         .entry = ENVIRONMENT_ENTRY(Building),
         .background = ENVIRONMENT_BACKGROUND(Building),
-        .palette = gBattleEnvironmentPalette_Plain,
+        .palMorning = gBattleEnvironmentPalette_Sand,
+        .palette = gBattleEnvironmentPalette_Underwater,
+        .palEvening = gBattleEnvironmentPalette_TallGrass,
+        .palNight = gBattleEnvironmentPalette_Cave,
         .battleIntroSlide = PLAIN_BATTLE_INTRO_SLIDE,
     },
 
