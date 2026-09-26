@@ -871,13 +871,10 @@ static void LoadBattleEnvironmentGfx(u16 environment)
     // Copy to bg3
     DecompressDataWithHeaderVram(gBattleEnvironmentInfo[environment].background.tileset, (void *)(BG_CHAR_ADDR(2)));
     DecompressDataWithHeaderVram(gBattleEnvironmentInfo[environment].background.tilemap, (void *)(BG_SCREEN_ADDR(26)));
-    if (gTimeOfDay == TIME_MORNING)
-        LoadPalette(gBattleEnvironmentInfo[environment].palMorning, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
-    else if (gTimeOfDay == TIME_DAY)
-        LoadPalette(gBattleEnvironmentInfo[environment].palette, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
-    else if (gTimeOfDay == TIME_EVENING)
+    // Changes the battle background palette depending on time of day
+    if (gTimeOfDay == TIME_EVENING) 
         LoadPalette(gBattleEnvironmentInfo[environment].palEvening, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
-    else if (gTimeOfDay == TIME_NIGHT)
+    else if (gTimeOfDay == TIME_NIGHT) 
         LoadPalette(gBattleEnvironmentInfo[environment].palNight, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
     else
         LoadPalette(gBattleEnvironmentInfo[environment].palette, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
