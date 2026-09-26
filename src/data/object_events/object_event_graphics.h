@@ -360,6 +360,9 @@ const u32 gObjectEventPic_Noland[] = INCGFX_U32("graphics/object_events/pics/peo
 const u32 gObjectEventPic_Lucy[] = INCGFX_U32("graphics/object_events/pics/people/frontier_brains/lucy.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_Brandon[] = INCGFX_U32("graphics/object_events/pics/people/frontier_brains/brandon.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_PokeBall[] = INCGFX_U32("graphics/object_events/pics/misc/ball_poke.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPic_None[] = INCGFX_U16("graphics/object_events/pics/misc/none.png", ".4bpp");
+const u16 gObjectEventPic_Trashcan[] = INCGFX_U16("graphics/object_events/pics/misc/trashcan.png", ".4bpp");
+const u16 gObjectEventPal_Trashcan[] = INCGFX_U16("graphics/object_events/palettes/trashcan.pal", ".gbapal");
 
 const u32 gObjectEventPic_DeoxysOld[] = INCGFX_U32("graphics/object_events/pics/pokemon_old/deoxys.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_MewOld[] = INCGFX_U32("graphics/object_events/pics/pokemon_old/mew.png", ".4bpp", "-mwidth 2 -mheight 4");
@@ -465,8 +468,6 @@ const u16 gFieldEffectObjectPalette_CaveDust[] = INCGFX_U16("graphics/field_effe
 const u32 gObjectEventPic_ApricornTree[] = INCGFX_U32("graphics/object_events/pics/misc/apricorn_tree.png", ".4bpp", "-mwidth 2 -mheight 2");
 
 const u32 gFieldEffectObjectPic_ShinySparkle[] = INCGFX_U32("graphics/field_effects/pics/shiny_sparkle.png", ".4bpp", "-mwidth 2 -mheight 4");
-
-const u16 gObjectEventPic_None[] = INCGFX_U16("graphics/object_events/pics/misc/none.png", ".4bpp");
 
 #if IS_FRLG
 

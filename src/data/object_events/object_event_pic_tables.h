@@ -1359,6 +1359,14 @@ static const struct SpriteFrameImage sPicTable_ApricornTree[] = {
     overworld_frame(gObjectEventPic_ApricornTree, 2, 2, 0),
 };
 
+static const struct SpriteFrameImage sPicTable_None[] = {
+    overworld_frame(gObjectEventPic_None, 2, 2, 0),
+};
+
+static const struct SpriteFrameImage sPicTable_Trashcan[] = {
+    overworld_frame(gObjectEventPic_Trashcan, 2, 2, 0),
+};
+
 #if IS_FRLG
 
 static const struct SpriteFrameImage sPicTable_RedNormal[] = {
@@ -3024,10 +3032,6 @@ static const struct SpriteFrameImage sPicTable_MomFrlg[] = {
     overworld_frame(gObjectEventPic_MomFrlg, 2, 4, 1),
     overworld_frame(gObjectEventPic_MomFrlg, 2, 4, 2),
     overworld_frame(gObjectEventPic_MomFrlg, 2, 4, 2),
-};
-
-static const struct SpriteFrameImage sPicTable_None[] = {
-    overworld_frame(gObjectEventPic_None, 2, 2, 0),
 };
 
 #endif // IS_FRLG
