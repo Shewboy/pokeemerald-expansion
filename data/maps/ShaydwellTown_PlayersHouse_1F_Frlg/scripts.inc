@@ -109,7 +109,7 @@ ShaydwellTown_PlayersHouse_1F_EventScript_Mom_2:
 # 60 "data/maps/ShaydwellTown_PlayersHouse_1F_Frlg/scripts.pory"
 	msgbox ShaydwellTown_PlayersHouse_1F_EventScript_Mom_Text_2
 # 61 "data/maps/ShaydwellTown_PlayersHouse_1F_Frlg/scripts.pory"
-	setvar VAR_SHAYDWELL_INTRO_STATE, 4
+	setvar VAR_SHAYDWELL_INTRO_STATE, 3
 # 62 "data/maps/ShaydwellTown_PlayersHouse_1F_Frlg/scripts.pory"
 	release
 	return

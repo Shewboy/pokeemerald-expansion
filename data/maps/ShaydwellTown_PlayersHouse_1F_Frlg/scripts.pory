@@ -58,7 +58,7 @@ script ShaydwellTown_PlayersHouse_1F_EventScript_Mom{
         giveitem(ITEM_POKE_BALL,5)
         waitfanfare
         msgbox(format("The world is your Cloyster now, honey.\pJust don't forget to call us once in a while, okay?\pAnd be safe!"))
-        setvar(VAR_SHAYDWELL_INTRO_STATE, 4)
+        setvar(VAR_SHAYDWELL_INTRO_STATE, 3)
         release
     }
     else {
