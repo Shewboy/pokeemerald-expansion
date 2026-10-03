@@ -7,7 +7,12 @@ mapscripts BronzongLake_Frlg_MapScripts {
 
 # Fisherboy Cody 
 script BronzongLake_EventScript_CodyBattle {
-    trainerbattle_single(TRAINER_FISHERBOY_CODY, format("Hey, {PLAYER}!\pI'm trying to snag BIG BOB!\pBut so far all I've caught are Chewtle..."), format("Aw, man!"))
+    trainerbattle_single(TRAINER_FISHERBOY_CODY, format("Hey, {PLAYER}!\pI'm trying to snag BIG BOB!\pBut so far all I've caught are Chewtle..."), format("Aw, man!"), EventScript_Cody_PostBattle)
+    msgbox(format("BIG BOB is a super-strong fish Pok\emon.\pI'm going to catch him someday. You'll see!"))
+    release
+}
+
+script EventScript_Cody_PostBattle {
     msgbox(format("That was fun! But you didn't see me use BIG BOB...\pWait! I have an idea!\pHow about we each train a bit and then rebattle once we've gotten stronger?\pThen maybe I'll get to show you BIG BOB!"))
     release
 }

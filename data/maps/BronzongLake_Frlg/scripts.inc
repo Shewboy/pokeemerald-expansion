@@ -4,7 +4,7 @@ BronzongLake_Frlg_MapScripts::
 
 BronzongLake_EventScript_CodyBattle::
 # 10 "data/maps/BronzongLake_Frlg/scripts.pory"
-	trainerbattle_single TRAINER_FISHERBOY_CODY, BronzongLake_EventScript_CodyBattle_Text_0, BronzongLake_EventScript_CodyBattle_Text_1
+	trainerbattle_single TRAINER_FISHERBOY_CODY, BronzongLake_EventScript_CodyBattle_Text_0, BronzongLake_EventScript_CodyBattle_Text_1, EventScript_Cody_PostBattle
 # 11 "data/maps/BronzongLake_Frlg/scripts.pory"
 	msgbox BronzongLake_EventScript_CodyBattle_Text_2
 # 12 "data/maps/BronzongLake_Frlg/scripts.pory"
@@ -12,58 +12,66 @@ BronzongLake_EventScript_CodyBattle::
 	return
 
 
+EventScript_Cody_PostBattle::
+# 16 "data/maps/BronzongLake_Frlg/scripts.pory"
+	msgbox EventScript_Cody_PostBattle_Text_0
+# 17 "data/maps/BronzongLake_Frlg/scripts.pory"
+	release
+	return
+
+
 BronzongLake_EventScript_ProudDad::
-# 21 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 26 "data/maps/BronzongLake_Frlg/scripts.pory"
 	lock
-# 22 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 27 "data/maps/BronzongLake_Frlg/scripts.pory"
 	msgbox BronzongLake_EventScript_ProudDad_Text_0
-# 23 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 28 "data/maps/BronzongLake_Frlg/scripts.pory"
 	release
 	return
 
 
 BronzongLake_EventScript_ProudMom::
-# 28 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 33 "data/maps/BronzongLake_Frlg/scripts.pory"
 	lock
-# 29 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 34 "data/maps/BronzongLake_Frlg/scripts.pory"
 	faceplayer
-# 30 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 35 "data/maps/BronzongLake_Frlg/scripts.pory"
 	msgbox BronzongLake_EventScript_ProudMom_Text_0
-# 31 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 36 "data/maps/BronzongLake_Frlg/scripts.pory"
 	release
 	return
 
 
 BronzongLake_EventScript_Tuber::
-# 36 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 41 "data/maps/BronzongLake_Frlg/scripts.pory"
 	lock
-# 37 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 42 "data/maps/BronzongLake_Frlg/scripts.pory"
 	faceplayer
-# 38 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 43 "data/maps/BronzongLake_Frlg/scripts.pory"
 	msgbox BronzongLake_EventScript_Tuber_Text_0
-# 39 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 44 "data/maps/BronzongLake_Frlg/scripts.pory"
 	release
 	return
 
 
 BronzongLake_EventScript_OldWoman::
-# 44 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 49 "data/maps/BronzongLake_Frlg/scripts.pory"
 	lock
-# 45 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 50 "data/maps/BronzongLake_Frlg/scripts.pory"
 	faceplayer
-# 46 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 51 "data/maps/BronzongLake_Frlg/scripts.pory"
 	msgbox BronzongLake_EventScript_OldWoman_Text_0
-# 47 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 52 "data/maps/BronzongLake_Frlg/scripts.pory"
 	release
 	return
 
 
 BronzongLake_Text_SwimClubSign::
-# 56 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 61 "data/maps/BronzongLake_Frlg/scripts.pory"
 	lockall
-# 57 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 62 "data/maps/BronzongLake_Frlg/scripts.pory"
 	msgbox BronzongLake_Text_SwimClubSign_Text_0, MSGBOX_SIGN
-# 58 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 63 "data/maps/BronzongLake_Frlg/scripts.pory"
 	releaseall
 	return
 
@@ -80,6 +88,12 @@ BronzongLake_EventScript_CodyBattle_Text_1:
 
 BronzongLake_EventScript_CodyBattle_Text_2:
 # 11 "data/maps/BronzongLake_Frlg/scripts.pory"
+	.string "BIG BOB is a super-strong fish Pokémon.\p"
+	.string "I'm going to catch him someday. You'll\n"
+	.string "see!$"
+
+EventScript_Cody_PostBattle_Text_0:
+# 16 "data/maps/BronzongLake_Frlg/scripts.pory"
 	.string "That was fun! But you didn't see me use\n"
 	.string "BIG BOB...\p"
 	.string "Wait! I have an idea!\p"
@@ -88,28 +102,28 @@ BronzongLake_EventScript_CodyBattle_Text_2:
 	.string "Then maybe I'll get to show you BIG BOB!$"
 
 BronzongLake_EventScript_ProudDad_Text_0:
-# 22 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 27 "data/maps/BronzongLake_Frlg/scripts.pory"
 	.string "Great job, son! Now let's see a\n"
 	.string "BEAUTIFLY stroke.$"
 
 BronzongLake_EventScript_ProudMom_Text_0:
-# 30 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 35 "data/maps/BronzongLake_Frlg/scripts.pory"
 	.string "Our little boy is like a POLIWAG the way\n"
 	.string "he swims.\p"
 	.string "Before we know it, he'll be doing laps -\n"
 	.string "just like his father used to!$"
 
 BronzongLake_EventScript_Tuber_Text_0:
-# 38 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 43 "data/maps/BronzongLake_Frlg/scripts.pory"
 	.string "Where's your bathing suit?$"
 
 BronzongLake_EventScript_OldWoman_Text_0:
-# 46 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 51 "data/maps/BronzongLake_Frlg/scripts.pory"
 	.string "Lots of people my age complain about\n"
 	.string "how rowdy children can be.\p"
 	.string "But not me! It warms my heart to see\n"
 	.string "them enjoying their youth.$"
 
 BronzongLake_Text_SwimClubSign_Text_0:
-# 57 "data/maps/BronzongLake_Frlg/scripts.pory"
+# 62 "data/maps/BronzongLake_Frlg/scripts.pory"
 	.string "Bronzong Lake Community Swim Club$"

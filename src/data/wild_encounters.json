@@ -43639,36 +43639,6 @@
               }
             ]
           },
-          "rock_smash_mons": {
-            "encounter_rate": 50,
-            "mons": [
-              {
-                "min_level": 1,
-                "max_level": 1,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 1,
-                "max_level": 1,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 1,
-                "max_level": 1,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 1,
-                "max_level": 1,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 1,
-                "max_level": 1,
-                "species": "SPECIES_TRUBBISH"
-              }
-            ]
-          },
           "headbutt_mons": {
             "encounter_rate": 50,
             "mons": [
@@ -43765,36 +43735,6 @@
                 "min_level": 2,
                 "max_level": 3,
                 "species": "SPECIES_PIDGEY"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 50,
-            "mons": [
-              {
-                "min_level": 1,
-                "max_level": 1,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 1,
-                "max_level": 1,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 1,
-                "max_level": 1,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 1,
-                "max_level": 1,
-                "species": "SPECIES_TRUBBISH"
-              },
-              {
-                "min_level": 1,
-                "max_level": 1,
-                "species": "SPECIES_TRUBBISH"
               }
             ]
           },
