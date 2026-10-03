@@ -1784,6 +1784,3 @@ Text_Yuck::
 
 	.include "data/maps/BronzongLake_Frlg/scripts.inc"
 	.include "data/maps/BronzongLake_Frlg/text.inc"
-
-	.include "data/maps/BronzongLakeWest_Frlg/scripts.inc"
-	.include "data/maps/BronzongLakeWest_Frlg/text.inc"

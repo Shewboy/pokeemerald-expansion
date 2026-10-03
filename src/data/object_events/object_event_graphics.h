@@ -362,7 +362,6 @@ const u32 gObjectEventPic_Brandon[] = INCGFX_U32("graphics/object_events/pics/pe
 const u32 gObjectEventPic_PokeBall[] = INCGFX_U32("graphics/object_events/pics/misc/ball_poke.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_None[] = INCGFX_U16("graphics/object_events/pics/misc/none.png", ".4bpp");
 const u16 gObjectEventPic_Trashcan[] = INCGFX_U16("graphics/object_events/pics/misc/trashcan.png", ".4bpp");
-const u16 gObjectEventPal_Trashcan[] = INCGFX_U16("graphics/object_events/palettes/trashcan.pal", ".gbapal");
 
 const u32 gObjectEventPic_DeoxysOld[] = INCGFX_U32("graphics/object_events/pics/pokemon_old/deoxys.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_MewOld[] = INCGFX_U32("graphics/object_events/pics/pokemon_old/mew.png", ".4bpp", "-mwidth 2 -mheight 4");

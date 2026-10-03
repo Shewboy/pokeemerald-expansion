@@ -992,36 +992,35 @@ bool32 IsItemShopCriteriaFulfilled(u32 itemId)
 
 static const struct TrashcanItem sTrashcanTable[] = 
 {//   Item                      0    1    2    3    4    5    6    7    8     Badges
-    { ITEM_POTION,          {  100,  0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_TINY_MUSHROOM,   {   0, 100,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_REPEL,           {   0,   0, 100,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_SUPER_POTION,    {   0,   0,   0, 100,   0,   0,   0,   0,   0, } },
-    { ITEM_POKE_DOLL,       {   0,   0,   0,   0, 100,   0,   0,   0,   0, } },
-    { ITEM_BIG_MUSHROOM,    {   0,   0,   0,   0,   0, 100,   0,   0,   0, } },
-    { ITEM_SUPER_REPEL,     {   0,   0,   0,   0,   0,   0, 100,   0,   0, } },
-    { ITEM_FULL_HEAL,       {   0,   0,   0,   0,   0,   0,   0, 100,   0, } },
-    { ITEM_REVIVE,          {   0,   0,   0,   0,   0,   0,   0,   0, 100, } },
-    { ITEM_HYPER_POTION,    {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_ETHER,           {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_MAX_REPEL,       {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_MOON_STONE,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_SUN_STONE,       {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_RARE_CANDY,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_NUGGET,          {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_MAX_POTION,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_MAX_ETHER,       {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_PP_UP,           {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_BIG_NUGGET,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_DESTINY_KNOT,    {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_LEFTOVERS,       {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_MENTAL_HERB,     {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_POWER_HERB,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_WHITE_HERB,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_BALM_MUSHROOM,   {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_MAX_REVIVE,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_ELIXIR,          {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_MAX_ELIXIR,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
-    { ITEM_BOTTLE_CAP,      {   0,   0,   0,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_ORAN_BERRY,      {  10,  10,  10,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_LEPPA_BERRY,     {  10,  10,  10,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_PECHA_BERRY,     {  10,  10,  10,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_CHERI_BERRY,     {  10,  10,  10,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_RAWST_BERRY,     {  10,  10,  10,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_ASPEAR_BERRY,    {  10,  10,  10,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_CHESTO_BERRY,    {  10,  10,  10,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_RARE_CANDY,      {   1,   1,   1,   5,   5,   5,  10,  10,  10, } },
+    { ITEM_FRESH_WATER,     {  29,  29,  29,   0,   0,   0,   0,   0,   0, } },
+    { ITEM_SODA_POP,        {   0,   0,   0,  30,  30,  30,   0,   0,   0, } },
+    { ITEM_LEMONADE,        {   0,   0,   0,   0,   0,   0,  30,  30,  30, } },
+    { ITEM_RAGE_CANDY_BAR,  {   0,   0,   0,  18,  18,  18,  15,  15,   0, } },
+    { ITEM_LAVA_COOKIE,     {   0,   0,   0,  17,  17,  17,  15,  15,   0, } },
+    { ITEM_POKE_DOLL,       {   0,   0,   0,   5,   0,   0,   0,   0,   0, } },
+    { ITEM_BLACK_SLUDGE,    {   0,   0,   0,   5,   5,   0,   0,   0,   0, } },
+    { ITEM_STICKY_BARB,     {   0,   0,   0,   5,   5,   5,   0,   0,   0, } },
+    { ITEM_CELL_BATTERY,    {   0,   0,   0,   5,   5,   5,   5,   0,   0, } },
+    { ITEM_MAGNET,          {   0,   0,   0,   5,   5,   5,   5,   5,   0, } },
+    { ITEM_POISON_BARB,     {   0,   0,   0,   5,   5,   5,   5,   5,   0, } },
+    { ITEM_TWISTED_SPOON,   {   0,   0,   0,   0,   5,   5,   5,   5,   0, } },
+    { ITEM_BLACK_GLASSES,   {   0,   0,   0,   0,   0,   5,   5,   5,   0, } },
+    { ITEM_TOXIC_ORB,       {   0,   0,   0,   0,   0,   0,   5,   5,   0, } },
+    { ITEM_WISE_GLASSES,    {   0,   0,   0,   0,   0,   0,   0,   5,   0, } },
+    { ITEM_LEFTOVERS,       {   0,   0,   0,   0,   0,   0,   0,   0,  10, } },
+    { ITEM_LINKING_CORD,    {   0,   0,   0,   0,   0,   0,   0,   0,  10, } },
+    { ITEM_TART_APPLE,      {   0,   0,   0,   0,   0,   0,   0,   0,  10, } },
+    { ITEM_SWEET_APPLE,     {   0,   0,   0,   0,   0,   0,   0,   0,  10, } },
+    { ITEM_SYRUPY_APPLE,    {   0,   0,   0,   0,   0,   0,   0,   0,  10, } },
+    { ITEM_WHIPPED_DREAM,   {   0,   0,   0,   0,   0,   0,   0,   0,  10, } },
 };
 
 void TrashcanGenerateItem(void)
@@ -1032,7 +1031,7 @@ void TrashcanGenerateItem(void)
             if (FlagGet(i))
                 badgeCount++;
         }
-    if (Random() % 100 > 49) {
+    if (Random() % 100 > 74) {
         u32 rand = Random() % 100;
         u32 percentTotal = 0;
         u32 j;

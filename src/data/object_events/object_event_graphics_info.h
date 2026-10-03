@@ -4488,7 +4488,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_None = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trashcan = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_SS_ANNE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,

@@ -10207,71 +10207,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_QUAYSHADE_TOWN",
-      "name": "QuayshadeTown_Layout",
-      "width": 28,
-      "height": 26,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/QuayshadeTown/border.bin",
-      "blockdata_filepath": "data/layouts/QuayshadeTown/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_QUAYSHADE_TOWN_PLAYERS_HOUSE_1F",
-      "name": "QuayshadeTown_PlayersHouse_1F_Layout",
-      "width": 11,
-      "height": 9,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
-      "border_filepath": "data/layouts/QuayshadeTown_PlayersHouse_1F/border.bin",
-      "blockdata_filepath": "data/layouts/QuayshadeTown_PlayersHouse_1F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_QUAYSHADE_TOWN_PLAYERS_HOUSE_2F",
-      "name": "QuayshadeTown_PlayersHouse_2F_Layout",
-      "width": 9,
-      "height": 8,
-      "border_width": 0,
-      "border_height": 0,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
-      "border_filepath": "data/layouts/QuayshadeTown_PlayersHouse_2F/border.bin",
-      "blockdata_filepath": "data/layouts/QuayshadeTown_PlayersHouse_2F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_QUAYSHADE_TOWN_CODY_HOUSE_1F",
-      "name": "QuayshadeTown_CodyHouse_1F_Layout",
-      "width": 11,
-      "height": 9,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
-      "border_filepath": "data/layouts/QuayshadeTown_CodyHouse_1F/border.bin",
-      "blockdata_filepath": "data/layouts/QuayshadeTown_CodyHouse_1F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_QUAYSHADE_TOWN_THIRD_HOUSE_1F",
-      "name": "QuayshadeTown_ThirdHouse_1F_Layout",
-      "width": 11,
-      "height": 9,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
-      "border_filepath": "data/layouts/QuayshadeTown_ThirdHouse_1F/border.bin",
-      "blockdata_filepath": "data/layouts/QuayshadeTown_ThirdHouse_1F/map.bin",
-      "layout_version": "emerald"
-    },
-    {
       "id": "LAYOUT_SHAYDWELL_TOWN_FRLG",
       "name": "ShaydwellTown_Frlg_Layout",
       "width": 34,
@@ -10342,18 +10277,6 @@
       "secondary_tileset": "gTileset_ShaydwellTown",
       "border_filepath": "data/layouts/BronzongLake_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/BronzongLake_Frlg/map.bin"
-    },
-    {
-      "id": "LAYOUT_BRONZONG_LAKE_WEST_FRLG",
-      "name": "BronzongLakeWest_Frlg_Layout",
-      "width": 13,
-      "height": 32,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_ShaydwellTown",
-      "border_filepath": "data/layouts/BronzongLakeWest_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/BronzongLakeWest_Frlg/map.bin"
     }
   ]
 }
