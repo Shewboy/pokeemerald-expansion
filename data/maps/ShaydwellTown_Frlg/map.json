@@ -18,6 +18,11 @@
       "map": "MAP_BRONZONG_LAKE_FRLG",
       "offset": -1,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE1_SJ_FRLG",
+      "offset": 8,
+      "direction": "down"
     }
   ],
   "object_events": [

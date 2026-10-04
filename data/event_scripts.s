@@ -1784,3 +1784,6 @@ Text_Yuck::
 
 	.include "data/maps/BronzongLake_Frlg/scripts.inc"
 	.include "data/maps/BronzongLake_Frlg/text.inc"
+
+	.include "data/maps/Route1_SJ_Frlg/scripts.inc"
+	.include "data/maps/Route1_SJ_Frlg/text.inc"
