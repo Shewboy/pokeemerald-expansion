@@ -1,0 +1,71 @@
+mapscripts Route1_SJ_Frlg_MapScripts {
+}
+
+### TRAINERS
+
+
+### Bug Catcher Derek
+script Route1_SJ_EventScript_DerekBattle {
+    trainerbattle_single(TRAINER_BUG_CATCHER_DEREK, format("Bug types rule! Don't you agree?"), format("No! My bugs!"))
+    msgbox(format("Bug type Pok\emon may not be the strongest, but they grow quickly."))
+    release
+}
+
+### Lass Melissa
+script Route1_SJ_EventScript_MelissaBattle {
+    trainerbattle_single(TRAINER_LASS_MELISSA, format("You look like you need something to do! Care for a battle?"), format("Wahhh!"))
+    msgbox(format("There's a big commotion going on at the end of this route.\pSomething about bulldozers?"))
+    release
+}
+
+
+### NPCs
+
+
+### Protester 1
+script Route1_SJ_EventScript_Protester1 {
+    lock
+    faceplayer
+    msgbox(format("No more construction!\nStop the destruction!"))
+    release
+}
+
+### Protester 2
+script Route1_SJ_EventScript_Protester2 {
+    lock
+    faceplayer
+    msgbox(format("I won't just stand by and let them destroy Pok\emon's homes!"))
+    release
+}
+
+### Protester 3
+script Route1_SJ_EventScript_Protester3 {
+    lock
+    faceplayer
+    msgbox(format("I just didn't feel like going to class."))
+    release
+}
+
+### Construction Worker 1
+script Route1_SJ_EventScript_Worker1 {
+    lock
+    faceplayer
+    msgbox(format("These college kids won't get out of our way!\nI've got a schedule to keep!"))
+    release
+}
+
+### Construction Worker 2
+script Route1_SJ_EventScript_Worker2 {
+    lock
+    faceplayer
+    msgbox(format("Lunch break, union breaks, and now this?\pI love my job!"))
+    release
+}
+
+### Construction Worker 3
+script Route1_SJ_EventScript_Worker3 {
+    lock
+    faceplayer
+    msgbox(format("People are itching to move to Prodemia City, but there's no more room.\pSo we're clearing some land to build housing."))
+    release
+}

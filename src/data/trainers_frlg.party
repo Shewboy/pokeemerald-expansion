@@ -13801,3 +13801,41 @@ Chewtle (M)
 Level: 3
 Ability: Strong Jaw
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BUG_CATCHER_DEREK ===
+Name: DEREK
+Class: Bug Catcher Frlg
+Pic: Bug Catcher Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Wurmple (F)
+Level: 4
+Ability: Shield Dust
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Kricketot (M)
+Level: 4
+Ability: Shed Skin
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_LASS_MELISSA ===
+Name: MELISSA
+Class: Lass Frlg
+Pic: Lass Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Pidove (F)
+Level: 3
+Ability: Big Pecks
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Skwovet (M)
+Level: 4
+Ability: Cheek Pouch
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe

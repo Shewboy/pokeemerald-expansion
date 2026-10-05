@@ -628,12 +628,14 @@
 #define TRAINER_CHAMPION_REMATCH_CHARMANDER        622
 #define TRAINER_CUE_BALL_PAXTON                    623
 #define TRAINER_FISHERBOY_CODY                     624
+#define TRAINER_BUG_CATCHER_DEREK                  625
+#define TRAINER_LASS_MELISSA                       626
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT_FRLG can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_FRLG                      625
+#define TRAINERS_COUNT_FRLG                      627
 #define MAX_TRAINERS_COUNT_FRLG                  768
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_FRLG_H
