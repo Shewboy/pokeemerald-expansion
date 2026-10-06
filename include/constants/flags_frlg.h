@@ -316,7 +316,7 @@
 #define FLAG_0x153               0x153
 
 // Item ball hide/show
-#define FLAG_HIDE_ROUTE2_ETHER                                  0x154
+#define FLAG_HIDE_ROUTE1_POKE_BALL                               0x154
 #define FLAG_HIDE_ROUTE2_PARALYZE_HEAL                          0x155
 #define FLAG_HIDE_VIRIDIAN_FOREST_POKE_BALL                     0x156
 #define FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE                      0x157

@@ -94,6 +94,20 @@ Route1_SJ_EventScript_Worker3::
 	return
 
 
+Route1_SJ_EventScript_PokeBall::
+# 79 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	lockall
+# 80 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	giveitem ITEM_POKE_BALL, 1
+# 81 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	waitfanfare
+# 82 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	setflag FLAG_HIDE_ROUTE1_POKE_BALL
+# 83 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	release
+	return
+
+
 Route1_SJ_EventScript_DerekBattle_Text_0:
 # 9 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	.string "Bug types rule! Don't you agree?$"

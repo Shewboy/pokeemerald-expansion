@@ -69,3 +69,16 @@ script Route1_SJ_EventScript_Worker3 {
     msgbox(format("People are itching to move to Prodemia City, but there's no more room.\pSo we're clearing some land to build housing."))
     release
 }
+
+
+### ITEMS
+
+
+### POKE BALL
+script Route1_SJ_EventScript_PokeBall {
+    lockall
+    giveitem(ITEM_POKE_BALL,1)
+    waitfanfare
+    setflag(FLAG_HIDE_ROUTE1_POKE_BALL)
+    release
+}
