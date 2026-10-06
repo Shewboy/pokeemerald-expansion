@@ -44662,7 +44662,7 @@
         },
         {
           "map": "MAP_ROUTE1_SJ_FRLG",
-          "base_label": "gRoute1_SJ_Frlg_Day",
+          "base_label": "gRoute1_SJ_FireRed_Day",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -44761,7 +44761,7 @@
         },
         {
           "map": "MAP_ROUTE1_SJ_FRLG",
-          "base_label": "gRoute1_SJ_Frlg_Morning",
+          "base_label": "gRoute1_SJ_FireRed_Morning",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
@@ -44860,7 +44860,7 @@
         },
         {
           "map": "MAP_ROUTE1_SJ_FRLG",
-          "base_label": "gRoute1_SJ_Frlg_Night",
+          "base_label": "gRoute1_SJ_FireRed_Night",
           "land_mons": {
             "encounter_rate": 21,
             "mons": [
