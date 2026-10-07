@@ -13834,3 +13834,22 @@ Skwovet (M)
 Level: 4
 Ability: Cheek Pouch
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_YOUNGSTER_JOHN ===
+Name: JOHN
+Class: Youngster Frlg
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Pidgey (M)
+Level: 3
+Ability: Keen Eye
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Bidoof (M)
+Level: 3
+Ability: Unaware
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe

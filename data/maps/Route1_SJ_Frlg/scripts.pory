@@ -15,7 +15,14 @@ script Route1_SJ_EventScript_DerekBattle {
 ### Lass Melissa
 script Route1_SJ_EventScript_MelissaBattle {
     trainerbattle_single(TRAINER_LASS_MELISSA, format("You look like you need something to do! Care for a battle?"), format("Wahhh!"))
-    msgbox(format("There's a big commotion going on at the end of this route.\pSomething about bulldozers?"))
+    msgbox(format("There's a big commotion going on at the end of this route.\pI don't want to get involved, so I'm staying put."))
+    release
+}
+
+### Youngster John
+script Route1_SJ_EventScript_JohnBattle {
+    trainerbattle_single(TRAINER_YOUNGSTER_JOHN, format("Yeah! Time for another battle!"), format("Awesome!"))
+    msgbox(format("Win or lose, every battle is a fun time!"))
     release
 }
 

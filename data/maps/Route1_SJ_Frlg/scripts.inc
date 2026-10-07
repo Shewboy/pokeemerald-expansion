@@ -22,90 +22,100 @@ Route1_SJ_EventScript_MelissaBattle::
 	return
 
 
+Route1_SJ_EventScript_JohnBattle::
+# 24 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	trainerbattle_single TRAINER_YOUNGSTER_JOHN, Route1_SJ_EventScript_JohnBattle_Text_0, Route1_SJ_EventScript_JohnBattle_Text_1
+# 25 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	msgbox Route1_SJ_EventScript_JohnBattle_Text_2
+# 26 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	release
+	return
+
+
 Route1_SJ_EventScript_Protester1::
-# 28 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 35 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	lock
-# 29 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 36 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	faceplayer
-# 30 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 37 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	msgbox Route1_SJ_EventScript_Protester1_Text_0
-# 31 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 38 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	release
 	return
 
 
 Route1_SJ_EventScript_Protester2::
-# 36 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 43 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	lock
-# 37 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 44 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	faceplayer
-# 38 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 45 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	msgbox Route1_SJ_EventScript_Protester2_Text_0
-# 39 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 46 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	release
 	return
 
 
 Route1_SJ_EventScript_Protester3::
-# 44 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 51 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	lock
-# 45 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 52 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	faceplayer
-# 46 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 53 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	msgbox Route1_SJ_EventScript_Protester3_Text_0
-# 47 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 54 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	release
 	return
 
 
 Route1_SJ_EventScript_Worker1::
-# 52 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 59 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	lock
-# 53 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 60 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	faceplayer
-# 54 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 61 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	msgbox Route1_SJ_EventScript_Worker1_Text_0
-# 55 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 62 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	release
 	return
 
 
 Route1_SJ_EventScript_Worker2::
-# 60 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 67 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	lock
-# 61 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 68 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	faceplayer
-# 62 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 69 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	msgbox Route1_SJ_EventScript_Worker2_Text_0
-# 63 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 70 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	release
 	return
 
 
 Route1_SJ_EventScript_Worker3::
-# 68 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 75 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	lock
-# 69 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 76 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	faceplayer
-# 70 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 77 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	msgbox Route1_SJ_EventScript_Worker3_Text_0
-# 71 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 78 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	release
 	return
 
 
 Route1_SJ_EventScript_PokeBall::
-# 80 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 87 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	lockall
-# 81 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 88 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	removeobject 1
-# 82 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 89 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	giveitem ITEM_POKE_BALL, 1
-# 83 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 90 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	waitfanfare
-# 84 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 91 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	setflag FLAG_HIDE_ROUTE1_POKE_BALL
-# 85 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 92 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	release
 	return
 
@@ -136,36 +146,49 @@ Route1_SJ_EventScript_MelissaBattle_Text_2:
 # 18 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	.string "There's a big commotion going on at the\n"
 	.string "end of this route.\p"
-	.string "Something about bulldozers?$"
+	.string "I don't want to get involved, so I'm\n"
+	.string "staying put.$"
+
+Route1_SJ_EventScript_JohnBattle_Text_0:
+# 24 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	.string "Yeah! Time for another battle!$"
+
+Route1_SJ_EventScript_JohnBattle_Text_1:
+# 24 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	.string "Awesome!$"
+
+Route1_SJ_EventScript_JohnBattle_Text_2:
+# 25 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	.string "Win or lose, every battle is a fun time!$"
 
 Route1_SJ_EventScript_Protester1_Text_0:
-# 30 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 37 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	.string "No more construction!\n"
 	.string "Stop the destruction!$"
 
 Route1_SJ_EventScript_Protester2_Text_0:
-# 38 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 45 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	.string "I won't just stand by and let them\n"
 	.string "destroy Pokémon's homes!$"
 
 Route1_SJ_EventScript_Protester3_Text_0:
-# 46 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 53 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	.string "I just didn't feel like going to class.$"
 
 Route1_SJ_EventScript_Worker1_Text_0:
-# 54 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 61 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	.string "These college kids won't get out of our\n"
 	.string "way!\n"
 	.string "I've got a schedule to keep!$"
 
 Route1_SJ_EventScript_Worker2_Text_0:
-# 62 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 69 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	.string "Lunch break, union breaks, and now\n"
 	.string "this?\p"
 	.string "I love my job!$"
 
 Route1_SJ_EventScript_Worker3_Text_0:
-# 70 "data/maps/Route1_SJ_Frlg/scripts.pory"
+# 77 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	.string "People are itching to move to Prodemia\n"
 	.string "City, but there's no more room.\p"
 	.string "So we're clearing some land to build\n"
