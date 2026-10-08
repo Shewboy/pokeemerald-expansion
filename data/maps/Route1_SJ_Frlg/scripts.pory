@@ -21,7 +21,7 @@ script Route1_SJ_EventScript_MelissaBattle {
 
 ### Youngster John
 script Route1_SJ_EventScript_JohnBattle {
-    trainerbattle_single(TRAINER_YOUNGSTER_JOHN, format("Yeah! Time for another battle!"), format("Awesome!"))
+    trainerbattle_single(TRAINER_YOUNGSTER_JOHN, format("Alright! Time for another battle!"), format("Awesome!"))
     msgbox(format("Win or lose, every battle is a fun time!"))
     release
 }
@@ -58,7 +58,7 @@ script Route1_SJ_EventScript_Protester3 {
 script Route1_SJ_EventScript_Worker1 {
     lock
     faceplayer
-    msgbox(format("These college kids won't get out of our way!\nI've got a schedule to keep!"))
+    msgbox(format("These college kids won't get out of our way! I've got a schedule to keep!"))
     release
 }
 
@@ -89,5 +89,15 @@ script Route1_SJ_EventScript_PokeBall {
     giveitem(ITEM_POKE_BALL,1)
     waitfanfare
     setflag(FLAG_HIDE_ROUTE1_POKE_BALL)
+    release
+}
+
+### POTION
+script Route1_SJ_EventScript_Potion {
+    lockall
+    removeobject(12)
+    giveitem(ITEM_POTION,1)
+    waitfanfare
+    setflag(FLAG_HIDE_ROUTE1_POTION)
     release
 }

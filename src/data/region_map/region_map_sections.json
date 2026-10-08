@@ -1638,6 +1638,10 @@
     {
       "id": "MAPSEC_ROUTE_1_SJ",
       "name": "ROUTE 1"
+    },
+    {
+      "id": "MAPSEC_PRODEMIA_CITY",
+      "name": "PRODEMIA CITY"
     }
   ]
 }

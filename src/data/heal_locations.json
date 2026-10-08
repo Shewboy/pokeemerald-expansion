@@ -359,6 +359,14 @@
       "respawn_npc": "0",
       "respawn_x": 2,
       "respawn_y": 3
+    },
+    {
+      "id": "HEAL_LOCATION_ROUTE1_SJ_FRLG",
+      "map": "MAP_ROUTE1_SJ_FRLG",
+      "x": 12,
+      "y": 20,
+      "respawn_map": "MAP_ROUTE1_SJ_FRLG",
+      "respawn_npc": "1"
     }
   ]
 }

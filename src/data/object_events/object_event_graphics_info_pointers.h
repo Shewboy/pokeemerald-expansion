@@ -295,6 +295,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fisher;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Channeler;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chef;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Policeman;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Contractor;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GentlemanFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SailorFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Captain;
@@ -708,6 +709,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CHANNELER]                = &gObjectEventGraphicsInfo_Channeler,
     [OBJ_EVENT_GFX_CHEF]                     = &gObjectEventGraphicsInfo_Chef,
     [OBJ_EVENT_GFX_POLICEMAN]                = &gObjectEventGraphicsInfo_Policeman,
+    [OBJ_EVENT_GFX_CONTRACTOR]               = &gObjectEventGraphicsInfo_Contractor,
     [OBJ_EVENT_GFX_GENTLEMAN_FRLG]           = &gObjectEventGraphicsInfo_GentlemanFrlg,
     [OBJ_EVENT_GFX_SAILOR_FRLG]              = &gObjectEventGraphicsInfo_SailorFrlg,
     [OBJ_EVENT_GFX_CAPTAIN]                  = &gObjectEventGraphicsInfo_Captain,

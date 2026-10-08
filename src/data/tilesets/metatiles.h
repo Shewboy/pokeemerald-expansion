@@ -411,3 +411,6 @@ const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary
 
 const u16 gMetatiles_ShaydwellTown[] = INCBIN_U16("data/tilesets/secondary/shaydwell_town/metatiles.bin");
 const u16 gMetatileAttributes_ShaydwellTown[] = INCBIN_U16("data/tilesets/secondary/shaydwell_town/metatile_attributes.bin");
+
+const u16 gMetatiles_ProdemiaCity[] = INCBIN_U16("data/tilesets/secondary/prodemia_city/metatiles.bin");
+const u16 gMetatileAttributes_ProdemiaCity[] = INCBIN_U16("data/tilesets/secondary/prodemia_city/metatile_attributes.bin");

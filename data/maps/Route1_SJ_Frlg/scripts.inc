@@ -120,6 +120,22 @@ Route1_SJ_EventScript_PokeBall::
 	return
 
 
+Route1_SJ_EventScript_Potion::
+# 97 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	lockall
+# 98 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	removeobject 12
+# 99 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	giveitem ITEM_POTION, 1
+# 100 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	waitfanfare
+# 101 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	setflag FLAG_HIDE_ROUTE1_POTION
+# 102 "data/maps/Route1_SJ_Frlg/scripts.pory"
+	release
+	return
+
+
 Route1_SJ_EventScript_DerekBattle_Text_0:
 # 10 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	.string "Bug types rule! Don't you agree?$"
@@ -151,7 +167,7 @@ Route1_SJ_EventScript_MelissaBattle_Text_2:
 
 Route1_SJ_EventScript_JohnBattle_Text_0:
 # 24 "data/maps/Route1_SJ_Frlg/scripts.pory"
-	.string "Yeah! Time for another battle!$"
+	.string "Alright! Time for another battle!$"
 
 Route1_SJ_EventScript_JohnBattle_Text_1:
 # 24 "data/maps/Route1_SJ_Frlg/scripts.pory"
@@ -178,8 +194,7 @@ Route1_SJ_EventScript_Protester3_Text_0:
 Route1_SJ_EventScript_Worker1_Text_0:
 # 61 "data/maps/Route1_SJ_Frlg/scripts.pory"
 	.string "These college kids won't get out of our\n"
-	.string "way!\n"
-	.string "I've got a schedule to keep!$"
+	.string "way! I've got a schedule to keep!$"
 
 Route1_SJ_EventScript_Worker2_Text_0:
 # 69 "data/maps/Route1_SJ_Frlg/scripts.pory"

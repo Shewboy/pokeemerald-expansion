@@ -43590,7 +43590,7 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_WURMPLE"
+                "species": "SPECIES_SKWOVET"
               },
               {
                 "min_level": 2,
@@ -43601,6 +43601,21 @@
                 "min_level": 2,
                 "max_level": 3,
                 "species": "SPECIES_WURMPLE"
+              },
+              {
+                "min_level": 2,
+                "max_level": 3,
+                "species": "SPECIES_WURMPLE"
+              },
+              {
+                "min_level": 2,
+                "max_level": 3,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 2,
+                "max_level": 3,
+                "species": "SPECIES_PIDGEY"
               },
               {
                 "min_level": 2,
@@ -43615,27 +43630,12 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_PIDGEY"
+                "species": "SPECIES_FLETCHLING"
               },
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 2,
-                "max_level": 3,
-                "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 2,
-                "max_level": 3,
-                "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 2,
-                "max_level": 3,
-                "species": "SPECIES_PIDGEY"
+                "species": "SPECIES_FLETCHLING"
               }
             ]
           },
@@ -44679,7 +44679,12 @@
               {
                 "min_level": 3,
                 "max_level": 4,
-                "species": "SPECIES_WURMPLE"
+                "species": "SPECIES_HOPPIP"
+              },
+              {
+                "min_level": 3,
+                "max_level": 4,
+                "species": "SPECIES_HOPPIP"
               },
               {
                 "min_level": 3,
@@ -44700,11 +44705,6 @@
                 "min_level": 3,
                 "max_level": 4,
                 "species": "SPECIES_FLETCHLING"
-              },
-              {
-                "min_level": 3,
-                "max_level": 4,
-                "species": "SPECIES_PIDGEY"
               },
               {
                 "min_level": 3,
@@ -44778,12 +44778,12 @@
               {
                 "min_level": 3,
                 "max_level": 4,
-                "species": "SPECIES_PIDOVE"
+                "species": "SPECIES_HOPPIP"
               },
               {
                 "min_level": 3,
                 "max_level": 4,
-                "species": "SPECIES_PIDOVE"
+                "species": "SPECIES_HOPPIP"
               },
               {
                 "min_level": 3,

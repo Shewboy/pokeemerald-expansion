@@ -10286,9 +10286,21 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_PewterCity",
+      "secondary_tileset": "gTileset_ProdemiaCity",
       "border_filepath": "data/layouts/Route1_SJ_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/Route1_SJ_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_FRLG",
+      "name": "ProdemiaCity_Frlg_Layout",
+      "width": 48,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General_Frlg",
+      "secondary_tileset": "gTileset_ProdemiaCity",
+      "border_filepath": "data/layouts/ProdemiaCity_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_Frlg/map.bin"
     }
   ]
 }
