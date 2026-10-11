@@ -75,7 +75,8 @@
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
-    "gMapGroup_IndoorShaydwell_Frlg"
+    "gMapGroup_IndoorShaydwell_Frlg",
+    "gMapGroup_IndoorProdemia_Frlg"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1171,5 +1172,9 @@
     "ShaydwellTown_PlayersHouse_2F_Frlg",
     "ShaydwellTown_CodysHouse_1F_Frlg",
     "ShaydwellTown_ThirdHouse_1F_Frlg"
+  ],
+  "gMapGroup_IndoorProdemia_Frlg": [
+    "ProdemiaCity_PokemonCenter_1F_Frlg",
+    "ProdemiaCity_PokemonCenter_2F_Frlg"
   ]
 }

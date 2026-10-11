@@ -20,8 +20,42 @@
       "direction": "up"
     }
   ],
-  "object_events": [],
-  "warp_events": [],
+  "object_events": [
+    {
+      "type": "clone",
+      "graphics_id": "OBJ_EVENT_GFX_CONTRACTOR",
+      "x": 26,
+      "y": -4,
+      "target_local_id": "15",
+      "target_map": "MAP_ROUTE1_SJ_FRLG"
+    },
+    {
+      "type": "clone",
+      "graphics_id": "OBJ_EVENT_GFX_MAN",
+      "x": 18,
+      "y": -4,
+      "target_local_id": "8",
+      "target_map": "MAP_ROUTE1_SJ_FRLG"
+    },
+    {
+      "type": "clone",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_FRLG",
+      "x": 18,
+      "y": -5,
+      "target_local_id": "7",
+      "target_map": "MAP_ROUTE1_SJ_FRLG"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_PRODEMIA_CITY_POKEMON_CENTER_1F_FRLG",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_KANTO"
 }

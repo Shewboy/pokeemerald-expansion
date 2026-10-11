@@ -367,6 +367,14 @@
       "y": 20,
       "respawn_map": "MAP_ROUTE1_SJ_FRLG",
       "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_PRODEMIA_CITY_FRLG",
+      "map": "MAP_PRODEMIA_CITY_FRLG",
+      "x": 10,
+      "y": 15,
+      "respawn_map": "MAP_PRODEMIA_CITY_POKEMON_CENTER_1F_FRLG",
+      "respawn_npc": "LOCALID_PRODEMIA_NURSE"
     }
   ]
 }
