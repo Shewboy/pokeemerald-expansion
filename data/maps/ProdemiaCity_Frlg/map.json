@@ -53,9 +53,41 @@
       "elevation": 0,
       "dest_map": "MAP_PRODEMIA_CITY_POKEMON_CENTER_1F_FRLG",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 40,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_PRODEMIA_CITY_MART_FRLG",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "EventScript_ProdemiaUniversity_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 34,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "EventScript_PokeMall_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_ProdemiaCity_CitySign"
+    }
+  ],
   "region": "REGION_KANTO"
 }

@@ -1,0 +1,24 @@
+mapscripts ProdemiaCity_Frlg_MapScripts {
+}
+
+
+### SIGNS
+
+
+script EventScript_ProdemiaUniversity_Sign {
+    lock
+    msgbox(format("Prodemia University\l\qoWhere the brightest stars shine.\qc"), MSGBOX_SIGN)
+    release
+}
+
+script EventScript_PokeMall_Sign {
+    lock
+    msgbox(format("COMING SOON!\lThe Prodemia Pok\e Mall!\pShop til you drop!"), MSGBOX_SIGN)
+    release
+}
+
+script EventScript_ProdemiaCity_CitySign {
+    lock
+    msgbox(format("Prodemia City\l\qoAlways moving forward.\qc"), MSGBOX_SIGN)
+    release
+}
