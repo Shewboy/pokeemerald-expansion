@@ -35,7 +35,7 @@ EventScript_ProdemiaCity_CitySign::
 EventScript_ProdemiaUniversity_Sign_Text_0:
 # 10 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "Prodemia University\l"
-	.string "“Where the brightest stars shine.”$"
+	.string "“The brightest minds in Lumina.”$"
 
 EventScript_PokeMall_Sign_Text_0:
 # 16 "data/maps/ProdemiaCity_Frlg/scripts.pory"

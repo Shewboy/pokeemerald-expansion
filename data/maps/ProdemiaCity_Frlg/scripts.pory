@@ -7,7 +7,7 @@ mapscripts ProdemiaCity_Frlg_MapScripts {
 
 script EventScript_ProdemiaUniversity_Sign {
     lock
-    msgbox(format("Prodemia University\l\qoWhere the brightest stars shine.\qc"), MSGBOX_SIGN)
+    msgbox(format("Prodemia University\l\qoThe brightest minds in Lumina.\qc"), MSGBOX_SIGN)
     release
 }
 

@@ -42,5 +42,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ShaydwellTown_PlayersHouse_2F_Text_PlayedWithNES"
     }
-  ]
+  ],
+  "region": "REGION_KANTO"
 }

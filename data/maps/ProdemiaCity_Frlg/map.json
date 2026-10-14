@@ -24,7 +24,7 @@
     {
       "type": "clone",
       "graphics_id": "OBJ_EVENT_GFX_CONTRACTOR",
-      "x": 26,
+      "x": 30,
       "y": -4,
       "target_local_id": "15",
       "target_map": "MAP_ROUTE1_SJ_FRLG"
@@ -32,7 +32,7 @@
     {
       "type": "clone",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
-      "x": 18,
+      "x": 22,
       "y": -4,
       "target_local_id": "8",
       "target_map": "MAP_ROUTE1_SJ_FRLG"
@@ -40,22 +40,50 @@
     {
       "type": "clone",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_FRLG",
-      "x": 18,
+      "x": 22,
       "y": -5,
       "target_local_id": "7",
       "target_map": "MAP_ROUTE1_SJ_FRLG"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_TRASHCAN",
+      "x": 6,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Common_EventScript_TrashcanEncounter",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_TRASHCAN",
+      "x": 32,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Common_EventScript_TrashcanEncounter",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 10,
+      "x": 14,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_PRODEMIA_CITY_POKEMON_CENTER_1F_FRLG",
       "dest_warp_id": "0"
     },
     {
-      "x": 40,
+      "x": 44,
       "y": 22,
       "elevation": 0,
       "dest_map": "MAP_PRODEMIA_CITY_MART_FRLG",
@@ -66,7 +94,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 25,
+      "x": 29,
       "y": 24,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -74,7 +102,7 @@
     },
     {
       "type": "sign",
-      "x": 32,
+      "x": 36,
       "y": 34,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -82,7 +110,7 @@
     },
     {
       "type": "sign",
-      "x": 21,
+      "x": 25,
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
