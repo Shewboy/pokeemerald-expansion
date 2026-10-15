@@ -173,9 +173,9 @@ ProdemiaCity_OnLoad_1:
 # 96 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	setmetatile 44, 22, METATILE_ProdemiaCity_PokeMart_ClosedDoor, TRUE
 # 99 "data/maps/ProdemiaCity_Frlg/scripts.pory"
-	setmetatile 39, 33, METATILE_ProdemiaCity_SilphCo_Door, TRUE
+	setmetatile 39, 33, METATILE_ProdemiaCity_SilphCoDoor, TRUE
 # 100 "data/maps/ProdemiaCity_Frlg/scripts.pory"
-	setmetatile 45, 33, METATILE_ProdemiaCity_SilphCo_Door, TRUE
+	setmetatile 45, 33, METATILE_ProdemiaCity_SilphCoDoor, TRUE
 # 102 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	special DrawWholeMapView
 	return

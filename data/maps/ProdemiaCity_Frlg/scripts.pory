@@ -96,8 +96,8 @@ script ProdemiaCity_OnLoad {
         setmetatile(44, 22, METATILE_ProdemiaCity_PokeMart_ClosedDoor, TRUE)
         //Change Poke Mall doors to ones with Door metatile behavior.
         //This keeps the door looking identical, but effectively adds the warps.
-        setmetatile(39, 33, METATILE_ProdemiaCity_SilphCo_Door, TRUE)
-        setmetatile(45, 33, METATILE_ProdemiaCity_SilphCo_Door, TRUE)
+        setmetatile(39, 33, METATILE_ProdemiaCity_SilphCoDoor, TRUE)
+        setmetatile(45, 33, METATILE_ProdemiaCity_SilphCoDoor, TRUE)
         //Redraw the map
         special(DrawWholeMapView)
     }

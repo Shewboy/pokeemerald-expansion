@@ -628,7 +628,7 @@
 #define METATILE_ProdemiaCity_PokeMall_RightWindow        0x2CB
 #define METATILE_ProdemiaCity_PokeMall_RightWindow_Top    0x2C3
 #define METATILE_ProdemiaCity_PokeMart_ClosedDoor         0x39B
-#define METATILE_ProdemiaCity_SilphCo_Door                0x2BC
+#define METATILE_ProdemiaCity_SilphCoDoor                 0x2BC
 #define METATILE_ProdemiaCity_TanBrick                    0x2E9
 
 // gTileset_Rustboro
