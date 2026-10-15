@@ -1,6 +1,107 @@
 mapscripts ProdemiaCity_Frlg_MapScripts {
+    MAP_SCRIPT_ON_LOAD: ProdemiaCity_OnLoad
 }
 
+
+script ProdemiaCity_OnLoad {
+    if (flag(FLAG_BADGE03_GET)){
+        //Replace crane tiles with tan brick tiles
+        setmetatile(32, 33, METATILE_ProdemiaCity_TanBrick, FALSE)
+        setmetatile(33, 33, METATILE_ProdemiaCity_TanBrick, FALSE)
+        setmetatile(34, 33, METATILE_ProdemiaCity_TanBrick, FALSE)
+        setmetatile(32, 32, METATILE_ProdemiaCity_TanBrick, FALSE)
+        setmetatile(33, 32, METATILE_ProdemiaCity_TanBrick, FALSE)
+        setmetatile(34, 32, METATILE_ProdemiaCity_TanBrick, FALSE)
+        setmetatile(34, 31, METATILE_ProdemiaCity_TanBrick, FALSE)
+        setmetatile(33, 29, METATILE_ProdemiaCity_TanBrick, FALSE)
+        setmetatile(34, 29, METATILE_ProdemiaCity_TanBrick, FALSE)
+        setmetatile(33, 28, METATILE_ProdemiaCity_TanBrick, FALSE)
+        setmetatile(34, 28, METATILE_ProdemiaCity_TanBrick, FALSE)
+        //Build one row of mall
+        setmetatile(41, 30, METATILE_ProdemiaCity_PokeMall_CenterWindow, TRUE)
+        setmetatile(42, 30, METATILE_ProdemiaCity_PokeMall_CenterWindow, TRUE)
+        setmetatile(43, 30, METATILE_ProdemiaCity_PokeMall_CenterWindow, TRUE)
+        setmetatile(44, 30, METATILE_ProdemiaCity_PokeMall_CenterWindow, TRUE)
+        setmetatile(45, 30, METATILE_ProdemiaCity_PokeMall_CenterWindow, TRUE)
+        setmetatile(46, 30, METATILE_ProdemiaCity_PokeMall_CenterWindow, TRUE)
+        setmetatile(47, 30, METATILE_ProdemiaCity_PokeMall_CenterWindow, TRUE)
+        setmetatile(48, 30, METATILE_ProdemiaCity_PokeMall_RightWindow, TRUE)
+        setmetatile(49, 30, METATILE_ProdemiaCity_PokeMall_RightWall, TRUE)
+        //Build next row of mall (top floor)
+        setmetatile(35, 29, METATILE_ProdemiaCity_PokeMall_LeftWall_Top, TRUE)
+        setmetatile(36, 29, METATILE_ProdemiaCity_PokeMall_LeftWindow_Top, TRUE)
+        setmetatile(37, 29, METATILE_ProdemiaCity_PokeMall_CenterWindow_Top, TRUE)
+        setmetatile(38, 29, METATILE_ProdemiaCity_PokeMall_CenterWindow_Top, TRUE)
+        setmetatile(39, 29, METATILE_ProdemiaCity_PokeMall_CenterWindow_Top, TRUE)
+        setmetatile(40, 29, METATILE_ProdemiaCity_PokeMall_CenterWindow_Top, TRUE)
+        setmetatile(41, 29, METATILE_ProdemiaCity_PokeMall_CenterWindow_Top, TRUE)
+        setmetatile(42, 29, METATILE_ProdemiaCity_PokeMall_CenterWindow_Top, TRUE)
+        setmetatile(43, 29, METATILE_ProdemiaCity_PokeMall_CenterWindow_Top, TRUE)
+        setmetatile(44, 29, METATILE_ProdemiaCity_PokeMall_CenterWindow_Top, TRUE)
+        setmetatile(45, 29, METATILE_ProdemiaCity_PokeMall_CenterWindow_Top, TRUE)
+        setmetatile(46, 29, METATILE_ProdemiaCity_PokeMall_CenterWindow_Top, TRUE)
+        setmetatile(47, 29, METATILE_ProdemiaCity_PokeMall_CenterWindow_Top, TRUE)
+        setmetatile(48, 29, METATILE_ProdemiaCity_PokeMall_RightWindow_Top, TRUE)
+        setmetatile(49, 29, METATILE_ProdemiaCity_PokeMall_RightWall_Top, TRUE)
+        //Build first row of roof
+        setmetatile(35, 28, METATILE_ProdemiaCity_PokeMall_LeftRoof_Bottom, TRUE)
+        setmetatile(36, 28, METATILE_ProdemiaCity_PokeMall_CenterRoof_Bottom, TRUE)
+        setmetatile(37, 28, METATILE_ProdemiaCity_PokeMall_LeftSky_Bottom, TRUE)
+        setmetatile(38, 28, METATILE_ProdemiaCity_PokeMall_CenterSky_Bottom, TRUE)
+        setmetatile(39, 28, METATILE_ProdemiaCity_PokeMall_RightSky_Bottom, TRUE)
+        setmetatile(40, 28, METATILE_ProdemiaCity_PokeMall_CenterRoof_Bottom, TRUE)
+        setmetatile(41, 28, METATILE_ProdemiaCity_PokeMall_LeftSky_Bottom, TRUE)
+        setmetatile(42, 28, METATILE_ProdemiaCity_PokeMall_CenterSky_Bottom, TRUE)
+        setmetatile(43, 28, METATILE_ProdemiaCity_PokeMall_RightSky_Bottom, TRUE)
+        setmetatile(44, 28, METATILE_ProdemiaCity_PokeMall_CenterRoof_Bottom, TRUE)
+        setmetatile(45, 28, METATILE_ProdemiaCity_PokeMall_LeftSky_Bottom, TRUE)
+        setmetatile(46, 28, METATILE_ProdemiaCity_PokeMall_CenterSky_Bottom, TRUE)
+        setmetatile(47, 28, METATILE_ProdemiaCity_PokeMall_RightSky_Bottom, TRUE)
+        setmetatile(48, 28, METATILE_ProdemiaCity_PokeMall_CenterRoof_Bottom, TRUE)
+        setmetatile(49, 28, METATILE_ProdemiaCity_PokeMall_RightRoof_Bottom, TRUE)
+        //Build second row of roof
+        setmetatile(35, 27, METATILE_ProdemiaCity_PokeMall_LeftRoof_Middle, TRUE)
+        setmetatile(36, 27, METATILE_ProdemiaCity_PokeMall_CenterRoof_Middle, TRUE)
+        setmetatile(37, 27, METATILE_ProdemiaCity_PokeMall_LeftSky_Middle, TRUE)
+        setmetatile(38, 27, METATILE_ProdemiaCity_PokeMall_CenterSky_Middle, TRUE)
+        setmetatile(39, 27, METATILE_ProdemiaCity_PokeMall_RightSky_Middle, TRUE)
+        setmetatile(40, 27, METATILE_ProdemiaCity_PokeMall_CenterRoof_Middle, TRUE)
+        setmetatile(41, 27, METATILE_ProdemiaCity_PokeMall_LeftSky_Middle, TRUE)
+        setmetatile(42, 27, METATILE_ProdemiaCity_PokeMall_CenterSky_Middle, TRUE)
+        setmetatile(43, 27, METATILE_ProdemiaCity_PokeMall_RightSky_Middle, TRUE)
+        setmetatile(44, 27, METATILE_ProdemiaCity_PokeMall_CenterRoof_Middle, TRUE)
+        setmetatile(45, 27, METATILE_ProdemiaCity_PokeMall_LeftSky_Middle, TRUE)
+        setmetatile(46, 27, METATILE_ProdemiaCity_PokeMall_CenterSky_Middle, TRUE)
+        setmetatile(47, 27, METATILE_ProdemiaCity_PokeMall_RightSky_Middle, TRUE)
+        setmetatile(48, 27, METATILE_ProdemiaCity_PokeMall_CenterRoof_Middle, TRUE)
+        setmetatile(49, 27, METATILE_ProdemiaCity_PokeMall_RightRoof_Middle, TRUE)
+        //Build final row of roof
+        setmetatile(35, 26, METATILE_ProdemiaCity_PokeMall_LeftRoof_Top, FALSE)
+        setmetatile(36, 26, METATILE_ProdemiaCity_PokeMall_CenterRoof_Top, FALSE)
+        setmetatile(37, 26, METATILE_ProdemiaCity_PokeMall_LeftSky_Top, FALSE)
+        setmetatile(38, 26, METATILE_ProdemiaCity_PokeMall_CenterSky_Top, FALSE)
+        setmetatile(39, 26, METATILE_ProdemiaCity_PokeMall_RightSky_Top, FALSE)
+        setmetatile(40, 26, METATILE_ProdemiaCity_PokeMall_CenterRoof_Top, FALSE)
+        setmetatile(41, 26, METATILE_ProdemiaCity_PokeMall_LeftSky_Top, FALSE)
+        setmetatile(42, 26, METATILE_ProdemiaCity_PokeMall_CenterSky_Top, FALSE)
+        setmetatile(43, 26, METATILE_ProdemiaCity_PokeMall_RightSky_Top, FALSE)
+        setmetatile(44, 26, METATILE_ProdemiaCity_PokeMall_CenterRoof_Top, FALSE)
+        setmetatile(45, 26, METATILE_ProdemiaCity_PokeMall_LeftSky_Top, FALSE)
+        setmetatile(46, 26, METATILE_ProdemiaCity_PokeMall_CenterSky_Top, FALSE)
+        setmetatile(47, 26, METATILE_ProdemiaCity_PokeMall_RightSky_Top, FALSE)
+        setmetatile(48, 26, METATILE_ProdemiaCity_PokeMall_CenterRoof_Top, FALSE)
+        setmetatile(49, 26, METATILE_ProdemiaCity_PokeMall_RightRoof_Top, FALSE)
+        //Change Poke Mart door to one without Door metatile behavior.
+        //This keeps the door looking identical, but effectively removes the warp.
+        setmetatile(44, 22, METATILE_ProdemiaCity_PokeMart_ClosedDoor, TRUE)
+        //Change Poke Mall doors to ones with Door metatile behavior.
+        //This keeps the door looking identical, but effectively adds the warps.
+        setmetatile(39, 33, METATILE_ProdemiaCity_SilphCo_Door, TRUE)
+        setmetatile(45, 33, METATILE_ProdemiaCity_SilphCo_Door, TRUE)
+        //Redraw the map
+        special(DrawWholeMapView)
+    }
+}
 
 ### SIGNS
 
@@ -13,8 +114,21 @@ script EventScript_ProdemiaUniversity_Sign {
 
 script EventScript_PokeMall_Sign {
     lock
-    msgbox(format("COMING SOON!\lThe Prodemia Pok\e Mall!\pShop til you drop!"), MSGBOX_SIGN)
+    if (flag(FLAG_BADGE03_GET)) {
+        msgbox(format("NOW OPEN!\lThe Prodemia Pok\e Mall!\pShop til you drop!"), MSGBOX_SIGN)
+    }
+    else {
+        msgbox(format("COMING SOON!\lThe Prodemia Pok\e Mall!\pShop til you drop!"), MSGBOX_SIGN)
+    }
     release
+}
+
+script EventScript_PokeMart_Sign {
+    if (flag(FLAG_BADGE03_GET)) {
+        lock
+        msgbox(format("PERMANENTLY CLOSED\pThank you to our dedicated customers!"), MSGBOX_SIGN)
+        release
+    }
 }
 
 script EventScript_ProdemiaCity_CitySign {

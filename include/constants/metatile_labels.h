@@ -169,7 +169,26 @@
 #define METATILE_Contest_WallShadow          0x221
 
 // gTileset_DepartmentStore
-#define METATILE_DepartmentStore_ElevatorDoor  0x28D
+#define METATILE_DepartmentStore_ElevatorDoor                          0x28D
+#define METATILE_DepartmentStore_Escalator_BottomNext_Normal           0x36E
+#define METATILE_DepartmentStore_Escalator_BottomNext_Transition1      0x382
+#define METATILE_DepartmentStore_Escalator_BottomNext_Transition2      0x380
+#define METATILE_DepartmentStore_Escalator_BottomRailNext_Transition1  0x37A
+#define METATILE_DepartmentStore_Escalator_BottomRailNext_Transition2  0x378
+#define METATILE_DepartmentStore_Escalator_BottomRail_Transition1      0x37B
+#define METATILE_DepartmentStore_Escalator_BottomRail_Transition2      0x379
+#define METATILE_DepartmentStore_Escalator_Bottom_Normal               0x36F
+#define METATILE_DepartmentStore_Escalator_Bottom_Transition1          0x383
+#define METATILE_DepartmentStore_Escalator_Bottom_Transition2          0x381
+#define METATILE_DepartmentStore_Escalator_TopNextRail_Normal          0x38E
+#define METATILE_DepartmentStore_Escalator_TopNext_Normal              0x386
+#define METATILE_DepartmentStore_Escalator_TopNext_Transition1         0x398
+#define METATILE_DepartmentStore_Escalator_TopNext_Transition2         0x384
+#define METATILE_DepartmentStore_Escalator_TopRail_Transition1         0x3A0
+#define METATILE_DepartmentStore_Escalator_TopRail_Transition2         0x38C
+#define METATILE_DepartmentStore_Escalator_Top_Normal                  0x387
+#define METATILE_DepartmentStore_Escalator_Top_Transition1             0x399
+#define METATILE_DepartmentStore_Escalator_Top_Transition2             0x385
 
 // gTileset_Dewford
 #define METATILE_Dewford_Door              0x225
@@ -578,6 +597,39 @@
 #define METATILE_PokemonMansion_Wall_EndCap_Basement                     0x2B0
 #define METATILE_PokemonMansion_Wall_EndPost_Bottom                      0x2AD
 #define METATILE_PokemonMansion_Wall_EndPost_Mid                         0x2A5
+
+// gTileset_ProdemiaCity
+#define METATILE_ProdemiaCity_PokeMall_CenterRoof_Bottom  0x2B9
+#define METATILE_ProdemiaCity_PokeMall_CenterRoof_Middle  0x2B1
+#define METATILE_ProdemiaCity_PokeMall_CenterRoof_Top     0x2A9
+#define METATILE_ProdemiaCity_PokeMall_CenterSky_Bottom   0x2D6
+#define METATILE_ProdemiaCity_PokeMall_CenterSky_Middle   0x2CE
+#define METATILE_ProdemiaCity_PokeMall_CenterSky_Top      0x2C6
+#define METATILE_ProdemiaCity_PokeMall_CenterWindow       0x2CA
+#define METATILE_ProdemiaCity_PokeMall_CenterWindow_Top   0x2C2
+#define METATILE_ProdemiaCity_PokeMall_LeftRoof_Bottom    0x2B8
+#define METATILE_ProdemiaCity_PokeMall_LeftRoof_Middle    0x2B0
+#define METATILE_ProdemiaCity_PokeMall_LeftRoof_Top       0x2A8
+#define METATILE_ProdemiaCity_PokeMall_LeftSky_Bottom     0x2D5
+#define METATILE_ProdemiaCity_PokeMall_LeftSky_Middle     0x2CD
+#define METATILE_ProdemiaCity_PokeMall_LeftSky_Top        0x2C5
+#define METATILE_ProdemiaCity_PokeMall_LeftWall           0x2C8
+#define METATILE_ProdemiaCity_PokeMall_LeftWall_Top       0x2C0
+#define METATILE_ProdemiaCity_PokeMall_LeftWindow         0x2C9
+#define METATILE_ProdemiaCity_PokeMall_LeftWindow_Top     0x2C1
+#define METATILE_ProdemiaCity_PokeMall_RightRoof_Bottom   0x2BA
+#define METATILE_ProdemiaCity_PokeMall_RightRoof_Middle   0x2B2
+#define METATILE_ProdemiaCity_PokeMall_RightRoof_Top      0x2AA
+#define METATILE_ProdemiaCity_PokeMall_RightSky_Bottom    0x2D7
+#define METATILE_ProdemiaCity_PokeMall_RightSky_Middle    0x2CF
+#define METATILE_ProdemiaCity_PokeMall_RightSky_Top       0x2C7
+#define METATILE_ProdemiaCity_PokeMall_RightWall          0x2CC
+#define METATILE_ProdemiaCity_PokeMall_RightWall_Top      0x2C4
+#define METATILE_ProdemiaCity_PokeMall_RightWindow        0x2CB
+#define METATILE_ProdemiaCity_PokeMall_RightWindow_Top    0x2C3
+#define METATILE_ProdemiaCity_PokeMart_ClosedDoor         0x39B
+#define METATILE_ProdemiaCity_SilphCo_Door                0x2BC
+#define METATILE_ProdemiaCity_TanBrick                    0x2E9
 
 // gTileset_Rustboro
 #define METATILE_Rustboro_Door_Gray  0x21F

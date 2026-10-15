@@ -1799,3 +1799,6 @@ Text_Yuck::
 
 	.include "data/maps/ProdemiaCity_Mart_Frlg/scripts.inc"
 	.include "data/maps/ProdemiaCity_Mart_Frlg/text.inc"
+
+	.include "data/maps/ProdemiaCity_PokeMall_1F_Frlg/scripts.inc"
+	.include "data/maps/ProdemiaCity_PokeMall_1F_Frlg/text.inc"

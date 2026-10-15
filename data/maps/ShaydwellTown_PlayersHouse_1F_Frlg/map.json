@@ -79,5 +79,6 @@
       "script": "ShaydwellTown_PlayersHouse_1F_Trigger_Dont_Leave"
     }
   ],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_KANTO"
 }
