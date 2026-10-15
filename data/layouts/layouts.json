@@ -10349,6 +10349,30 @@
       "secondary_tileset": "gTileset_DepartmentStore",
       "border_filepath": "data/layouts/ProdemiaCity_PokeMall_1F_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/ProdemiaCity_PokeMall_1F_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_POKE_MALL_2F_FRLG",
+      "name": "ProdemiaCity_PokeMall_2F_Frlg_Layout",
+      "width": 27,
+      "height": 15,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_DepartmentStore",
+      "border_filepath": "data/layouts/ProdemiaCity_PokeMall_2F_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_PokeMall_2F_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_POKE_MALL_3F_FRLG",
+      "name": "ProdemiaCity_PokeMall_3F_Frlg_Layout",
+      "width": 27,
+      "height": 15,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_DepartmentStore",
+      "border_filepath": "data/layouts/ProdemiaCity_PokeMall_3F_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_PokeMall_3F_Frlg/map.bin"
     }
   ]
 }

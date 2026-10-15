@@ -170,25 +170,27 @@
 
 // gTileset_DepartmentStore
 #define METATILE_DepartmentStore_ElevatorDoor                          0x28D
+#define METATILE_DepartmentStore_Escalator_BottomNextRail_Normal       0x366
+#define METATILE_DepartmentStore_Escalator_BottomNextRail_Transition1  0x37A
+#define METATILE_DepartmentStore_Escalator_BottomNextRail_Transition2  0x378
 #define METATILE_DepartmentStore_Escalator_BottomNext_Normal           0x36E
 #define METATILE_DepartmentStore_Escalator_BottomNext_Transition1      0x382
 #define METATILE_DepartmentStore_Escalator_BottomNext_Transition2      0x380
-#define METATILE_DepartmentStore_Escalator_BottomRailNext_Transition1  0x37A
-#define METATILE_DepartmentStore_Escalator_BottomRailNext_Transition2  0x378
+#define METATILE_DepartmentStore_Escalator_BottomRail_Normal           0x367
 #define METATILE_DepartmentStore_Escalator_BottomRail_Transition1      0x37B
 #define METATILE_DepartmentStore_Escalator_BottomRail_Transition2      0x379
 #define METATILE_DepartmentStore_Escalator_Bottom_Normal               0x36F
 #define METATILE_DepartmentStore_Escalator_Bottom_Transition1          0x383
 #define METATILE_DepartmentStore_Escalator_Bottom_Transition2          0x381
-#define METATILE_DepartmentStore_Escalator_TopNextRail_Normal          0x38E
-#define METATILE_DepartmentStore_Escalator_TopNext_Normal              0x386
-#define METATILE_DepartmentStore_Escalator_TopNext_Transition1         0x398
-#define METATILE_DepartmentStore_Escalator_TopNext_Transition2         0x384
-#define METATILE_DepartmentStore_Escalator_TopRail_Transition1         0x3A0
-#define METATILE_DepartmentStore_Escalator_TopRail_Transition2         0x38C
-#define METATILE_DepartmentStore_Escalator_Top_Normal                  0x387
-#define METATILE_DepartmentStore_Escalator_Top_Transition1             0x399
-#define METATILE_DepartmentStore_Escalator_Top_Transition2             0x385
+#define METATILE_DepartmentStore_Escalator_TopNextRail_Normal          0x38F
+#define METATILE_DepartmentStore_Escalator_TopNextRail_Transition1     0x3A1
+#define METATILE_DepartmentStore_Escalator_TopNextRail_Transition2     0x38D
+#define METATILE_DepartmentStore_Escalator_TopNext_Normal              0x387
+#define METATILE_DepartmentStore_Escalator_TopNext_Transition1         0x399
+#define METATILE_DepartmentStore_Escalator_TopNext_Transition2         0x385
+#define METATILE_DepartmentStore_Escalator_Top_Normal                  0x386
+#define METATILE_DepartmentStore_Escalator_Top_Transition1             0x398
+#define METATILE_DepartmentStore_Escalator_Top_Transition2             0x384
 
 // gTileset_Dewford
 #define METATILE_Dewford_Door              0x225

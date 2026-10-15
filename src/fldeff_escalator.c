@@ -11,8 +11,12 @@ static EWRAM_DATA u8 sEscalatorAnim_TaskId = 0;
 static void SetEscalatorMetatile(u8 taskId, const s16 *metatileIds, u16 metatileMasks);
 static void Task_DrawEscalator(u8 taskId);
 
+extern const struct Tileset gTileset_DepartmentStore;
+
 #define ESCALATOR_STAGES     3
 #define LAST_ESCALATOR_STAGE (ESCALATOR_STAGES - 1)
+
+//Emerald Poke Center
 
 static const s16 sEscalatorMetatiles_1F_0[ESCALATOR_STAGES] = {
     METATILE_PokemonCenter_Escalator1F_Tile0_Frame2,
@@ -55,6 +59,8 @@ static const s16 sEscalatorMetatiles_2F_2[ESCALATOR_STAGES] = {
     METATILE_PokemonCenter_Escalator2F_Tile2_Frame1,
     METATILE_PokemonCenter_Escalator2F_Tile2_Frame2
 };
+
+//FRLG Poke Center
 
 static const s16 sEscalatorMetatilesFrlg_BottomNextRail[ESCALATOR_STAGES] = 
 {
@@ -103,6 +109,57 @@ static const s16 sEscalatorMetatilesFrlg_TopNextRail[ESCALATOR_STAGES] =
     METATILE_PokemonCenterFrlg_Escalator_TopNextRail_Normal, 
     METATILE_PokemonCenterFrlg_Escalator_TopNextRail_Transition1, 
     METATILE_PokemonCenterFrlg_Escalator_TopNextRail_Transition2
+};
+
+//Poke Mall
+
+static const s16 sEscalatorMetatilesPokeMall_BottomNextRail[ESCALATOR_STAGES] = 
+{
+    METATILE_DepartmentStore_Escalator_BottomNextRail_Transition2, 
+    METATILE_DepartmentStore_Escalator_BottomNextRail_Transition1, 
+    METATILE_DepartmentStore_Escalator_BottomNextRail_Normal
+};
+
+static const s16 sEscalatorMetatilesPokeMall_BottomRail[ESCALATOR_STAGES] = 
+{
+    METATILE_DepartmentStore_Escalator_BottomRail_Transition2, 
+    METATILE_DepartmentStore_Escalator_BottomRail_Transition1, 
+    METATILE_DepartmentStore_Escalator_BottomRail_Normal
+};
+
+static const s16 sEscalatorMetatilesPokeMall_BottomNext[ESCALATOR_STAGES] = 
+{
+    METATILE_DepartmentStore_Escalator_BottomNext_Transition2, 
+    METATILE_DepartmentStore_Escalator_BottomNext_Transition1, 
+    METATILE_DepartmentStore_Escalator_BottomNext_Normal
+};
+
+static const s16 sEscalatorMetatilesPokeMall_Bottom[ESCALATOR_STAGES] = 
+{
+    METATILE_DepartmentStore_Escalator_Bottom_Transition2, 
+    METATILE_DepartmentStore_Escalator_Bottom_Transition1, 
+    METATILE_DepartmentStore_Escalator_Bottom_Normal
+};
+
+static const s16 sEscalatorMetatilesPokeMall_TopNext[ESCALATOR_STAGES] = 
+{
+    METATILE_DepartmentStore_Escalator_TopNext_Normal, 
+    METATILE_DepartmentStore_Escalator_TopNext_Transition1, 
+    METATILE_DepartmentStore_Escalator_TopNext_Transition2
+};
+
+static const s16 sEscalatorMetatilesPokeMall_Top[ESCALATOR_STAGES] = 
+{
+    METATILE_DepartmentStore_Escalator_Top_Normal, 
+    METATILE_DepartmentStore_Escalator_Top_Transition1, 
+    METATILE_DepartmentStore_Escalator_Top_Transition2
+};
+
+static const s16 sEscalatorMetatilesPokeMall_TopNextRail[ESCALATOR_STAGES] = 
+{
+    METATILE_DepartmentStore_Escalator_TopNextRail_Normal, 
+    METATILE_DepartmentStore_Escalator_TopNextRail_Transition1, 
+    METATILE_DepartmentStore_Escalator_TopNextRail_Transition2
 };
 
 #define tState            data[0]
@@ -159,6 +216,12 @@ static void SetEscalatorMetatile(u8 taskId, const s16 *metatileIds, u16 metatile
     }
 }
 
+static bool8 IsPokeMallEscalator(void)
+{
+    return gMapHeader.mapLayout->primaryTileset == &gTileset_DepartmentStore
+        || gMapHeader.mapLayout->secondaryTileset == &gTileset_DepartmentStore;
+}
+
 static void Task_DrawEscalator(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -169,25 +232,46 @@ static void Task_DrawEscalator(u8 taskId)
     switch (tState)
     {
     case 0:
-        SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_BottomNextRail : sEscalatorMetatiles_1F_0, 0);
+        if (IsPokeMallEscalator())
+            SetEscalatorMetatile(taskId, sEscalatorMetatilesPokeMall_BottomNextRail, 0);
+        else
+            SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_BottomNextRail : sEscalatorMetatiles_1F_0, 0);
         break;
     case 1:
-        SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_BottomRail : sEscalatorMetatiles_1F_1, 0);
+        if (IsPokeMallEscalator())
+            SetEscalatorMetatile(taskId, sEscalatorMetatilesPokeMall_BottomRail, 0);
+        else
+            SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_BottomRail : sEscalatorMetatiles_1F_1, 0);
         break;
     case 2:
-        SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_BottomNext : sEscalatorMetatiles_1F_2, MAPGRID_IMPASSABLE);
+        if (IsPokeMallEscalator())
+            SetEscalatorMetatile(taskId, sEscalatorMetatilesPokeMall_BottomNext, 0);
+        else
+            SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_BottomNext : sEscalatorMetatiles_1F_2, MAPGRID_IMPASSABLE);
         break;
     case 3:
-        SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_Bottom : sEscalatorMetatiles_1F_3, 0);
+        if (IsPokeMallEscalator())
+            SetEscalatorMetatile(taskId, sEscalatorMetatilesPokeMall_Bottom, 0);
+        else
+            SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_Bottom : sEscalatorMetatiles_1F_3, 0);
         break;
     case 4:
-        SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_TopNext : sEscalatorMetatiles_2F_0, MAPGRID_IMPASSABLE);
+        if (IsPokeMallEscalator())
+            SetEscalatorMetatile(taskId, sEscalatorMetatilesPokeMall_TopNext, 0);
+        else
+            SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_TopNext : sEscalatorMetatiles_2F_0, MAPGRID_IMPASSABLE);
         break;
     case 5:
-        SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_Top : sEscalatorMetatiles_2F_1, 0);
+        if (IsPokeMallEscalator())
+            SetEscalatorMetatile(taskId, sEscalatorMetatilesPokeMall_Top, 0);
+        else
+            SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_Top : sEscalatorMetatiles_2F_1, 0);
         break;
     case 6:
-        SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_TopNextRail : sEscalatorMetatiles_2F_2, 0);
+        if (IsPokeMallEscalator())
+            SetEscalatorMetatile(taskId, sEscalatorMetatilesPokeMall_TopNextRail, 0);
+        else
+            SetEscalatorMetatile(taskId, gMapHeader.mapLayout->isFrlg ? sEscalatorMetatilesFrlg_TopNextRail : sEscalatorMetatiles_2F_2, 0);
         break;
     }
 

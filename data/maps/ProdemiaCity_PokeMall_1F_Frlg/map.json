@@ -31,18 +31,11 @@
       "dest_warp_id": "3"
     },
     {
-      "x": 1,
-      "y": 7,
+      "x": 16,
+      "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_PRODEMIA_CITY_POKE_MALL_1F_FRLG",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 1,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_PRODEMIA_CITY_POKE_MALL_1F_FRLG",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_PRODEMIA_CITY_POKE_MALL_2F_FRLG",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
