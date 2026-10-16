@@ -268,6 +268,8 @@ static u8 sActiveList[32];
 // External declarations
 extern u8 *gFieldEffectScriptPointers[];
 extern const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[];
+extern const struct Tileset gTileset_DepartmentStore;
+extern bool8 IsPokeMallEscalator();
 
 static const u32 sNewGameBirch_Gfx[] = INCGFX_U32("graphics/birch_speech/birch.png", ".4bpp");
 static const u32 sUnusedBirchBeauty[] = INCGFX_U32("graphics/birch_speech/unused_beauty.png", ".4bpp", "-num_tiles 822 -Wnum_tiles");
@@ -300,6 +302,32 @@ static const u8 sRockFragment_TopLeft[] = INCGFX_U8("graphics/field_effects/pics
 static const u8 sRockFragment_TopRight[] = INCGFX_U8("graphics/field_effects/pics/deoxys_rock_fragment_top_right.png", ".4bpp");
 static const u8 sRockFragment_BottomLeft[] = INCGFX_U8("graphics/field_effects/pics/deoxys_rock_fragment_bottom_left.png", ".4bpp");
 static const u8 sRockFragment_BottomRight[] = INCGFX_U8("graphics/field_effects/pics/deoxys_rock_fragment_bottom_right.png", ".4bpp");
+
+//The following two functions are helpers for mirroring the player sprite when riding the escalators in Prodemia Poke Mall
+static s16 EscalatorCos(s16 angle, s16 amplitude)
+{
+    s16 x = Cos(angle, amplitude);
+    return IsPokeMallEscalator() ? -x : x;
+}
+
+static u8 GetEscalatorFacingDir(void)
+{
+    s16 x;
+    s16 y;
+    u8 behavior;
+    PlayerGetDestCoords(&x, &y);
+    behavior = MapGridGetMetatileBehaviorAt(x, y);
+    if (behavior == MB_DOWN_ESCALATOR && IsPokeMallEscalator() == TRUE)
+    {
+        // If dest is down escalator tile, check if player is in PokeMall vs PokeCenter
+        return DIR_WEST;
+    }
+    else // MB_UP_ESCALATOR
+    {
+        // If dest is up escalator tile, player is facing east
+        return DIR_EAST;
+    }
+}
 
 bool8 (*const gFieldEffectScriptFuncs[])(u8 **, u32 *) =
 {
@@ -1884,7 +1912,7 @@ static void RideDownEscalatorOut(struct Task *task)
 {
     struct Sprite *sprite;
     sprite = &gSprites[gPlayerAvatar.spriteId];
-    sprite->x2 = Cos(0x7c, task->data[2]);
+    sprite->x2 = EscalatorCos(0x7c, task->data[2]);
     sprite->y2 = Sin(0x76, task->data[2]);
     task->data[3]++;
     if (task->data[3] & 1)
@@ -1941,7 +1969,7 @@ static bool8 EscalatorWarpIn_Init(struct Task *task)
     CameraObjectFreeze();
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     objectEvent->noShadow = TRUE;
-    ObjectEventSetHeldMovement(objectEvent, GetFaceDirectionMovementAction(DIR_EAST));
+    ObjectEventSetHeldMovement(objectEvent, GetFaceDirectionMovementAction(GetEscalatorFacingDir()));
     PlayerGetDestCoords(&x, &y);
     behavior = MapGridGetMetatileBehaviorAt(x, y);
     EscalatorMoveFollowerNPCFinish();
@@ -1997,7 +2025,7 @@ static bool8 EscalatorWarpIn_Up_Init(struct Task *task)
 {
     struct Sprite *sprite;
     sprite = &gSprites[gPlayerAvatar.spriteId];
-    sprite->x2 = Cos(0x7c, task->data[1]);
+    sprite->x2 = EscalatorCos(0x7c, task->data[1]);
     sprite->y2 = Sin(0x76, task->data[1]);
     task->tState++;
     return FALSE;
@@ -2007,7 +2035,7 @@ static bool8 EscalatorWarpIn_Up_Ride(struct Task *task)
 {
     struct Sprite *sprite;
     sprite = &gSprites[gPlayerAvatar.spriteId];
-    sprite->x2 = Cos(0x7c, task->data[1]);
+    sprite->x2 = EscalatorCos(0x7c, task->data[1]);
     sprite->y2 = Sin(0x76, task->data[1]);
     task->data[2]++;
     if (task->data[2] & 1)
@@ -2043,7 +2071,7 @@ static bool8 EscalatorWarpIn_End(struct Task *task)
     {
         CameraObjectReset();
         UnlockPlayerFieldControls();
-        ObjectEventSetHeldMovement(objectEvent, GetWalkNormalMovementAction(DIR_EAST));
+        ObjectEventSetHeldMovement(objectEvent, GetWalkNormalMovementAction(GetEscalatorFacingDir()));
         DestroyTask(FindTaskIdByFunc(Task_EscalatorWarpIn));
     }
     return FALSE;

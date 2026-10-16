@@ -216,7 +216,7 @@ static void SetEscalatorMetatile(u8 taskId, const s16 *metatileIds, u16 metatile
     }
 }
 
-static bool8 IsPokeMallEscalator(void)
+bool8 IsPokeMallEscalator(void)
 {
     return gMapHeader.mapLayout->primaryTileset == &gTileset_DepartmentStore
         || gMapHeader.mapLayout->secondaryTileset == &gTileset_DepartmentStore;
