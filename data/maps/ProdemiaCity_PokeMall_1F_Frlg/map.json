@@ -36,6 +36,13 @@
       "elevation": 0,
       "dest_map": "MAP_PRODEMIA_CITY_POKE_MALL_2F_FRLG",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_PRODEMIA_CITY_POKE_MALL_ELEVATOR_FRLG",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

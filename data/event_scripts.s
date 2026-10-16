@@ -1808,3 +1808,9 @@ Text_Yuck::
 
 	.include "data/maps/ProdemiaCity_PokeMall_3F_Frlg/scripts.inc"
 	.include "data/maps/ProdemiaCity_PokeMall_3F_Frlg/text.inc"
+
+	.include "data/maps/ProdemiaCity_PokeMall_Elevator_Frlg/scripts.inc"
+	.include "data/maps/ProdemiaCity_PokeMall_Elevator_Frlg/text.inc"
+
+	.include "data/maps/ProdemiaCity_PokeMall_4F_Frlg/scripts.inc"
+	.include "data/maps/ProdemiaCity_PokeMall_4F_Frlg/text.inc"
