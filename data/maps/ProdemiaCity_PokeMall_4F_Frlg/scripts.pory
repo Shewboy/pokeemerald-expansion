@@ -1,0 +1,8 @@
+mapscripts ProdemiaCity_PokeMall_4F_Frlg_MapScripts {
+}
+
+script ProdemiaCity_PokeMall_4F_EventScript_FloorSign {
+    lock
+    msgbox(format("4F: DRUGSTORE"), MSGBOX_SIGN)
+    release
+}

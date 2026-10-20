@@ -154,7 +154,7 @@
 #define FLAG_GAVE_WALKING_BOY_FRESH_WATER                  0x0B1
 #define FLAG_GAVE_WALKING_BOY_LEMONADE                     0x0B2
 #define FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR               0x0B3
-#define FLAG_0x0B4                                         0x0B4
+#define FLAG_DAILY_PICKED_LOTO_TICKET_FRLG                 0x0B4
 #define FLAG_0x0B5               0x0B5
 #define FLAG_0x0B6               0x0B6
 #define FLAG_0x0B7               0x0B7

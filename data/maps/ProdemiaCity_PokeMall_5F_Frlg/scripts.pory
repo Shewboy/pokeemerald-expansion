@@ -1,0 +1,8 @@
+mapscripts ProdemiaCity_PokeMall_5F_Frlg_MapScripts {
+}
+
+script ProdemiaCity_PokeMall_5F_EventScript_FloorSign {
+    lock
+    msgbox(format("5F: FOOD COURT"), MSGBOX_SIGN)
+    release
+}

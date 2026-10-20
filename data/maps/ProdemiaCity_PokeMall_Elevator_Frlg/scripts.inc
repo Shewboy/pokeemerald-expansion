@@ -12,10 +12,16 @@ ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelect::
 	setvar VAR_0x8004, 3
 	specialvar VAR_RESULT, InitElevatorFloorSelectMenuPos
 	switch VAR_RESULT
-	case 0, ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom4F
-	case 1, ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom3F
-	case 2, ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom2F
-	case 3, ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom1F
+	case 0, ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom5F
+	case 1, ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom4F
+	case 2, ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom3F
+	case 3, ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom2F
+	case 4, ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom1F
+	end
+
+ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom5F::
+	multichoicedefault 0, 0, MULTI_DEPT_STORE_ELEVATOR, 0, FALSE
+	goto ProdemiaCity_PokeMall_Elevator_EventScript_ChooseFloor
 	end
 
 ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom4F::
@@ -40,17 +46,18 @@ ProdemiaCity_PokeMall_Elevator_EventScript_FloorSelectFrom1F::
 
 ProdemiaCity_PokeMall_Elevator_EventScript_ChooseFloor::
 	switch VAR_RESULT
-	case 0, ProdemiaCity_PokeMall_Elevator_EventScript_To4F
-	case 1, ProdemiaCity_PokeMall_Elevator_EventScript_To3F
-	case 2, ProdemiaCity_PokeMall_Elevator_EventScript_To2F
-	case 3, ProdemiaCity_PokeMall_Elevator_EventScript_To1F
+	case 0, ProdemiaCity_PokeMall_Elevator_EventScript_To5F
+	case 1, ProdemiaCity_PokeMall_Elevator_EventScript_To4F
+	case 2, ProdemiaCity_PokeMall_Elevator_EventScript_To3F
+	case 3, ProdemiaCity_PokeMall_Elevator_EventScript_To2F
+	case 4, ProdemiaCity_PokeMall_Elevator_EventScript_To1F
 	case 5, ProdemiaCity_PokeMall_Elevator_EventScript_ExitFloorSelect
 	case 127, ProdemiaCity_PokeMall_Elevator_EventScript_ExitFloorSelect
 	end
 
 ProdemiaCity_PokeMall_Elevator_EventScript_To1F::
 	setvar VAR_0x8006, 4
-	setdynamicwarp MAP_PRODEMIA_CITY_POKE_MALL_1F_FRLG, 255, 6, 1
+	setdynamicwarp MAP_PRODEMIA_CITY_POKE_MALL_1F_FRLG, 255, 13, 1
 	goto_if_eq VAR_ELEVATOR_FLOOR, 4, ProdemiaCity_PokeMall_Elevator_EventScript_ExitFloorSelect
 	call ProdemiaCity_PokeMall_Elevator_EventScript_MoveElevator
 	setvar VAR_ELEVATOR_FLOOR, 4
@@ -59,7 +66,7 @@ ProdemiaCity_PokeMall_Elevator_EventScript_To1F::
 
 ProdemiaCity_PokeMall_Elevator_EventScript_To2F::
 	setvar VAR_0x8006, 5
-	setdynamicwarp MAP_PRODEMIA_CITY_POKE_MALL_2F_FRLG, 255, 6, 1
+	setdynamicwarp MAP_PRODEMIA_CITY_POKE_MALL_2F_FRLG, 255, 13, 1
 	goto_if_eq VAR_ELEVATOR_FLOOR, 5, ProdemiaCity_PokeMall_Elevator_EventScript_ExitFloorSelect
 	call ProdemiaCity_PokeMall_Elevator_EventScript_MoveElevator
 	setvar VAR_ELEVATOR_FLOOR, 5
@@ -68,7 +75,7 @@ ProdemiaCity_PokeMall_Elevator_EventScript_To2F::
 
 ProdemiaCity_PokeMall_Elevator_EventScript_To3F::
 	setvar VAR_0x8006, 6
-	setdynamicwarp MAP_PRODEMIA_CITY_POKE_MALL_3F_FRLG, 255, 6, 1
+	setdynamicwarp MAP_PRODEMIA_CITY_POKE_MALL_3F_FRLG, 255, 13, 1
 	goto_if_eq VAR_ELEVATOR_FLOOR, 6, ProdemiaCity_PokeMall_Elevator_EventScript_ExitFloorSelect
 	call ProdemiaCity_PokeMall_Elevator_EventScript_MoveElevator
 	setvar VAR_ELEVATOR_FLOOR, 6
@@ -77,10 +84,19 @@ ProdemiaCity_PokeMall_Elevator_EventScript_To3F::
 
 ProdemiaCity_PokeMall_Elevator_EventScript_To4F::
 	setvar VAR_0x8006, 7
-	setdynamicwarp MAP_PRODEMIA_CITY_POKE_MALL_4F_FRLG, 255, 6, 1
+	setdynamicwarp MAP_PRODEMIA_CITY_POKE_MALL_4F_FRLG, 255, 13, 1
 	goto_if_eq VAR_ELEVATOR_FLOOR, 7, ProdemiaCity_PokeMall_Elevator_EventScript_ExitFloorSelect
 	call ProdemiaCity_PokeMall_Elevator_EventScript_MoveElevator
 	setvar VAR_ELEVATOR_FLOOR, 7
+	goto ProdemiaCity_PokeMall_Elevator_EventScript_ExitFloorSelect
+	end
+
+ProdemiaCity_PokeMall_Elevator_EventScript_To5F::
+	setvar VAR_0x8006, 8
+	setdynamicwarp MAP_PRODEMIA_CITY_POKE_MALL_5F_FRLG, 255, 13, 1
+	goto_if_eq VAR_ELEVATOR_FLOOR, 8, ProdemiaCity_PokeMall_Elevator_EventScript_ExitFloorSelect
+	call ProdemiaCity_PokeMall_Elevator_EventScript_MoveElevator
+	setvar VAR_ELEVATOR_FLOOR, 8
 	goto ProdemiaCity_PokeMall_Elevator_EventScript_ExitFloorSelect
 	end
 

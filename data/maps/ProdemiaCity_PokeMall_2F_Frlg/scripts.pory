@@ -1,0 +1,8 @@
+mapscripts ProdemiaCity_PokeMall_2F_Frlg_MapScripts {
+}
+
+script ProdemiaCity_PokeMall_2F_EventScript_FloorSign {
+    lock
+    msgbox(format("2F: TRAINER'S MARKET"), MSGBOX_SIGN)
+    release
+}

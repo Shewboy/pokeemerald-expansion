@@ -5280,6 +5280,32 @@ u16 InitElevatorFloorSelectMenuPos(void)
             break;
         }
     }
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(MAP_PRODEMIA_CITY_POKE_MALL_1F_FRLG))
+    {
+        switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
+        {
+        case MAP_NUM(MAP_PRODEMIA_CITY_POKE_MALL_5F_FRLG):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 0;
+            break;
+        case MAP_NUM(MAP_PRODEMIA_CITY_POKE_MALL_4F_FRLG):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 1;
+            break;
+        case MAP_NUM(MAP_PRODEMIA_CITY_POKE_MALL_3F_FRLG):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 2;
+            break;
+        case MAP_NUM(MAP_PRODEMIA_CITY_POKE_MALL_2F_FRLG):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 3;
+            break;
+        case MAP_NUM(MAP_PRODEMIA_CITY_POKE_MALL_1F_FRLG):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 4;
+            break;
+        }
+    }
     return sElevatorCursorPos;
 }
 
