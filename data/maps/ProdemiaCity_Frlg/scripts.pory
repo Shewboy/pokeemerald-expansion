@@ -108,7 +108,7 @@ script ProdemiaCity_OnLoad {
 
 script EventScript_ProdemiaUniversity_Sign {
     lock
-    msgbox(format("Prodemia University\l\qoThe brightest minds in Lumina.\qc"), MSGBOX_SIGN)
+    msgbox(format("Prodemia University\l\qoThe brightest minds in Meddoh.\qc"), MSGBOX_SIGN)
     release
 }
 
@@ -134,5 +134,73 @@ script EventScript_PokeMart_Sign {
 script EventScript_ProdemiaCity_CitySign {
     lock
     msgbox(format("Prodemia City\l\qoAlways moving forward.\qc"), MSGBOX_SIGN)
+    release
+}
+
+
+### NPCs
+
+
+script EventScript_ProdemiaCity_Contractor1 {
+    lock
+    faceplayer
+    msgbox(format("You don't have a hard hat? Be careful!"))
+    release
+}
+
+script EventScript_ProdemiaCity_Contractor2 {
+    lock
+    faceplayer
+    msgbox(format("These steel girders are called \qoI\qc beams because of their shape.\pI wonder if they have beams for the other letters of the alphabet?"))
+    release
+}
+
+script EventScript_ProdemiaCity_Contractor3 {
+    lock
+    faceplayer
+    msgbox(format("Working in construction is great!\pI get to literally make my mark on the world."))
+    release
+}
+
+script EventScript_ProdemiaCity_Contractor4 {
+    lock
+    faceplayer
+    msgbox(format("What? No, the mall won't be completed for a while.\pThe Pok\e Mart is still open, though."))
+    release
+}
+
+script EventScript_ProdemiaCity_Gurdurr {
+    lock
+    faceplayer
+    playmoncry(SPECIES_GURDURR, CRY_MODE_NORMAL)
+    msgbox(format("Gurr!"))
+    release
+}
+
+script EventScript_ProdemiaCity_Woman {
+    lock
+    faceplayer
+    msgbox(format("Prodemia used to be a slow, quiet town before the University got so big.\pNow I can barely hear myself think!"))
+    release
+}
+
+script EventScript_ProdemiaCity_TrashcanGuy {
+    lock
+    faceplayer
+    msgbox(format("I wasn't trash picking, I swear!\p.....\lAlright, you got me.\pBut don't knock it til you try it! I've found some pretty neat stuff."))
+    release
+}
+
+script EventScript_ProdemiaCity_BaldingMan {
+    lock
+    faceplayer
+    msgbox(format("Are you here to see Professor Holly?\pShe's highly regarded by her students."))
+    release
+}
+
+script EventScript_ProdemiaCity_Lass {
+    lock
+    faceplayer
+    msgbox(format("I can't wait for the new Pok\e Mall to be built!"))
     release
 }
