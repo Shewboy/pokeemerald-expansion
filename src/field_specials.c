@@ -5162,6 +5162,27 @@ void GetElevatorFloor(void)
             break;
         }
     }
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(MAP_PRODEMIA_CITY_POKE_MALL_1F_FRLG))
+    {
+        switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
+        {
+        case MAP_NUM(MAP_PRODEMIA_CITY_POKE_MALL_1F_FRLG):
+            floor = 4;
+            break;
+        case MAP_NUM(MAP_PRODEMIA_CITY_POKE_MALL_2F_FRLG):
+            floor = 5;
+            break;
+        case MAP_NUM(MAP_PRODEMIA_CITY_POKE_MALL_3F_FRLG):
+            floor = 6;
+            break;
+        case MAP_NUM(MAP_PRODEMIA_CITY_POKE_MALL_4F_FRLG):
+            floor = 7;
+            break;
+        case MAP_NUM(MAP_PRODEMIA_CITY_POKE_MALL_5F_FRLG):
+            floor = 8;
+            break;
+        }
+    }
     VarSet(VAR_ELEVATOR_FLOOR, floor);
 }
 
