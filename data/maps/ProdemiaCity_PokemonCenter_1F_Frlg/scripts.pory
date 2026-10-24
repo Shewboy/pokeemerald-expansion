@@ -15,3 +15,36 @@ ProdemiaCity_PokemonCenter_1F_EventScript_Nurse::
 	release
 	end
 `
+
+script ProdemiaCity_PokemonCenter_1F_EventScript_GBAKid {
+	lock
+	faceplayer
+	msgbox(format("Per Meddoh League regulations, Trainers are only allowed to carry six Pok\emon at a time.\pPC's like the one behind me let you store your extra 'mons free of charge."))
+	release
+}
+
+script ProdemiaCity_PokemonCenter_1F_EventScript_Gentleman {
+	lock
+	faceplayer
+	if(!flag(FLAG_RECEIVED_ANTIDOTE_PRODEMIA_PKMNCENTER)) {
+		msgbox(format("Getting poisoned can be a real pain!\pTake this, it'll help."))
+		giveitem(ITEM_ANTIDOTE, 1)
+		goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+		setflag(FLAG_RECEIVED_ANTIDOTE_PRODEMIA_PKMNCENTER)
+		waitfanfare
+		release
+	}
+	else {
+		lock
+		faceplayer
+		msgbox(format("Having your Pok\emon lose HP every few steps can be scary.\pLuckily it goes away just before they faint."))
+		release
+	}
+}
+
+script ProdemiaCity_PokemonCenter_1F_EventScript_Woman {
+	lock
+	faceplayer
+	msgbox(format("I always wanted to attend Prodemia University, but my grades weren't good enough."))
+	release
+}

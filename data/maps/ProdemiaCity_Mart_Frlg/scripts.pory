@@ -21,3 +21,17 @@ ProdemiaCity_Mart_Items::
 	.2byte ITEM_NONE
 	release
 	end`
+
+script ProdemiaCity_Mart_EventScript_OldWoman {
+	lock
+	faceplayer
+	msgbox(format("That new Pok\e Mall is going to put this place out of business!\pI don't want to lose my small corner store."))
+	release
+}
+
+script ProdemiaCity_Mart_EventScript_Man {
+	lock
+	faceplayer
+	msgbox(format("This Pok\e Mart is having a big liquidation sale before they close.\pI'm taking advantage of the good deals while I can."))
+	release
+}

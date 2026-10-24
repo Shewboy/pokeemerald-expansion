@@ -42,3 +42,41 @@ ProdemiaCity_Mart_Items::
 	release
 # 23 "data/maps/ProdemiaCity_Mart_Frlg/scripts.pory"
 	end
+
+ProdemiaCity_Mart_EventScript_OldWoman::
+# 26 "data/maps/ProdemiaCity_Mart_Frlg/scripts.pory"
+	lock
+# 27 "data/maps/ProdemiaCity_Mart_Frlg/scripts.pory"
+	faceplayer
+# 28 "data/maps/ProdemiaCity_Mart_Frlg/scripts.pory"
+	msgbox ProdemiaCity_Mart_EventScript_OldWoman_Text_0
+# 29 "data/maps/ProdemiaCity_Mart_Frlg/scripts.pory"
+	release
+	return
+
+
+ProdemiaCity_Mart_EventScript_Man::
+# 33 "data/maps/ProdemiaCity_Mart_Frlg/scripts.pory"
+	lock
+# 34 "data/maps/ProdemiaCity_Mart_Frlg/scripts.pory"
+	faceplayer
+# 35 "data/maps/ProdemiaCity_Mart_Frlg/scripts.pory"
+	msgbox ProdemiaCity_Mart_EventScript_Man_Text_0
+# 36 "data/maps/ProdemiaCity_Mart_Frlg/scripts.pory"
+	release
+	return
+
+
+ProdemiaCity_Mart_EventScript_OldWoman_Text_0:
+# 28 "data/maps/ProdemiaCity_Mart_Frlg/scripts.pory"
+	.string "That new Poké Mall is going to put this\n"
+	.string "place out of business!\p"
+	.string "I don't want to lose my small corner\n"
+	.string "store.$"
+
+ProdemiaCity_Mart_EventScript_Man_Text_0:
+# 35 "data/maps/ProdemiaCity_Mart_Frlg/scripts.pory"
+	.string "This Poké Mart is having a big\n"
+	.string "liquidation sale before they close.\p"
+	.string "I'm taking advantage of the good deals\n"
+	.string "while I can.$"
