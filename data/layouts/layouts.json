@@ -10421,6 +10421,18 @@
       "secondary_tileset": "gTileset_DepartmentStore",
       "border_filepath": "data/layouts/ProdemiaCity_PokeMall_5F_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/ProdemiaCity_PokeMall_5F_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_HOUSE1_FRLG",
+      "name": "ProdemiaCity_House1_Layout_Frlg",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/ProdemiaCity_House1_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_House1_Frlg/map.bin"
     }
   ]
 }

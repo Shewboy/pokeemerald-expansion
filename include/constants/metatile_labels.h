@@ -601,6 +601,7 @@
 #define METATILE_PokemonMansion_Wall_EndPost_Mid                         0x2A5
 
 // gTileset_ProdemiaCity
+#define METATILE_ProdemiaCity_Door                        0x284
 #define METATILE_ProdemiaCity_PokeMall_CenterRoof_Bottom  0x2B9
 #define METATILE_ProdemiaCity_PokeMall_CenterRoof_Middle  0x2B1
 #define METATILE_ProdemiaCity_PokeMall_CenterRoof_Top     0x2A9

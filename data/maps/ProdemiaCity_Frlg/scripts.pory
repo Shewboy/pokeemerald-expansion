@@ -177,10 +177,24 @@ script EventScript_ProdemiaCity_Gurdurr {
     release
 }
 
-script EventScript_ProdemiaCity_Woman {
+script EventScript_ProdemiaCity_Man {
+    lock
+    faceplayer
+    msgbox(format("You came from Shaydwell Town? I heard it's quaint there.\pBut I like the hustle and bustle. That's why I moved to Prodemia."))
+    release
+}
+
+script EventScript_ProdemiaCity_WomanWest {
     lock
     faceplayer
     msgbox(format("Prodemia used to be a slow, quiet town before the University got so big.\pNow I can barely hear myself think!"))
+    release
+}
+
+script EventScript_ProdemiaCity_WomanEast {
+    lock
+    faceplayer
+    msgbox(format("You look like a Pok\emon Trainer. Have you met Professor Holly?\pI've heard she's looking for someone to help with her research."))
     release
 }
 
@@ -191,16 +205,30 @@ script EventScript_ProdemiaCity_TrashcanGuy {
     release
 }
 
+script EventScript_ProdemiaCity_LittleGirl {
+    lock
+    faceplayer
+    msgbox(format("College sounds like so much fun! It's like school but with more play time."))
+    release
+}
+
 script EventScript_ProdemiaCity_BaldingMan {
     lock
     faceplayer
-    msgbox(format("Are you here to see Professor Holly?\pShe's highly regarded by her students."))
+    msgbox(format("Prodemia City doesn't have a Gym Leader.\pI guess all the college students are too bookish for that kind of thing."))
     release
 }
 
 script EventScript_ProdemiaCity_Lass {
     lock
     faceplayer
-    msgbox(format("I can't wait for the new Pok\e Mall to be built!"))
+    msgbox(format("I'm a huge shopper, so I'm super excited for the new Pok\e Mall to be built!"))
+    release
+}
+
+script EventScript_ProdemiaCity_WomanSouth {
+    lock
+    faceplayer
+    msgbox(format("I just got back from visiting a friend in Silicraft City.\pShe owns an art studio that sells glass flutes."))
     release
 }
