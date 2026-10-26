@@ -10433,6 +10433,18 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/ProdemiaCity_House1_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/ProdemiaCity_House1_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_HOUSE2_1F_FRLG",
+      "name": "ProdemiaCity_House2_1F_Frlg_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/ProdemiaCity_House2_1F_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_House2_1F_Frlg/map.bin"
     }
   ]
 }

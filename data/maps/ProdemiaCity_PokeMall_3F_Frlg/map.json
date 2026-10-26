@@ -77,5 +77,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ProdemiaCity_PokeMall_3F_EventScript_FloorSign"
     }
-  ]
+  ],
+  "region": "REGION_KANTO"
 }

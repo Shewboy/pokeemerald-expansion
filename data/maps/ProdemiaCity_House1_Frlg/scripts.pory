@@ -1,2 +1,17 @@
 mapscripts ProdemiaCity_House1_Frlg_MapScripts {
 }
+
+script ProdemiaCity_House1_EventScript_Woman {
+    lock
+    faceplayer
+    msgbox(format("Conifear Forest isn't for the faint of heart.\pNot only is it easy to get lost, it's teeming with Ghost Pok\emon."))
+    release
+}
+
+script ProdemiaCity_House1_EventScript_Hoothoot {
+    lock
+    faceplayer
+    playmoncry(SPECIES_HOOTHOOT, CRY_MODE_NORMAL)
+    msgbox(format("Who?"))
+    release
+}

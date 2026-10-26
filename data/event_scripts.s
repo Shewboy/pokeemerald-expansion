@@ -1820,3 +1820,6 @@ Text_Yuck::
 
 	.include "data/maps/ProdemiaCity_House1_Frlg/scripts.inc"
 	.include "data/maps/ProdemiaCity_House1_Frlg/text.inc"
+
+	.include "data/maps/ProdemiaCity_House2_1F_Frlg/scripts.inc"
+	.include "data/maps/ProdemiaCity_House2_1F_Frlg/text.inc"
