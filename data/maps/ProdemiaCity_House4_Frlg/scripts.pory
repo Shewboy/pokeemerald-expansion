@@ -1,0 +1,16 @@
+mapscripts ProdemiaCity_House4_Frlg_MapScripts {
+}
+
+script ProdemiaCity_House4_EventScript_Mother {
+    lock
+    faceplayer
+    msgbox(format("I can't get him to stop pretending to be a Gurdurr.\pHe keeps carrying stuff over his head and grunting."))
+    release
+}
+
+script ProdemiaCity_House4_EventScript_Son {
+    lock
+    faceplayer
+    msgbox(format("GURR!"))
+    release
+}

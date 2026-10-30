@@ -1,0 +1,9 @@
+mapscripts ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg_MapScripts {
+}
+
+script ProdemiaUniversity_EventScript_Admin {
+    lock
+    faceplayer
+    msgbox(format("Welcome!\pLecture halls are down the hallway to your right.\pThe library and research lab are to the left."))
+    release
+}

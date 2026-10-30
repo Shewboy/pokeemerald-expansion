@@ -1,0 +1,9 @@
+mapscripts ProdemiaCity_House3_Frlg_MapScripts {
+}
+
+script ProdemiaCity_House3_EventScript_WiseMan {
+    lock
+    faceplayer
+    msgbox(format("This city has changed a lot since I was a child.\pBut \qodifferent\qc doesn't have to mean \qobad\qc.\pSure, the constant construction bothers me at times.\pBut it's also a sign that Prodemia is thriving."))
+    release
+}

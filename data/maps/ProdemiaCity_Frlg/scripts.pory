@@ -106,13 +106,13 @@ script ProdemiaCity_OnLoad {
 ### SIGNS
 
 
-script EventScript_ProdemiaUniversity_Sign {
+script ProdemiaCity_EventScript_ProdemiaUniversitySign {
     lock
     msgbox(format("Prodemia University\l\qoThe brightest minds in Meddoh.\qc"), MSGBOX_SIGN)
     release
 }
 
-script EventScript_PokeMall_Sign {
+script ProdemiaCity_EventScript_PokeMallSign {
     lock
     if (flag(FLAG_BADGE03_GET)) {
         msgbox(format("NOW OPEN!\lThe Prodemia Pok\e Mall!\pShop til you drop!"), MSGBOX_SIGN)
@@ -123,7 +123,7 @@ script EventScript_PokeMall_Sign {
     release
 }
 
-script EventScript_PokeMart_Sign {
+script ProdemiaCity_EventScript_PokeMartSign {
     if (flag(FLAG_BADGE03_GET)) {
         lock
         msgbox(format("PERMANENTLY CLOSED\pThank you to our dedicated customers!"), MSGBOX_SIGN)
@@ -131,9 +131,15 @@ script EventScript_PokeMart_Sign {
     }
 }
 
-script EventScript_ProdemiaCity_CitySign {
+script ProdemiaCity_EventScript_CitySign {
     lock
     msgbox(format("Prodemia City\l\qoAlways moving forward.\qc"), MSGBOX_SIGN)
+    release
+}
+
+script ProdemiaCity_EventScript_DormSign {
+    lock
+    msgbox(format("Prodemia University Dormitories"), MSGBOX_SIGN)
     release
 }
 

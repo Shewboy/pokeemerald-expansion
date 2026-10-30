@@ -1,6 +1,20 @@
 mapscripts ProdemiaCity_House2_1F_Frlg_MapScripts {
 }
 
+
+### SIGNS
+
+
+script ProdemiaCity_House2_1F_EventScript_FloorSign {
+    lock
+    msgbox(format("1F: COMMON AREA"), MSGBOX_SIGN)
+    release
+}
+
+
+### NPCs
+
+
 script ProdemiaCity_House2_1F_EventScript_FemaleStudent {
     lock
     faceplayer
@@ -12,11 +26,5 @@ script ProdemiaCity_House2_1F_EventScript_MaleStudent {
     lock
     faceplayer
     msgbox(format("Moving out of my parents' place was scary at first.\pBut now that I've got the hang of my schedule and made new friends, it ain't so bad!"))
-    release
-}
-
-script ProdemiaCity_House2_1F_EventScript_FloorSign {
-    lock
-    msgbox(format("1F: COMMON AREA"), MSGBOX_SIGN)
     release
 }

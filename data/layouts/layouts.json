@@ -10469,6 +10469,42 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/ProdemiaCity_House2_3F_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/ProdemiaCity_House2_3F_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_HOUSE3_FRLG",
+      "name": "ProdemiaCity_House3_Frlg_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/ProdemiaCity_House3_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_House3_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_HOUSE4_FRLG",
+      "name": "ProdemiaCity_House4_Frlg_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/ProdemiaCity_House4_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_House4_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_PRODEMIA_UNIVERSITY_ENTRY_HALL_FRLG",
+      "name": "ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg_Layout",
+      "width": 37,
+      "height": 21,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_Museum",
+      "border_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg/map.bin"
     }
   ]
 }

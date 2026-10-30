@@ -1829,3 +1829,12 @@ Text_Yuck::
 
 	.include "data/maps/ProdemiaCity_House2_3F_Frlg/scripts.inc"
 	.include "data/maps/ProdemiaCity_House2_3F_Frlg/text.inc"
+
+	.include "data/maps/ProdemiaCity_House3_Frlg/scripts.inc"
+	.include "data/maps/ProdemiaCity_House3_Frlg/text.inc"
+
+	.include "data/maps/ProdemiaCity_House4_Frlg/scripts.inc"
+	.include "data/maps/ProdemiaCity_House4_Frlg/text.inc"
+
+	.include "data/maps/ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg/scripts.inc"
+	.include "data/maps/ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg/text.inc"

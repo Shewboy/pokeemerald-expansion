@@ -181,293 +181,307 @@ ProdemiaCity_OnLoad_1:
 	return
 
 
-EventScript_ProdemiaUniversity_Sign::
+ProdemiaCity_EventScript_ProdemiaUniversitySign::
 # 110 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
 # 111 "data/maps/ProdemiaCity_Frlg/scripts.pory"
-	msgbox EventScript_ProdemiaUniversity_Sign_Text_0, MSGBOX_SIGN
+	msgbox ProdemiaCity_EventScript_ProdemiaUniversitySign_Text_0, MSGBOX_SIGN
 # 112 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
-EventScript_PokeMall_Sign::
+ProdemiaCity_EventScript_PokeMallSign::
 # 116 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
 # 117 "data/maps/ProdemiaCity_Frlg/scripts.pory"
-	goto_if_set FLAG_BADGE03_GET, EventScript_PokeMall_Sign_2
+	goto_if_set FLAG_BADGE03_GET, ProdemiaCity_EventScript_PokeMallSign_2
 # 121 "data/maps/ProdemiaCity_Frlg/scripts.pory"
-	msgbox EventScript_PokeMall_Sign_Text_1, MSGBOX_SIGN
-EventScript_PokeMall_Sign_1:
+	msgbox ProdemiaCity_EventScript_PokeMallSign_Text_1, MSGBOX_SIGN
+ProdemiaCity_EventScript_PokeMallSign_1:
 # 123 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
-EventScript_PokeMall_Sign_2:
+ProdemiaCity_EventScript_PokeMallSign_2:
 # 118 "data/maps/ProdemiaCity_Frlg/scripts.pory"
-	msgbox EventScript_PokeMall_Sign_Text_0, MSGBOX_SIGN
-	goto EventScript_PokeMall_Sign_1
+	msgbox ProdemiaCity_EventScript_PokeMallSign_Text_0, MSGBOX_SIGN
+	goto ProdemiaCity_EventScript_PokeMallSign_1
 
 
-EventScript_PokeMart_Sign::
+ProdemiaCity_EventScript_PokeMartSign::
 # 127 "data/maps/ProdemiaCity_Frlg/scripts.pory"
-	goto_if_set FLAG_BADGE03_GET, EventScript_PokeMart_Sign_1
+	goto_if_set FLAG_BADGE03_GET, ProdemiaCity_EventScript_PokeMartSign_1
 	return
 
-EventScript_PokeMart_Sign_1:
+ProdemiaCity_EventScript_PokeMartSign_1:
 # 128 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
 # 129 "data/maps/ProdemiaCity_Frlg/scripts.pory"
-	msgbox EventScript_PokeMart_Sign_Text_0, MSGBOX_SIGN
+	msgbox ProdemiaCity_EventScript_PokeMartSign_Text_0, MSGBOX_SIGN
 # 130 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
-EventScript_ProdemiaCity_CitySign::
+ProdemiaCity_EventScript_CitySign::
 # 135 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
 # 136 "data/maps/ProdemiaCity_Frlg/scripts.pory"
-	msgbox EventScript_ProdemiaCity_CitySign_Text_0, MSGBOX_SIGN
+	msgbox ProdemiaCity_EventScript_CitySign_Text_0, MSGBOX_SIGN
 # 137 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
-EventScript_ProdemiaCity_Contractor1::
-# 145 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+ProdemiaCity_EventScript_DormSign::
+# 141 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 146 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 142 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	msgbox ProdemiaCity_EventScript_DormSign_Text_0, MSGBOX_SIGN
+# 143 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	release
+	return
+
+
+EventScript_ProdemiaCity_Contractor1::
+# 151 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	lock
+# 152 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 147 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 153 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_Contractor1_Text_0
-# 148 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 154 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_Contractor2::
-# 152 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 158 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 153 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 159 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 154 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 160 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_Contractor2_Text_0
-# 155 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 161 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_Contractor3::
-# 159 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 165 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 160 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 166 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 161 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 167 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_Contractor3_Text_0
-# 162 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 168 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_Contractor4::
-# 166 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 172 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 167 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 173 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 168 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 174 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_Contractor4_Text_0
-# 169 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 175 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_Gurdurr::
-# 173 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 179 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 174 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 180 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 175 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 181 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	playmoncry SPECIES_GURDURR, CRY_MODE_NORMAL
-# 176 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 182 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_Gurdurr_Text_0
-# 177 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 183 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_Man::
-# 181 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 187 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 182 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 188 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 183 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 189 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_Man_Text_0
-# 184 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 190 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_WomanWest::
-# 188 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 194 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 189 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 195 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 190 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 196 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_WomanWest_Text_0
-# 191 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 197 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_WomanEast::
-# 195 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 201 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 196 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 202 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 197 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 203 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_WomanEast_Text_0
-# 198 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 204 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_TrashcanGuy::
-# 202 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 208 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 203 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 209 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 204 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 210 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_TrashcanGuy_Text_0
-# 205 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 211 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_LittleGirl::
-# 209 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 215 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 210 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 216 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 211 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 217 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_LittleGirl_Text_0
-# 212 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 218 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_BaldingMan::
-# 216 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 222 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 217 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 223 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 218 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 224 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_BaldingMan_Text_0
-# 219 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 225 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_Lass::
-# 223 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 229 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 224 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 230 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 225 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 231 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_Lass_Text_0
-# 226 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 232 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
 EventScript_ProdemiaCity_WomanSouth::
-# 230 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 236 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	lock
-# 231 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 237 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	faceplayer
-# 232 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 238 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	msgbox EventScript_ProdemiaCity_WomanSouth_Text_0
-# 233 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 239 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	release
 	return
 
 
-EventScript_ProdemiaUniversity_Sign_Text_0:
+ProdemiaCity_EventScript_ProdemiaUniversitySign_Text_0:
 # 111 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "Prodemia University\l"
 	.string "“The brightest minds in Meddoh.”$"
 
-EventScript_PokeMall_Sign_Text_0:
+ProdemiaCity_EventScript_PokeMallSign_Text_0:
 # 118 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "NOW OPEN!\l"
 	.string "The Prodemia Poké Mall!\p"
 	.string "Shop til you drop!$"
 
-EventScript_PokeMall_Sign_Text_1:
+ProdemiaCity_EventScript_PokeMallSign_Text_1:
 # 121 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "COMING SOON!\l"
 	.string "The Prodemia Poké Mall!\p"
 	.string "Shop til you drop!$"
 
-EventScript_PokeMart_Sign_Text_0:
+ProdemiaCity_EventScript_PokeMartSign_Text_0:
 # 129 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "PERMANENTLY CLOSED\p"
 	.string "Thank you to our dedicated customers!$"
 
-EventScript_ProdemiaCity_CitySign_Text_0:
+ProdemiaCity_EventScript_CitySign_Text_0:
 # 136 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "Prodemia City\l"
 	.string "“Always moving forward.”$"
 
+ProdemiaCity_EventScript_DormSign_Text_0:
+# 142 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	.string "Prodemia University Dormitories$"
+
 EventScript_ProdemiaCity_Contractor1_Text_0:
-# 147 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 153 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "You don't have a hard hat? Be careful!$"
 
 EventScript_ProdemiaCity_Contractor2_Text_0:
-# 154 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 160 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "These steel girders are called “I”\n"
 	.string "beams because of their shape.\p"
 	.string "I wonder if they have beams for the\n"
 	.string "other letters of the alphabet?$"
 
 EventScript_ProdemiaCity_Contractor3_Text_0:
-# 161 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 167 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "Working in construction is great!\p"
 	.string "I get to literally make my mark on the\n"
 	.string "world.$"
 
 EventScript_ProdemiaCity_Contractor4_Text_0:
-# 168 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 174 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "What? No, the mall won't be completed\n"
 	.string "for a while.\p"
 	.string "The Poké Mart is still open, though.$"
 
 EventScript_ProdemiaCity_Gurdurr_Text_0:
-# 176 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 182 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "Gurr!$"
 
 EventScript_ProdemiaCity_Man_Text_0:
-# 183 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 189 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "You came from Shaydwell Town? I heard\n"
 	.string "it's quaint there.\p"
 	.string "But I like the hustle and bustle. That's\n"
 	.string "why I moved to Prodemia.$"
 
 EventScript_ProdemiaCity_WomanWest_Text_0:
-# 190 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 196 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "Prodemia used to be a slow, quiet town\n"
 	.string "before the University got so big.\p"
 	.string "Now I can barely hear myself think!$"
 
 EventScript_ProdemiaCity_WomanEast_Text_0:
-# 197 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 203 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "You look like a Pokémon Trainer. Have\n"
 	.string "you met Professor Holly?\p"
 	.string "I've heard she's looking for someone to\n"
 	.string "help with her research.$"
 
 EventScript_ProdemiaCity_TrashcanGuy_Text_0:
-# 204 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 210 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "I wasn't trash picking, I swear!\p"
 	.string ".....\l"
 	.string "Alright, you got me.\p"
@@ -475,24 +489,24 @@ EventScript_ProdemiaCity_TrashcanGuy_Text_0:
 	.string "found some pretty neat stuff.$"
 
 EventScript_ProdemiaCity_LittleGirl_Text_0:
-# 211 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 217 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "College sounds like so much fun! It's\n"
 	.string "like school but with more play time.$"
 
 EventScript_ProdemiaCity_BaldingMan_Text_0:
-# 218 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 224 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "Prodemia City doesn't have a Gym\n"
 	.string "Leader.\p"
 	.string "I guess all the college students are\n"
 	.string "too bookish for that kind of thing.$"
 
 EventScript_ProdemiaCity_Lass_Text_0:
-# 225 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 231 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "I'm a huge shopper, so I'm super excited\n"
 	.string "for the new Poké Mall to be built!$"
 
 EventScript_ProdemiaCity_WomanSouth_Text_0:
-# 232 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+# 238 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 	.string "I just got back from visiting a friend\n"
 	.string "in Silicraft City.\p"
 	.string "She owns an art studio that sells glass\n"

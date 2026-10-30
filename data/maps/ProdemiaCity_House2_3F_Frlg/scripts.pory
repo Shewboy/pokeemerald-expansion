@@ -1,6 +1,20 @@
 mapscripts ProdemiaCity_House2_3F_Frlg_MapScripts {
 }
 
+
+### SIGNS
+
+
+script ProdemiaCity_House2_3F_EventScript_FloorSign {
+    lock
+    msgbox(format("3F: BOYS' DORMITORY"), MSGBOX_SIGN)
+    release
+}
+
+
+### NPCs
+
+
 script ProdemiaCity_House2_3F_EventScript_Gamer1 {
     lock
     msgbox(format("Happy feet!"))
@@ -19,12 +33,6 @@ script ProdemiaCity_House2_3F_EventScript_Nerd {
     msgbox(format("Ugh, my roommates are always so noisy...\pCan't they see I'm trying to study?"))
     applymovement(3, moves(face_right))
     waitmovement(3)
-    release
-}
-
-script ProdemiaCity_House2_3F_EventScript_FloorSign {
-    lock
-    msgbox(format("3F: BOYS' DORMITORY"), MSGBOX_SIGN)
     release
 }
 

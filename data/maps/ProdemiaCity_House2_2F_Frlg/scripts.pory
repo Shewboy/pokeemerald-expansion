@@ -1,6 +1,20 @@
 mapscripts ProdemiaCity_House2_2F_Frlg_MapScripts {
 }
 
+
+### SIGNS
+
+
+script ProdemiaCity_House2_2F_EventScript_FloorSign {
+    lock
+    msgbox(format("2F: GIRLS' DORMITORY"), MSGBOX_SIGN)
+    release
+}
+
+
+### NPCS
+
+
 script ProdemiaCity_House2_2F_EventScript_Gossiper1 {
     lock
     msgbox(format("Omg! So what happened after you kissed him?"))
@@ -24,11 +38,5 @@ script ProdemiaCity_House2_2F_EventScript_Gossiper2 {
     msgbox(format("Um, hello? Personal space much?"))
     applymovement(1, moves(face_right))
     waitmovement(1)
-    release
-}
-
-script ProdemiaCity_House2_2F_EventScript_FloorSign {
-    lock
-    msgbox(format("2F: GIRLS' DORMITORY"), MSGBOX_SIGN)
     release
 }
