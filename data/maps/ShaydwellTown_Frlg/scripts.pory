@@ -483,14 +483,72 @@ script ShaydwellTown_EventScript_Walking_Boy{
     lock
     faceplayer
     msgbox(format(".....\p..................................\p.................................................................{PAUSE 30}.{PAUSE 30}.{PAUSE 30}?"))
-    // LAVA COOKIE -> FIRE STINE
-    if (checkitem(ITEM_LAVA_COOKIE,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_LAVA_COOKIE)) {
+    // BIG MALASADA -> POWER WEIGHT
+    if (checkitem(ITEM_BIG_MALASADA,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_BIG_MALASADA)) {
+        msgbox(format("Give the walking boy your Big Malasada?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            msgbox(format(".....!"))
+            giveitem(ITEM_POWER_WEIGHT,1)
+            goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+            waitfanfare
+            removeitem(ITEM_BIG_MALASADA,1)
+            setflag(FLAG_GAVE_WALKING_BOY_BIG_MALASADA)
+            release
+            end
+        }
+        else {
+            msgbox(format("....."))
+            release
+            end
+            }
+    }
+    // RAGE CANDY BAR -> POWER BRACER
+    elif (checkitem(ITEM_RAGE_CANDY_BAR,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR)) {
+        msgbox(format("Give the walking boy your Rage Candy Bar?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            msgbox(format(".....!"))
+            giveitem(ITEM_POWER_BRACER,1)
+            goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+            waitfanfare
+            removeitem(ITEM_RAGE_CANDY_BAR,1)
+            setflag(FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR)
+            release
+            end
+        }
+        else {
+            msgbox(format("....."))
+            release
+            end
+            }
+    }
+    // OLD GATEAU -> POWER BELT
+    elif (checkitem(ITEM_OLD_GATEAU,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_OLD_GATEAU)) {
+        msgbox(format("Give the walking boy your Old Gateau?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            msgbox(format(".....!"))
+            giveitem(ITEM_POWER_BELT,1)
+            goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+            waitfanfare
+            removeitem(ITEM_OLD_GATEAU,1)
+            setflag(FLAG_GAVE_WALKING_BOY_OLD_GATEAU)
+            release
+            end
+        }
+        else {
+            msgbox(format("....."))
+            release
+            end
+            }
+    }
+    // LAVA COOKIE -> POWER LENS
+    elif (checkitem(ITEM_LAVA_COOKIE,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_LAVA_COOKIE)) {
         msgbox(format("Give the walking boy your Lava Cookie?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
             msgbox(format(".....!"))
-            removeitem(ITEM_LAVA_COOKIE,1)
-            giveitem(ITEM_FIRE_STONE,1)
+            giveitem(ITEM_POWER_LENS,1)
+            goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
             waitfanfare
+            removeitem(ITEM_LAVA_COOKIE,1)
             setflag(FLAG_GAVE_WALKING_BOY_LAVA_COOKIE)
             release
             end
@@ -501,14 +559,15 @@ script ShaydwellTown_EventScript_Walking_Boy{
             end
         }
     }
-    // CASTELIACONE -> ICE STONE
+    // CASTELIACONE -> POWER BAND
     elif (checkitem(ITEM_CASTELIACONE,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_CASTELIACONE)) {
         msgbox(format("Give the walking boy your Casteliacone?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
             msgbox(format(".....!"))
-            removeitem(ITEM_CASTELIACONE,1)
-            giveitem(ITEM_ICE_STONE,1)
+            giveitem(ITEM_POWER_BAND,1)
+            goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
             waitfanfare
+            removeitem(ITEM_CASTELIACONE,1)
             setflag(FLAG_GAVE_WALKING_BOY_CASTELIACONE)
             release
             end
@@ -519,15 +578,16 @@ script ShaydwellTown_EventScript_Walking_Boy{
             end
         }
     }
-    // FRESH WATER -> WATER STONE
-    elif (checkitem(ITEM_FRESH_WATER,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_FRESH_WATER)) {
-        msgbox(format("Give the walking boy your Fresh Water?"), MSGBOX_YESNO)
+    // PEWTER CRUNCHIES -> POWER ANKLET
+    elif (checkitem(ITEM_PEWTER_CRUNCHIES,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_PEWTER_CRUNCHIES)) {
+        msgbox(format("Give the walking boy your Pewter Crunchies?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
             msgbox(format(".....!"))
-            removeitem(ITEM_FRESH_WATER,1)
-            giveitem(ITEM_WATER_STONE,1)
+            giveitem(ITEM_POWER_ANKLET,1)
+            goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
             waitfanfare
-            setflag(FLAG_GAVE_WALKING_BOY_FRESH_WATER)
+            removeitem(ITEM_PEWTER_CRUNCHIES,1)
+            setflag(FLAG_GAVE_WALKING_BOY_PEWTER_CRUNCHIES)
             release
             end
         }
@@ -536,42 +596,6 @@ script ShaydwellTown_EventScript_Walking_Boy{
             release
             end
         }
-    }
-    // LEMONADE -> THUNDER STONE
-    elif (checkitem(ITEM_LEMONADE,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_LEMONADE)) {
-        msgbox(format("Give the walking boy your Lemonade?"), MSGBOX_YESNO)
-        if (var(VAR_RESULT) == YES) {
-            msgbox(format(".....!"))
-            removeitem(ITEM_LEMONADE,1)
-            giveitem(ITEM_THUNDERSTONE,1)
-            waitfanfare
-            setflag(FLAG_GAVE_WALKING_BOY_LEMONADE)
-            release
-            end
-        }
-        else {
-            msgbox(format("....."))
-            release
-            end
-        }
-    }
-    // RAGE CANDY BAR -> MOON STONE
-    elif (checkitem(ITEM_RAGE_CANDY_BAR,1) == TRUE && !flag(FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR)) {
-        msgbox(format("Give the walking boy your Rage Candy Bar?"), MSGBOX_YESNO)
-        if (var(VAR_RESULT) == YES) {
-            msgbox(format(".....!"))
-            removeitem(ITEM_RAGE_CANDY_BAR,1)
-            giveitem(ITEM_MOON_STONE,1)
-            waitfanfare
-            setflag(FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR)
-            release
-            end
-        }
-        else {
-            msgbox(format("....."))
-            release
-            end
-            }
     }
     else {
         release

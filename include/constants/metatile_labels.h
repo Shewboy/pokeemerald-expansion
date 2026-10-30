@@ -118,8 +118,10 @@
 #define METATILE_Building_TV_On   0x003
 
 // gTileset_BuildingFrlg
-#define METATILE_BuildingFrlg_PCOff  0x062
-#define METATILE_BuildingFrlg_PCOn   0x063
+#define METATILE_BuildingFrlg_PCOff        0x062
+#define METATILE_BuildingFrlg_PCOn         0x063
+#define METATILE_BuildingFrlg_TV_FLASHING  0x061
+#define METATILE_BuildingFrlg_TV_NO_FLASH  0x035
 
 // gTileset_Cave
 #define METATILE_Cave_CrackedFloor                       0x22F

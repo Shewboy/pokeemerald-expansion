@@ -108,8 +108,8 @@
       "x": 2,
       "y": 11,
       "elevation": 0,
-      "item": "ITEM_ULTRA_BALL",
-      "flag": "FLAG_BRONZONG_LAKE_ULTRA_BALL",
+      "item": "ITEM_WATER_STONE",
+      "flag": "FLAG_BRONZONG_LAKE_WATER_STONE",
       "quantity": 1,
       "underfoot": false
     }

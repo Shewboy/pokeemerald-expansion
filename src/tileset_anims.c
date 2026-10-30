@@ -419,8 +419,8 @@ const u16 *const gTilesetAnims_Slateport_Balloons[] = {
     gTilesetAnims_Slateport_Balloons_Frame3
 };
 
-const u16 gTilesetAnims_Building_TvTurnedOn_Frame0[] = INCGFX_U16("data/tilesets/primary/building/anim/tv_turned_on/0.png", ".4bpp");
-const u16 gTilesetAnims_Building_TvTurnedOn_Frame1[] = INCGFX_U16("data/tilesets/primary/building/anim/tv_turned_on/1.png", ".4bpp");
+const u16 gTilesetAnims_Building_TvTurnedOn_Frame0[] = INCGFX_U16("data/tilesets/primary/building_frlg/anim/tv_turned_on/0.png", ".4bpp");
+const u16 gTilesetAnims_Building_TvTurnedOn_Frame1[] = INCGFX_U16("data/tilesets/primary/building_frlg/anim/tv_turned_on/1.png", ".4bpp");
 
 const u16 *const gTilesetAnims_Building_TvTurnedOn[] = {
     gTilesetAnims_Building_TvTurnedOn_Frame0,
@@ -1113,7 +1113,7 @@ static void TilesetAnim_BattleDome2(u16 timer)
 static void QueueAnimTiles_Building_TVTurnedOn(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Building_TvTurnedOn);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Building_TvTurnedOn[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 4 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Building_TvTurnedOn[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x057)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_SootopolisGym_Waterfalls(u16 timer)

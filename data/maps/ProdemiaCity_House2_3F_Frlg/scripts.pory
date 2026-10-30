@@ -1,0 +1,43 @@
+mapscripts ProdemiaCity_House2_3F_Frlg_MapScripts {
+}
+
+script ProdemiaCity_House2_3F_EventScript_Gamer1 {
+    lock
+    msgbox(format("Happy feet!"))
+    release
+}
+
+script ProdemiaCity_House2_3F_EventScript_Gamer2 {
+    lock
+    msgbox(format("Wombo combo!"))
+    release
+}
+
+script ProdemiaCity_House2_3F_EventScript_Nerd {
+    lock
+    faceplayer
+    msgbox(format("Ugh, my roommates are always so noisy...\pCan't they see I'm trying to study?"))
+    applymovement(3, moves(face_right))
+    waitmovement(3)
+    release
+}
+
+script ProdemiaCity_House2_3F_EventScript_FloorSign {
+    lock
+    msgbox(format("3F: BOYS' DORMITORY"), MSGBOX_SIGN)
+    release
+}
+
+
+### ITEMS
+
+
+### UPGRADE
+script ProdemiaCity_House2_3F_EventScript_Upgrade {
+    lockall
+    removeobject(4)
+    giveitem(ITEM_UPGRADE,1)
+    waitfanfare
+    setflag(FLAG_HIDE_PRODEMIA_CITY_UPGRADE)
+    release
+}

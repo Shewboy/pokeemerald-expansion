@@ -151,11 +151,11 @@
 // Unused?
 #define FLAG_GAVE_WALKING_BOY_LAVA_COOKIE                  0x0AF
 #define FLAG_GAVE_WALKING_BOY_CASTELIACONE                 0x0B0
-#define FLAG_GAVE_WALKING_BOY_FRESH_WATER                  0x0B1
-#define FLAG_GAVE_WALKING_BOY_LEMONADE                     0x0B2
+#define FLAG_GAVE_WALKING_BOY_OLD_GATEAU                   0x0B1
+#define FLAG_GAVE_WALKING_BOY_BIG_MALASADA                 0x0B2
 #define FLAG_GAVE_WALKING_BOY_RAGE_CANDY_BAR               0x0B3
-#define FLAG_DAILY_PICKED_LOTO_TICKET_FRLG                 0x0B4
-#define FLAG_0x0B5               0x0B5
+#define FLAG_GAVE_WALKING_BOY_PEWTER_CRUNCHIES             0x0B4
+#define FLAG_DAILY_PICKED_LOTO_TICKET_FRLG                 0x0B5
 #define FLAG_0x0B6               0x0B6
 #define FLAG_0x0B7               0x0B7
 #define FLAG_0x0B8               0x0B8
@@ -318,7 +318,7 @@
 // Item ball hide/show
 #define FLAG_HIDE_ROUTE1_POKE_BALL                              0x154
 #define FLAG_HIDE_ROUTE1_POTION                                 0x155
-#define FLAG_HIDE_VIRIDIAN_FOREST_POKE_BALL                     0x156
+#define FLAG_HIDE_PRODEMIA_CITY_UPGRADE                         0x156
 #define FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE                      0x157
 #define FLAG_HIDE_VIRIDIAN_FOREST_POTION                        0x158
 #define FLAG_HIDE_MT_MOON_1F_PARALYZE_HEAL                      0x159
@@ -1188,7 +1188,7 @@
 #define FLAG_HIDDEN_ITEM_SSANNE_EXTERIOR_LAVA_COOKIE                       (FLAG_HIDDEN_ITEMS_START + 190)
 
 // Unused hidden item flags
-#define FLAG_BRONZONG_LAKE_ULTRA_BALL   0x4A7 // Unused Flag
+#define FLAG_BRONZONG_LAKE_WATER_STONE  0x4A7 // Unused Flag
 #define FLAG_UNUSED_0x4A8               0x4A8 // Unused Flag
 #define FLAG_UNUSED_0x4A9               0x4A9 // Unused Flag
 #define FLAG_UNUSED_0x4AA               0x4AA // Unused Flag

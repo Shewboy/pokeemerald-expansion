@@ -26,6 +26,16 @@ ProdemiaCity_House2_1F_EventScript_MaleStudent::
 	return
 
 
+ProdemiaCity_House2_1F_EventScript_FloorSign::
+# 19 "data/maps/ProdemiaCity_House2_1F_Frlg/scripts.pory"
+	lock
+# 20 "data/maps/ProdemiaCity_House2_1F_Frlg/scripts.pory"
+	msgbox ProdemiaCity_House2_1F_EventScript_FloorSign_Text_0, MSGBOX_SIGN
+# 21 "data/maps/ProdemiaCity_House2_1F_Frlg/scripts.pory"
+	release
+	return
+
+
 ProdemiaCity_House2_1F_EventScript_FemaleStudent_Text_0:
 # 7 "data/maps/ProdemiaCity_House2_1F_Frlg/scripts.pory"
 	.string "Aren't you a bit young to be in college?$"
@@ -37,3 +47,7 @@ ProdemiaCity_House2_1F_EventScript_MaleStudent_Text_0:
 	.string "But now that I've got the hang of my\n"
 	.string "schedule and made new friends, it ain't\l"
 	.string "so bad!$"
+
+ProdemiaCity_House2_1F_EventScript_FloorSign_Text_0:
+# 20 "data/maps/ProdemiaCity_House2_1F_Frlg/scripts.pory"
+	.string "1F: COMMON AREA$"

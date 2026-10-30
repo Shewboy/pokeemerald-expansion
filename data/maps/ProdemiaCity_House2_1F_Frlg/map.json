@@ -51,9 +51,25 @@
       "elevation": 0,
       "dest_map": "MAP_PRODEMIA_CITY_FRLG",
       "dest_warp_id": "6"
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_PRODEMIA_CITY_HOUSE2_2F_FRLG",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "ProdemiaCity_House2_1F_EventScript_FloorSign"
+    }
+  ],
   "region": "REGION_KANTO"
 }

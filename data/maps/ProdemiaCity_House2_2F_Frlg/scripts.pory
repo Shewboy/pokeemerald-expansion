@@ -1,0 +1,34 @@
+mapscripts ProdemiaCity_House2_2F_Frlg_MapScripts {
+}
+
+script ProdemiaCity_House2_2F_EventScript_Gossiper1 {
+    lock
+    msgbox(format("Omg! So what happened after you kissed him?"))
+    playse(SE_PIN)
+    applymovement(2, moves(emote_exclamation_mark, delay_16))
+    waitmovement(2)
+    faceplayer
+    msgbox(format("Excuse me! This is a private conversation."))
+    applymovement(2, moves(face_left))
+    waitmovement(2)
+    release
+}
+
+script ProdemiaCity_House2_2F_EventScript_Gossiper2 {
+    lock
+    msgbox(format("Well, we left the party and then..."))
+    playse(SE_PIN)
+    applymovement(1, moves(emote_exclamation_mark, delay_16))
+    waitmovement(1)
+    faceplayer
+    msgbox(format("Um, hello? Personal space much?"))
+    applymovement(1, moves(face_right))
+    waitmovement(1)
+    release
+}
+
+script ProdemiaCity_House2_2F_EventScript_FloorSign {
+    lock
+    msgbox(format("2F: GIRLS' DORMITORY"), MSGBOX_SIGN)
+    release
+}
