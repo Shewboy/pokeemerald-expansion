@@ -25,7 +25,7 @@ script ProdemiaUniversity_EventScript_Book3 {
 
 script ProdemiaUniversity_EventScript_OldBook {
     lock
-    msgbox(format("There's a book with a worn, pitch-black cover.\pJust looking at it gives you a sense of unease."))
+    msgbox(format("There's an old book with a worn, pitch-black cover.\pJust looking at it gives you a sense of unease."))
     release
 }
 

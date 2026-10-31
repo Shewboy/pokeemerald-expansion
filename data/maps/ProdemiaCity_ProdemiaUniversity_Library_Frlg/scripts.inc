@@ -108,8 +108,8 @@ ProdemiaUniversity_EventScript_Book3_Text_0:
 
 ProdemiaUniversity_EventScript_OldBook_Text_0:
 # 28 "data/maps/ProdemiaCity_ProdemiaUniversity_Library_Frlg/scripts.pory"
-	.string "There's a book with a worn, pitch-black\n"
-	.string "cover.\p"
+	.string "There's an old book with a worn,\n"
+	.string "pitch-black cover.\p"
 	.string "Just looking at it gives you a sense of\n"
 	.string "unease.$"
 
