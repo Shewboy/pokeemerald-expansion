@@ -7,12 +7,25 @@ mapscripts ProdemiaCity_ProdemiaUniversity_Library_Frlg_MapScripts {
 
 script ProdemiaUniversity_EventScript_Book1 {
     lock
-    msgbox(format("\qoThe "), MSGBOX_YESNO)
-    if (var(VAR_RESULT == YES)) {
-        msgbox(format("In medieval Galar, there existed two powerful families.\pOne commanded the Beast of the Sword, and the other the Beast of the Shield.\pFor many years, the families lived in harmony. Life was peaceful and their kingdoms flourished.\pBut one day, a foreign power launched an invasion. The two families met to determine a strategy to fend off the invaders.\p"))
-    }
-    else {
-    }
+    msgbox(format("\qoThe Sword and the Shield\qc\lA tale of two heroes who saved Galar from the Darkest Day."))
+    release
+}
+
+script ProdemiaUniversity_EventScript_Book2 {
+    lock
+    msgbox(format("\qoLover's Summer\qc\pI don't think I'm old enough to read this book..."))
+    release
+}
+
+script ProdemiaUniversity_EventScript_Book3 {
+    lock
+    msgbox(format("\qoEV Training for Dummies\qc"))
+    release
+}
+
+script ProdemiaUniversity_EventScript_OldBook {
+    lock
+    msgbox(format("There's a book with a worn, pitch-black cover.\pJust looking at it gives you a sense of unease."))
     release
 }
 
