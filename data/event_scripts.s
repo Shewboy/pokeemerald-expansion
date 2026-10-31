@@ -1838,3 +1838,12 @@ Text_Yuck::
 
 	.include "data/maps/ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg/scripts.inc"
 	.include "data/maps/ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg/text.inc"
+
+	.include "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall1_Frlg/scripts.inc"
+	.include "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall1_Frlg/text.inc"
+
+	.include "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.inc"
+	.include "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/text.inc"
+
+	.include "data/maps/ProdemiaCity_ProdemiaUniversity_Library_Frlg/scripts.inc"
+	.include "data/maps/ProdemiaCity_ProdemiaUniversity_Library_Frlg/text.inc"

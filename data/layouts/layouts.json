@@ -10498,13 +10498,49 @@
       "id": "LAYOUT_PRODEMIA_CITY_PRODEMIA_UNIVERSITY_ENTRY_HALL_FRLG",
       "name": "ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg_Layout",
       "width": 37,
-      "height": 21,
+      "height": 16,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_BuildingFrlg",
       "secondary_tileset": "gTileset_Museum",
       "border_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_PRODEMIA_UNIVERSITY_LECTURE_HALL1_FRLG",
+      "name": "ProdemiaCity_ProdemiaUniversity_LectureHall1_Frlg_Layout",
+      "width": 14,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_Museum",
+      "border_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_LectureHall1_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_LectureHall1_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_PRODEMIA_UNIVERSITY_LECTURE_HALL2_FRLG",
+      "name": "ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg_Layout",
+      "width": 14,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_Museum",
+      "border_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_PRODEMIA_UNIVERSITY_LIBRARY_FRLG",
+      "name": "ProdemiaCity_ProdemiaUniversity_Library_Frlg_Layout",
+      "width": 17,
+      "height": 13,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_Museum",
+      "border_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_Library_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_Library_Frlg/map.bin"
     }
   ]
 }

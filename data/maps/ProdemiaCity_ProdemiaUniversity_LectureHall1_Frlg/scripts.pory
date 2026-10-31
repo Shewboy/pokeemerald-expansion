@@ -1,0 +1,63 @@
+mapscripts ProdemiaCity_ProdemiaUniversity_LectureHall1_Frlg_MapScripts {
+}
+
+
+### SIGNS
+
+
+script ProdemiaUniversity_EventScript_Chalkboard1 {
+    lock
+    msgbox(format("Equations beyond your comprehension are scrawled across the board."))
+    release
+}
+
+
+### NPCs
+
+
+script ProdemiaUniversity_EventScript_Professor {
+    lock
+    msgbox(format("...and as Stokes' Theroem states, the total circulation of a vector field around a closed curve is equal to...?"))
+    playse(SE_PIN)
+    applymovement(2, moves(emote_question_mark, delay_16))
+    waitmovement(2)
+    playse(SE_PIN)
+    applymovement(4, moves(emote_question_mark, delay_16))
+    waitmovement(4)
+    playse(SE_PIN)
+    applymovement(5, moves(emote_question_mark, delay_16))
+    waitmovement(5)
+    playse(SE_PIN)
+    applymovement(3, moves(emote_question_mark, delay_16))
+    waitmovement(3)
+    msgbox(format("Oh, come on now! Have none of you been listening?"))
+    release
+}
+
+script ProdemiaUniversity_EventScript_FemaleStudent1 {
+    lock
+    faceplayer
+    msgbox(format("Why does calculus have to be so hard?"))
+    release
+}
+
+script ProdemiaUniversity_EventScript_FemaleStudent2 {
+    lock
+    faceplayer
+    msgbox(format("How is this geezer still teaching? He should retire!"))
+    release
+}
+
+script ProdemiaUniversity_EventScript_MaleStudent1 {
+    lock
+    faceplayer
+    msgbox(format("I think my head is going to explode."))
+    release
+}
+
+script ProdemiaUniversity_EventScript_MaleStudent2 {
+    lock
+    faceplayer
+    msgbox(format("I've already accepted that I'm failing this class.\pTime to switch majors again!"))
+    release
+}

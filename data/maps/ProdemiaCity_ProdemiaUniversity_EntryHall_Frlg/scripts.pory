@@ -1,9 +1,47 @@
 mapscripts ProdemiaCity_ProdemiaUniversity_EntryHall_Frlg_MapScripts {
 }
 
+
+### SIGNS
+
+
+script ProdemiaUniversity_EventScript_LabSign {
+    lock
+    msgbox(format("RESEARCH LAB"), MSGBOX_SIGN)
+    release
+}
+
+script ProdemiaUniversity_EventScript_LibrarySign {
+    lock
+    msgbox(format("LIBRARY"), MSGBOX_SIGN)
+    release
+}
+
+script ProdemiaUniversity_EventScript_LectureHall1Sign {
+    lock
+    msgbox(format("LECTURE HALL 1"), MSGBOX_SIGN)
+    release
+}
+
+script ProdemiaUniversity_EventScript_LectureHall2Sign {
+    lock
+    msgbox(format("LECTURE HALL 2"), MSGBOX_SIGN)
+    release
+}
+
+### NPCs
+
+
 script ProdemiaUniversity_EventScript_Admin {
     lock
     faceplayer
     msgbox(format("Welcome!\pLecture halls are down the hallway to your right.\pThe library and research lab are to the left."))
+    release
+}
+
+script ProdemiaUniversity_EventScript_WanderingStudent {
+    lock
+    faceplayer
+    msgbox(format("When I'm feeling stressed about my classes, I sometimes wander the hallways to clear my head.\pAs important as it is to study hard, it's equally important to take breaks."))
     release
 }

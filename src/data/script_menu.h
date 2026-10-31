@@ -1122,6 +1122,18 @@ static const struct MenuAction sMultichoiceList_HOF_Eggs_Victories_Quit[] = {
     {gText_ShopQuit}
 };
 
+static const u8 gText_Diurnal[] = _("DIURNAL");
+static const u8 gText_Nocturnal[] = _("NOCTURNAL");
+static const u8 gText_Crepuscular[] = _("CREPUSCULAR");
+
+static const struct MenuAction MultichoiceList_TimeOfDayDescriptions[] =
+{
+    {gText_Diurnal},
+    {gText_Nocturnal},
+    {gText_Crepuscular},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -1294,6 +1306,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_HOF_VICTORIES_QUIT]                         = MULTICHOICE(sMultichoiceList_HOF_Victories_Quit),
     [MULTI_EGGS_VICTORIES_QUIT]                        = MULTICHOICE(sMultichoiceList_Eggs_Victories_Quit),
     [MULTI_HOF_EGGS_VICTORIES_QUIT]                    = MULTICHOICE(sMultichoiceList_HOF_Eggs_Victories_Quit),
+    [MULTI_TOD_DESCRIPTIONS]                           = MULTICHOICE(MultichoiceList_TimeOfDayDescriptions),
 };
 
 const u8 *const gStdStrings[] =

@@ -1,0 +1,49 @@
+mapscripts ProdemiaCity_ProdemiaUniversity_Library_Frlg_MapScripts {
+}
+
+
+### SIGNS
+
+
+script ProdemiaUniversity_EventScript_Book1 {
+    lock
+    msgbox(format("\qoThe "), MSGBOX_YESNO)
+    if (var(VAR_RESULT == YES)) {
+        msgbox(format("In medieval Galar, there existed two powerful families.\pOne commanded the Beast of the Sword, and the other the Beast of the Shield.\pFor many years, the families lived in harmony. Life was peaceful and their kingdoms flourished.\pBut one day, a foreign power launched an invasion. The two families met to determine a strategy to fend off the invaders.\p"))
+    }
+    else {
+    }
+    release
+}
+
+
+### NPCs
+
+
+script ProdemiaUniversity_EventScript_OldWoman {
+    lock
+    faceplayer
+    msgbox(format("The University gives free public access to their library.\pWhich is great for me, because I love to read!"))
+    release
+}
+
+script ProdemiaUniversity_EventScript_AllNighter {
+    lock
+    faceplayer
+    msgbox(format("I've been studying nonstop since yesterday morning.\pMaybe if I just lay my head down for a few seconds...\pZzzzzz"))
+    release
+}
+
+script ProdemiaUniversity_EventScript_Quiet {
+    lock
+    faceplayer
+    msgbox(format("I'm not studying. I just like having a quiet place to read."))
+    release
+}
+
+script ProdemiaUniversity_EventScript_Books {
+    lock
+    faceplayer
+    msgbox(format("The library doesn't just have academic books.\pThey also carry fiction, biographies, and even historic documents."))
+    release
+}

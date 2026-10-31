@@ -1,0 +1,24 @@
+mapscripts ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg_MapScripts {
+}
+
+
+### SIGNS
+
+
+script ProdemiaUniversity_EventScript_Chalkboard2 {
+    lock
+    msgbox(format("Various Pok\emon are categorized into lists.\pWhich description would you like to read?"))
+    multichoice(0, 0, MULTI_TOD_DESCRIPTIONS, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: msgbox(format("Diurnal Pok\emon are primarily active during the day and inactive at night.\pHumans are also diurnal, which is why many diurnal Pok\emon make for great pets.\pMost bird Pok\emon are diurnal, as well as Ledyba, Skwovet, and Hoppip."))
+        case 1: msgbox(format("Nocturnal Pok\emon are primarily active at night and inactive during the day.\pResearch has shown that nocturnal Pok\emon have highly developed senses of hearing, smell, and eyesight.\pZubat, Kricketot, and Hoothoot are well-known examples of nocturnal Pok\emon."))
+        case 2: msgbox(format("Crepuscular Pok\emon are primarily active during the transition hours of dawn and dusk.\pAs a result, many of these Pok\emon are mistaken for being nocturnal.\pCrepuscular Pok\emon include Deerling, Vulpix, and Stunky."))
+        case MULTI_B_PRESSED: end
+    }
+    release
+    end
+}
+
+
+
+### NPCs
