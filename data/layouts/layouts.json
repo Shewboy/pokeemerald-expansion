@@ -10541,6 +10541,18 @@
       "secondary_tileset": "gTileset_Museum",
       "border_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_Library_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_Library_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRODEMIA_CITY_PRODEMIA_UNIVERSITY_LAB_FRLG",
+      "name": "ProdemiaCity_ProdemiaUniversity_Lab_Frlg_Layout",
+      "width": 15,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_Lab_Frlg",
+      "border_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_Lab_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ProdemiaCity_ProdemiaUniversity_Lab_Frlg/map.bin"
     }
   ]
 }

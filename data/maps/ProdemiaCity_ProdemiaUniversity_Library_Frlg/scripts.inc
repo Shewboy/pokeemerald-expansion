@@ -92,8 +92,8 @@ ProdemiaUniversity_EventScript_Books::
 
 ProdemiaUniversity_EventScript_Book1_Text_0:
 # 10 "data/maps/ProdemiaCity_ProdemiaUniversity_Library_Frlg/scripts.pory"
-	.string "“The Sword and the Shield”\l"
-	.string "A tale of two heroes who saved Galar\l"
+	.string "“The Sword and the Shield”\p"
+	.string "A tale of two heroes who saved Galar\n"
 	.string "from the Darkest Day.$"
 
 ProdemiaUniversity_EventScript_Book2_Text_0:

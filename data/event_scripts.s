@@ -1847,3 +1847,6 @@ Text_Yuck::
 
 	.include "data/maps/ProdemiaCity_ProdemiaUniversity_Library_Frlg/scripts.inc"
 	.include "data/maps/ProdemiaCity_ProdemiaUniversity_Library_Frlg/text.inc"
+
+	.include "data/maps/ProdemiaCity_ProdemiaUniversity_Lab_Frlg/scripts.inc"
+	.include "data/maps/ProdemiaCity_ProdemiaUniversity_Lab_Frlg/text.inc"

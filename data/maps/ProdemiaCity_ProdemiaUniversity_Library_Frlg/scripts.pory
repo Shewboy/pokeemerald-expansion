@@ -7,7 +7,7 @@ mapscripts ProdemiaCity_ProdemiaUniversity_Library_Frlg_MapScripts {
 
 script ProdemiaUniversity_EventScript_Book1 {
     lock
-    msgbox(format("\qoThe Sword and the Shield\qc\lA tale of two heroes who saved Galar from the Darkest Day."))
+    msgbox(format("\qoThe Sword and the Shield\qc\pA tale of two heroes who saved Galar from the Darkest Day."))
     release
 }
 

@@ -1,0 +1,130 @@
+mapscripts ProdemiaCity_ProdemiaUniversity_Lab_Frlg_MapScripts {
+}
+
+
+
+### NPCs
+
+
+script ProdemiaUniversity_EventScript_FossilNerd {
+    lock
+    faceplayer
+    if (!flag(FLAG_FOSSIL_REVIVE_MAN_FIRST_TALK)) {
+        msgbox(format("Salutations, humanoid!\pCare to take part in the greatest experiment of our time? Sure you do!\pIf you provide me with the fossilized remains of a Pok\emon, I'll bring it back to life before your very eyes!\pI look forward to pioneering a new era of scientific possibilies with you!"))
+        setflag(FLAG_FOSSIL_REVIVE_MAN_FIRST_TALK)
+        release
+        end
+    }
+    else {
+        msgbox(format("Greetings! Have you some fossils for me?"))
+        if (checkitem(ITEM_JAW_FOSSIL) == TRUE || checkitem(ITEM_SAIL_FOSSIL) == TRUE) {
+            if (checkitem(ITEM_JAW_FOSSIL) == TRUE) {
+                dynmultipush(FossilNerd_JawFossil, 0)
+            }
+            if (checkitem(ITEM_SAIL_FOSSIL) == TRUE) {
+                dynmultipush(FossilNerd_SailFossil, 1)
+            }
+            dynmultipush(FossilNerd_Cancel, 2)
+            dynmultistack(0, 0, FALSE, 4, FALSE, 0, NULL)
+            switch (var(VAR_RESULT)) {
+                case 0:
+                    call(EventScript_FossilNerd_ReviveFossil)
+                    givemon(SPECIES_TYRUNT, 20, ITEM_DRAGON_FANG)
+                    if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                        removeitem(ITEM_JAW_FOSSIL)
+                        playfanfare(MUS_OBTAIN_ITEM)
+                        msgbox("Received Tyrunt!")
+                        waitfanfare
+                        call(NicknamePartyMon)
+                    }
+                    elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                        removeitem(ITEM_JAW_FOSSIL)
+                        playfanfare(MUS_OBTAIN_ITEM)
+                        msgbox("Received Tyrunt!")
+                        waitfanfare
+                        call(NicknamePartyMon)
+                    }
+                    else{
+                        msgbox("No more room.")
+                    }
+                    release
+                    end
+                case 1:
+                    call(EventScript_FossilNerd_ReviveFossil)
+                    givemon(SPECIES_AMAURA, 20, ITEM_NEVER_MELT_ICE)
+                    if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                        removeitem(ITEM_SAIL_FOSSIL)
+                        playfanfare(MUS_OBTAIN_ITEM)
+                        msgbox("Received Amaura!")
+                        waitfanfare
+                        call(NicknamePartyMon)
+                    }
+                    elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                        removeitem(ITEM_SAIL_FOSSIL)
+                        playfanfare(MUS_OBTAIN_ITEM)
+                        msgbox("Received Amaura!")
+                        waitfanfare
+                        call(NicknamePartyMon)
+                    }
+                    else{
+                        msgbox("No more room.")
+                    }
+                    release
+                    end
+                case 2:
+                case MULTI_B_PRESSED:
+            }
+        }
+        msgbox(format("Negatory. Next time, perhaps!"))
+        release
+    }
+}
+
+script EventScript_FossilNerd_ReviveFossil {
+    msgbox(format("Splendid! Let us commence!"))
+    applymovement(2, moves(face_up))
+    waitmovement(2)
+    playse(SE_PC_ON)
+    waitse
+    delay(10)
+    playse(SE_DEX_SEARCH)
+    waitse
+    delay(10)
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Magnificent! The machine worked!\pWe successfully revived a prehistoric Pok\emon!\pPlease take the creature as a token of my thanks."))
+    return
+}
+
+text FossilNerd_JawFossil {
+    "JAW FOSSIL"
+}
+
+text FossilNerd_SailFossil {
+    "SAIL FOSSIL"
+}
+
+text FossilNerd_Cancel {
+    "CANCEL"
+}
+
+script ProdemiaUniversity_EventScript_LabWoman1 {
+    lock
+    faceplayer
+    msgbox(format("I'm running a study to compare the healing effects of man-made medicine and berries on Pok\emon.\pSo far, no major differences. Which is a good thing!"))
+    release
+}
+
+script ProdemiaUniversity_EventScript_LabWoman2 {
+    lock
+    faceplayer
+    msgbox(format("When most people think of universities, they picture themselves sitting in lectures and studying for exams.\pBut many universities are also important hubs for scientific research and development."))
+    release
+}
+
+script ProdemiaUniversity_EventScript_LabMan {
+    lock
+    faceplayer
+    msgbox(format("That guy in the back is a bit...strange.\pHe says he's working on a machine that can revive extinct Pok\emon."))
+    release
+}
