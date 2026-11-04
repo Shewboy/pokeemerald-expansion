@@ -86,10 +86,10 @@ script EventScript_FossilNerd_ReviveFossil {
     waitmovement(2)
     playse(SE_PC_ON)
     waitse
-    delay(10)
+    delay(30)
     playse(SE_DEX_SEARCH)
     waitse
-    delay(10)
+    delay(30)
     applymovement(2, moves(face_player))
     waitmovement(2)
     msgbox(format("Magnificent! The machine worked!\pWe successfully revived a prehistoric Pok\emon!\pPlease take the creature as a token of my thanks."))
