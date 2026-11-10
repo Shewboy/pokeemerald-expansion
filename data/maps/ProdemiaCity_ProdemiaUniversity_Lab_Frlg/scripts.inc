@@ -169,13 +169,13 @@ EventScript_FossilNerd_ReviveFossil::
 # 88 "data/maps/ProdemiaCity_ProdemiaUniversity_Lab_Frlg/scripts.pory"
 	waitse
 # 89 "data/maps/ProdemiaCity_ProdemiaUniversity_Lab_Frlg/scripts.pory"
-	delay 60
+	delay 30
 # 90 "data/maps/ProdemiaCity_ProdemiaUniversity_Lab_Frlg/scripts.pory"
 	playse SE_DEX_SEARCH
 # 91 "data/maps/ProdemiaCity_ProdemiaUniversity_Lab_Frlg/scripts.pory"
 	waitse
 # 92 "data/maps/ProdemiaCity_ProdemiaUniversity_Lab_Frlg/scripts.pory"
-	delay 60
+	delay 30
 # 93 "data/maps/ProdemiaCity_ProdemiaUniversity_Lab_Frlg/scripts.pory"
 	applymovement 2, EventScript_FossilNerd_ReviveFossil_Movement_1
 # 94 "data/maps/ProdemiaCity_ProdemiaUniversity_Lab_Frlg/scripts.pory"
