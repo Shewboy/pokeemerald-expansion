@@ -1,6 +1,63 @@
 mapscripts ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ProdemiaUniversity_LectureHall2_Sally
+        ]
 }
 
+
+### STORY EVENTS
+
+
+script ProdemiaUniversity_EventScript_ProfessorHollyIntro {
+    lock
+    faceplayer
+    msgbox(format("PROFESSOR HOLLY: I'm sorry, but my office hours are...\pOh! My apologies, I thought you were one of my students.\pDid you come to inquire about one of the Pok\edexes I have?\pYes, well I'm sorry to say that I don't just hand them out to anyone who asks! Pok\edexes aren't cheap, you know.\pPlus, I already have someone in mind."))
+    closemessage
+    playse(SE_EXIT)
+    applymovement(LOCALID_PLAYER, moves(face_down))
+    applymovement(1, moves(face_down))
+    playbgm(MUS_ENCOUNTER_MAY, FALSE)
+    addobject(2)
+    applymovement(2, moves (walk_up * 7))
+    waitmovement
+    applymovement(2, moves (walk_right * 2))
+    waitmovement
+    msgbox(format("???: Sorry I'm late, professor!"))
+    msgbox(format("HOLLY: And here is that someone now!"))
+    applymovement(2, moves(face_player))
+    msgbox(format("???: I don't think we've met. My name is Sally! I'm the Professor's teaching assistant."))
+    applymovement(1, moves(face_player))
+    msgbox(format("HOLLY: Sally has been a tremendous help to me this semester.\pHard to believe that she's already grading college papers at age 12!"))
+    msgbox(format("SALLY: Oh, Professor, you're too kind!"))
+    msgbox(format("HOLLY: But I've kept you cooped up in these old, dusty walls for far too long.\pYou're young! You should be exploring the world and having adventures."))
+    msgbox(format("SALLY: A-Are you sure, Professor? With my wheelchair and all..."))
+    msgbox(format("HOLLY: I'm certain of it. There's only so much a person can learn from books and lectures. Experience is the greatest teacher!\pThat's why I want to give you this-"))
+    playbgm(MUS_ENCOUNTER_MAGMA, FALSE)
+    playse(SE_PIN)
+    applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark, delay_16))
+    applymovement(1, moves(emote_exclamation_mark, delay_16))
+    applymovement(2, moves(emote_exclamation_mark, delay_16))
+    msgbox(format("???: EEEEEEEEEEK!"))
+    msgbox(format("???: Stop, thief!"))
+    closemessage
+    addobject(3)
+    applymovement(3, moves (walk_up * 7))
+    waitmovement
+    applymovement(3, moves (walk_right * 1))
+    msgbox(format("P-Professor! Someone just stole a book from the library!\pI tried to stop them, but I don't have any Pok\emon..."))
+    msgbox(format("HOLLY: Goodness! You don't mean...THAT book?"))
+    msgbox(format("???: Unfortunately, yes."))
+    msgbox(format("HOLLY: We can't let them get away!"))
+    msgbox(format("HOLLY: {PLAYER}, please track them down and get that book back!"))
+    release
+    end
+}
+
+script ProdemiaUniversity_LectureHall2_Sally {
+    removeobject(2)
+    setvar(VAR_TEMP_0, 1)
+    end
+}
 
 ### SIGNS
 
