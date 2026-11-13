@@ -157,8 +157,8 @@
 #define FLAG_GAVE_WALKING_BOY_PEWTER_CRUNCHIES             0x0B4
 #define FLAG_DAILY_PICKED_LOTO_TICKET_FRLG                 0x0B5
 #define FLAG_FOSSIL_REVIVE_MAN_FIRST_TALK                  0x0B6
-#define FLAG_0x0B7               0x0B7
-#define FLAG_0x0B8               0x0B8
+#define FLAG_MEET_PROFESSOR_HOLLY                          0x0B7
+#define FLAG_HIDE_NPCS_PRODEMIA_U                         0x0B8
 #define FLAG_0x0B9               0x0B9
 #define FLAG_0x0BA               0x0BA
 #define FLAG_0x0BB               0x0BB

@@ -3,6 +3,29 @@ mapscripts ProdemiaCity_Frlg_MapScripts {
 }
 
 
+### STORY EVENTS
+
+
+script ProdemiaCity_EventScript_UmbraGruntM {
+    lock
+    msgbox(format("Mutter mutter mutter..."))
+    faceplayer
+    msgbox(format("Hey kid, can't you see we're busy scheming? Get lost!"))
+    applymovement(23, moves(face_up))
+    waitmovement
+    release
+}
+
+script ProdemiaCity_EventScript_UmbraGruntF {
+    lock
+    msgbox(format("Whisper whisper whisper..."))
+    faceplayer
+    msgbox(format("Tch! Stop eavesdropping! Scram!"))
+    applymovement(22, moves(face_down))
+    waitmovement
+    release
+}
+
 script ProdemiaCity_OnLoad {
     if (flag(FLAG_BADGE03_GET)){
         //Replace crane tiles with tan brick tiles

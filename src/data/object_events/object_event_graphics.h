@@ -364,6 +364,8 @@ const u16 gObjectEventPic_None[] = INCGFX_U16("graphics/object_events/pics/misc/
 const u16 gObjectEventPic_Trashcan[] = INCGFX_U16("graphics/object_events/pics/misc/trashcan.png", ".4bpp");
 const u32 gObjectEventPic_Sally[] = INCGFX_U32("graphics/object_events/pics/people/sally.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_ProfHolly[] = INCGFX_U16("graphics/object_events/pics/people/prof_holly.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPic_UmbraMemberM[] = INCGFX_U16("graphics/object_events/pics/people/umbra_member_m.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPic_UmbraMemberF[] = INCGFX_U16("graphics/object_events/pics/people/umbra_member_f.png", ".4bpp", "-mwidth 2 -mheight 4");
 
 const u32 gObjectEventPic_DeoxysOld[] = INCGFX_U32("graphics/object_events/pics/pokemon_old/deoxys.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_MewOld[] = INCGFX_U32("graphics/object_events/pics/pokemon_old/mew.png", ".4bpp", "-mwidth 2 -mheight 4");

@@ -1,7 +1,5 @@
 mapscripts ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg_MapScripts {
-    MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_TEMP_0, 0: ProdemiaUniversity_LectureHall2_Sally
-        ]
+    MAP_SCRIPT_ON_TRANSITION: ProdemiaUniversity_LectureHall2_Hide_NPCs
 }
 
 
@@ -49,13 +47,13 @@ script ProdemiaUniversity_EventScript_ProfessorHollyIntro {
     msgbox(format("???: Unfortunately, yes."))
     msgbox(format("HOLLY: We can't let them get away!"))
     msgbox(format("HOLLY: {PLAYER}, please track them down and get that book back!"))
+    setflag(FLAG_MEET_PROFESSOR_HOLLY)
     release
     end
 }
 
-script ProdemiaUniversity_LectureHall2_Sally {
-    removeobject(2)
-    setvar(VAR_TEMP_0, 1)
+script ProdemiaUniversity_LectureHall2_Hide_NPCs {
+    setflag(FLAG_HIDE_NPCS_PRODEMIA_U)
     end
 }
 

@@ -392,6 +392,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_None;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trashcan;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sally;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfHolly;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UmbraMemberM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UmbraMemberF;
 // Begin Pokémon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
@@ -654,6 +656,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TRASHCAN] =                 &gObjectEventGraphicsInfo_Trashcan,
     [OBJ_EVENT_GFX_SALLY] =                    &gObjectEventGraphicsInfo_Sally,
     [OBJ_EVENT_GFX_PROF_HOLLY] =               &gObjectEventGraphicsInfo_ProfHolly,
+    [OBJ_EVENT_GFX_UMBRA_MEMBER_M] =           &gObjectEventGraphicsInfo_UmbraMemberM,
+    [OBJ_EVENT_GFX_UMBRA_MEMBER_F] =           &gObjectEventGraphicsInfo_UmbraMemberF,
 #if IS_FRLG
     [OBJ_EVENT_GFX_RED_NORMAL] =               &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE] =                 &gObjectEventGraphicsInfo_RedBike,
