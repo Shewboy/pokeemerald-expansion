@@ -438,6 +438,54 @@ EventScript_ProdemiaCity_WomanSouth::
 	return
 
 
+EventScript_ProdemiaCity_Trashcan1::
+# 270 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	lock
+# 271 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	compare VAR_TEMP_0, FALSE
+	goto_if_eq EventScript_ProdemiaCity_Trashcan1_2
+# 278 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	msgbox EventScript_ProdemiaCity_Trashcan1_Text_0
+EventScript_ProdemiaCity_Trashcan1_1:
+# 280 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	release
+	return
+
+EventScript_ProdemiaCity_Trashcan1_2:
+# 272 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	call Common_EventScript_TrashcanEncounter
+# 273 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq EventScript_ProdemiaCity_Trashcan1_5
+	goto EventScript_ProdemiaCity_Trashcan1_1
+
+EventScript_ProdemiaCity_Trashcan1_5:
+# 274 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	setvar VAR_TEMP_0, TRUE
+	goto EventScript_ProdemiaCity_Trashcan1_1
+
+
+EventScript_ProdemiaCity_Trashcan2::
+# 284 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	lock
+# 285 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	compare VAR_TEMP_1, FALSE
+	goto_if_eq EventScript_ProdemiaCity_Trashcan2_2
+# 290 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	msgbox EventScript_ProdemiaCity_Trashcan1_Text_0
+EventScript_ProdemiaCity_Trashcan2_1:
+# 292 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	release
+	return
+
+EventScript_ProdemiaCity_Trashcan2_2:
+# 286 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	call Common_EventScript_TrashcanEncounter
+# 287 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	setvar VAR_TEMP_1, TRUE
+	goto EventScript_ProdemiaCity_Trashcan2_1
+
+
 # 14 "data/maps/ProdemiaCity_Frlg/scripts.pory"
 ProdemiaCity_EventScript_UmbraGruntM_Movement_0:
 # 14 "data/maps/ProdemiaCity_Frlg/scripts.pory"
@@ -576,3 +624,7 @@ EventScript_ProdemiaCity_WomanSouth_Text_0:
 	.string "in Silicraft City.\p"
 	.string "She owns an art studio that sells glass\n"
 	.string "flutes.$"
+
+EventScript_ProdemiaCity_Trashcan1_Text_0:
+# 278 "data/maps/ProdemiaCity_Frlg/scripts.pory"
+	.string "There's a foul stench...$"

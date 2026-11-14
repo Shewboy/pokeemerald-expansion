@@ -261,3 +261,33 @@ script EventScript_ProdemiaCity_WomanSouth {
     msgbox(format("I just got back from visiting a friend in Silicraft City.\pShe owns an art studio that sells glass flutes."))
     release
 }
+
+
+### TRASHCANS
+
+
+script EventScript_ProdemiaCity_Trashcan1 {
+    lock
+    if (var(VAR_TEMP_0) == FALSE) {
+        call(Common_EventScript_TrashcanEncounter)
+        if (var(VAR_RESULT) == YES) {
+            setvar(VAR_TEMP_0, TRUE)
+        }
+    }
+    else {
+        msgbox(format("There's a foul stench..."))
+    }
+    release
+}
+
+script EventScript_ProdemiaCity_Trashcan2 {
+    lock
+    if (var(VAR_TEMP_1) == FALSE) {
+        call(Common_EventScript_TrashcanEncounter)
+        setvar(VAR_TEMP_1, TRUE)
+    }
+    else {
+        msgbox(format("There's a foul stench..."))
+    }
+    release
+}

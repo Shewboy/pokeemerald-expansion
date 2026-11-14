@@ -1675,16 +1675,12 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	end
 
 Common_EventScript_TrashcanEncounter::
-	lockall
 	msgbox Text_WantToTrashcan, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelTrashcan
-	goto_if_eq VAR_TEMP_0, TRUE, EventScript_EndTrashcan
 	special RockSmashWildEncounter
 	goto_if_eq VAR_RESULT, FALSE, EventScript_TrashcanItem
-	setvar VAR_TEMP_0, TRUE
-	waitstate
-	releaseall
-	end
+	setvar VAR_RESULT, YES
+	return
 
 Text_WantToTrashcan::
 	.string "There's a foul stench...\p"
@@ -1692,22 +1688,20 @@ Text_WantToTrashcan::
 
 EventScript_CancelTrashcan::
 	closemessage
-	releaseall
-	end
+	setvar VAR_RESULT, NO
+	return
 
 EventScript_TrashcanItem::
 	special TrashcanGenerateItem
 	goto_if_eq VAR_RESULT, FALSE, EventScript_EndTrashcan
 	giveitem VAR_RESULT, 1
-	setvar VAR_TEMP_0, TRUE
-	releaseall
-	end
+	setvar VAR_RESULT, YES
+	return
 
 EventScript_EndTrashcan::
 	msgbox Text_Yuck
-	setvar VAR_TEMP_0, TRUE
-	releaseall
-	end
+	setvar VAR_RESULT, YES
+	return
 
 Text_Yuck::
 	.string "Yuck! Wish I hadn't!$"
