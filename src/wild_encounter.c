@@ -549,6 +549,18 @@ static u8 PickWildMonNature(enum Species species)
     return GetSynchronizedNature(WILDMON_ORIGIN, species);
 }
 
+static void PickWildMonStatus(enum WildPokemonArea area)
+{
+    u16 species = GetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_SPECIES);
+    u32 status;
+
+    if (species == SPECIES_SKWOVET && GetTimeOfDay() == TIME_NIGHT && area == WILD_AREA_HEADBUTT)
+    {
+        status = STATUS1_SLEEP;
+        SetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_STATUS, &status);
+    }
+}
+
 void CreateWildMon(enum Species species, u8 level)
 {
     ZeroEnemyPartyMons();
@@ -636,6 +648,7 @@ bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, enum WildPok
         return FALSE;
 
     CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
+    PickWildMonStatus(area);
     return TRUE;
 }
 
