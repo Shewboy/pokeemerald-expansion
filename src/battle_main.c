@@ -418,7 +418,8 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_RUIN_MANIAC_FRLG] =     { _("RUIN MANIAC"), 12 },
     [TRAINER_CLASS_LADY_FRLG] =            { _("LADY"), 50 },
     [TRAINER_CLASS_PAINTER_FRLG] =         { _("PAINTER"), 4 },
-    [TRAINER_CLASS_FISHERBOY_FRLG] =         { _("FISHERBOY"), 4, BALL_LURE },
+    [TRAINER_CLASS_FISHERBOY_FRLG] =       { _("FISHERBOY"), 4, BALL_LURE },
+    [TRAINER_CLASS_UMBRA_CLAN_FRLG] =      { _("UMBRA CLAN"), 8, BALL_DUSK },
 };
 
 static void (*const sTurnActionsFuncsTable[])(void) =

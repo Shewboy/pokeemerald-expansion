@@ -1,10 +1,25 @@
 mapscripts ProdemiaCity_Frlg_MapScripts {
     MAP_SCRIPT_ON_LOAD: ProdemiaCity_OnLoad
+    MAP_SCRIPT_ON_TRANSITION: ProdemiaCity_OnTransition
 }
 
 
 ### STORY EVENTS
 
+
+script ProdemiaCity_OnTransition {
+    if (var(VAR_PRODEMIA_CITY_STATE) == 0) {
+        setflag(FLAG_HIDE_PRODEMIA_UMBRA_THIEF)
+    }
+    elif (var(VAR_PRODEMIA_CITY_STATE) == 1) {
+        setflag(FLAG_HIDE_PRODEMIA_UMBRA_GRUNTS)
+        clearflag(FLAG_HIDE_PRODEMIA_UMBRA_THIEF)
+    }
+    else {
+        setflag(FLAG_HIDE_PRODEMIA_UMBRA_GRUNTS)
+        setflag(FLAG_HIDE_PRODEMIA_UMBRA_THIEF)
+    }
+}
 
 script ProdemiaCity_EventScript_UmbraGruntM {
     lock
@@ -24,6 +39,56 @@ script ProdemiaCity_EventScript_UmbraGruntF {
     applymovement(22, moves(face_down))
     waitmovement
     release
+}
+
+script ProdemiaCity_Trigger_ThiefLeft {
+    lockall
+    setvar(VAR_TEMP_1, 0)
+    goto(ProdemiaCity_EventScript_Thief)
+    end
+}
+
+script ProdemiaCity_Trigger_ThiefMid {
+    lockall
+    setvar(VAR_TEMP_1, 1)
+    goto(ProdemiaCity_EventScript_Thief)
+    end
+}
+
+script ProdemiaCity_Trigger_ThiefRight {
+    lockall
+    setvar(VAR_TEMP_1, 2)
+    goto(ProdemiaCity_EventScript_Thief)
+    end
+}
+
+script ProdemiaCity_EventScript_Thief {
+    playbgm(MUS_ENCOUNTER_MAGMA, FALSE)
+    switch(var(VAR_TEMP_1)) {
+        case 0:
+            applymovement(LOCALID_PLAYER, moves(walk_right, face_up))
+        case 1:
+            applymovement(LOCALID_PLAYER, moves(face_up))
+        case 2:
+            applymovement(LOCALID_PLAYER, moves(walk_left, face_up))
+    }
+    waitmovement
+    msgbox(format("Hehehehe! Mother is sure to be pleased with us for stealing this."))
+    playse(SE_PIN)
+    applymovement(24, moves(emote_question_mark))
+    waitmovement
+    delay(40)
+    applymovement(24, moves(face_down))
+    msgbox(format("Hey! This doesn't concern you. The motives of the Umbra Clan are far beyond what your puny brain can comprehend.\pBut you look like you came to fight, so a fight is what you'll get!"))
+    applymovement(24, moves(walk_down))
+    waitmovement
+    trainerbattle_no_intro(TRAINER_UMBRA_GRUNT_F_PRODEMIA, format("What?! Impossible!"))
+    msgbox(format("Grrr, you're stronger than you look.\pBut you're too late. My partner has the book, and he's long gone!\pThe Umbra Clan will not rest until Meddoh is engulfed in darkness!"))
+    applymovement(24, moves(walk_left * 3))
+    playse(SE_EXIT)
+    removeobject(24)
+    setvar(var(VAR_PRODEMIA_CITY_STATE, 2))
+    releaseall
 }
 
 script ProdemiaCity_OnLoad {

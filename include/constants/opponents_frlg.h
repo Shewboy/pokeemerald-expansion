@@ -630,7 +630,8 @@
 #define TRAINER_FISHERBOY_CODY                     624
 #define TRAINER_BUG_CATCHER_DEREK                  625
 #define TRAINER_LASS_MELISSA                       626
-#define TRAINER_YOUNGSTER_JOHN                     627
+#define TRAINER_YOUNGSTER_JOHN
+#define TRAINER_UMBRA_CLAN_F_PRODEMIA                    627
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is
 //       only space for 25 additional trainers before trainer flag space overflows.

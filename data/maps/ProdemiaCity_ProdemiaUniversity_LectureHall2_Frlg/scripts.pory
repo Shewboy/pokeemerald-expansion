@@ -1,5 +1,8 @@
 mapscripts ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION: ProdemiaUniversity_LectureHall2_Hide_NPCs
+    MAP_SCRIPT_ON_TRANSITION: ProdemiaUniversity_LectureHall2_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE[
+        VAR_PRODEMIA_CITY_STATE, 0: ProdemiaUniversity_EventScript_ProfessorHollyIntro
+    ]
 }
 
 
@@ -8,25 +11,30 @@ mapscripts ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg_MapScripts {
 
 script ProdemiaUniversity_EventScript_ProfessorHollyIntro {
     lock
-    faceplayer
-    msgbox(format("PROFESSOR HOLLY: I'm sorry, but my office hours are...\pOh! My apologies, I thought you were one of my students.\pDid you come to inquire about one of the Pok\edexes I have?\pYes, well I'm sorry to say that I don't just hand them out to anyone who asks! Pok\edexes aren't cheap, you know.\pPlus, I already have someone in mind."))
+    applymovement(LOCALID_PLAYER, moves(walk_up * 7, walk_right * 3, face_up))
+    waitmovement
+    applymovement(1, moves(face_down))
+    msgbox(format("PROFESSOR HOLLY: I'm sorry, but my office hours are...\pOh! My apologies, I thought you were one of my students.\p{PLAYER}, is it?\pDid you come to inquire about one of the Pok\edexes I have?\pYes, well I'm sorry to say that I don't just hand them out to anyone who asks! Pok\edexes aren't cheap, you know.\pPlus, I already have someone in mind."))
     closemessage
     playse(SE_EXIT)
-    applymovement(LOCALID_PLAYER, moves(face_down))
-    applymovement(1, moves(face_down))
     playbgm(MUS_ENCOUNTER_MAY, FALSE)
     addobject(2)
-    applymovement(2, moves (walk_up * 7))
+    applymovement(2, moves (walk_up * 8, walk_right * 2))
     waitmovement
-    applymovement(2, moves (walk_right * 2))
+    applymovement(LOCALID_PLAYER, moves(face_left))
+    applymovement(1, moves(face_left))
     waitmovement
     msgbox(format("???: Sorry I'm late, professor!"))
     msgbox(format("HOLLY: And here is that someone now!"))
-    applymovement(2, moves(face_player))
+    applymovement(2, moves(face_down))
     msgbox(format("???: I don't think we've met. My name is Sally! I'm the Professor's teaching assistant."))
+    applymovement(LOCALID_PLAYER, moves(face_up))
     applymovement(1, moves(face_player))
     msgbox(format("HOLLY: Sally has been a tremendous help to me this semester.\pHard to believe that she's already grading college papers at age 12!"))
+    applymovement(2, moves(face_right))
     msgbox(format("SALLY: Oh, Professor, you're too kind!"))
+    applymovement(LOCALID_PLAYER, moves(face_left))
+    applymovement(1, moves(face_left))
     msgbox(format("HOLLY: But I've kept you cooped up in these old, dusty walls for far too long.\pYou're young! You should be exploring the world and having adventures."))
     msgbox(format("SALLY: A-Are you sure, Professor? With my wheelchair and all..."))
     msgbox(format("HOLLY: I'm certain of it. There's only so much a person can learn from books and lectures. Experience is the greatest teacher!\pThat's why I want to give you this-"))
@@ -39,21 +47,37 @@ script ProdemiaUniversity_EventScript_ProfessorHollyIntro {
     msgbox(format("???: Stop, thief!"))
     closemessage
     addobject(3)
-    applymovement(3, moves (walk_up * 7))
+    applymovement(3, moves (walk_fast_up * 7, walk_fast_right * 1))
     waitmovement
-    applymovement(3, moves (walk_right * 1))
-    msgbox(format("P-Professor! Someone just stole a book from the library!\pI tried to stop them, but I don't have any Pok\emon..."))
-    msgbox(format("HOLLY: Goodness! You don't mean...THAT book?"))
-    msgbox(format("???: Unfortunately, yes."))
-    msgbox(format("HOLLY: We can't let them get away!"))
-    msgbox(format("HOLLY: {PLAYER}, please track them down and get that book back!"))
-    setflag(FLAG_MEET_PROFESSOR_HOLLY)
+    applymovement(2, moves (face_left))
+    waitmovement
+    msgbox(format("P-Professor! Someone just stole a book from the library!\pI tried to stop them, but they threatend to attack me with their Pok\emon."))
+    msgbox(format("HOLLY: Goodness! That's a bit excessive."))
+    applymovement(LOCALID_PLAYER, moves(face_up))
+    applymovement(1, moves(face_player))
+    msgbox(format("HOLLY: {PLAYER}, I know I am asking a lot of you, but please stop that thief!"))
+    setvar(VAR_PRODEMIA_CITY_STATE, 1)
     release
     end
 }
 
-script ProdemiaUniversity_LectureHall2_Hide_NPCs {
-    setflag(FLAG_HIDE_NPCS_PRODEMIA_U)
+script ProdemiaUniversity_LectureHall2_OnTransition {
+    if (var(VAR_PRODEMIA_CITY_STATE) == 0) {
+        setflag(FLAG_HIDE_NPCS_PRODEMIA_U)
+    }
+    elif (var(VAR_PRODEMIA_CITY_STATE) == 1) {
+        //Sally
+        setobjectxyperm(2,5,2)
+        setobjectmovementtype(2,MOVEMENT_TYPE_FACE_LEFT)
+        //Prof Holly
+        setobjectmovementtype(1,MOVEMENT_TYPE_FACE_LEFT)
+        //Man
+        setobjectxyperm(3,4,3)
+        setobjectmovementtype(3,MOVEMENT_TYPE_FACE_RIGHT)
+        clearflag(FLAG_HIDE_NPCS_PRODEMIA_U)
+    }
+    else {
+    }
     end
 }
 

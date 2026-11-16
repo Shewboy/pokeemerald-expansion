@@ -309,7 +309,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ProdemiaCity_EventScript_UmbraGruntF",
-      "flag": "FLAG_MEET_PROFESSOR_HOLLY"
+      "flag": "FLAG_HIDE_PRODEMIA_UMBRA_GRUNTS"
     },
     {
       "type": "object",
@@ -323,7 +323,21 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ProdemiaCity_EventScript_UmbraGruntM",
-      "flag": "FLAG_MEET_PROFESSOR_HOLLY"
+      "flag": "FLAG_HIDE_PRODEMIA_UMBRA_GRUNTS"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_UMBRA_MEMBER_F",
+      "x": 7,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -391,7 +405,35 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_PRODEMIA_CITY_STATE",
+      "var_value": "1",
+      "script": "ProdemiaCity_EventScript_Thief"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "1",
+      "script": "ProdemiaCity_EventScript_Thief"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "1",
+      "script": "ProdemiaCity_EventScript_Thief"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
