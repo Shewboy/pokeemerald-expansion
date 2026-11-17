@@ -159,8 +159,8 @@
 #define FLAG_FOSSIL_REVIVE_MAN_FIRST_TALK                  0x0B6
 #define FLAG_HIDE_PRODEMIA_UMBRA_GRUNTS                    0x0B7
 #define FLAG_HIDE_NPCS_PRODEMIA_U                          0x0B8
-#define FLAG_0x0B9               0x0B9
-#define FLAG_0x0BA               0x0BA
+#define FLAG_HIDE_PRODEMIA_UMBRA_THIEF                     0x0B9
+#define FLAG_HIDE_SALLY_HOLLY_PRODEMIA                     0x0BA
 #define FLAG_0x0BB               0x0BB
 #define FLAG_0x0BC               0x0BC
 #define FLAG_0x0BD               0x0BD

@@ -9,15 +9,19 @@ mapscripts ProdemiaCity_Frlg_MapScripts {
 
 script ProdemiaCity_OnTransition {
     if (var(VAR_PRODEMIA_CITY_STATE) == 0) {
+        clearflag(FLAG_HIDE_PRODEMIA_UMBRA_GRUNTS)
         setflag(FLAG_HIDE_PRODEMIA_UMBRA_THIEF)
+        setflag(FLAG_HIDE_SALLY_HOLLY_PRODEMIA)
     }
     elif (var(VAR_PRODEMIA_CITY_STATE) == 1) {
         setflag(FLAG_HIDE_PRODEMIA_UMBRA_GRUNTS)
         clearflag(FLAG_HIDE_PRODEMIA_UMBRA_THIEF)
+        setflag(FLAG_HIDE_SALLY_HOLLY_PRODEMIA)
     }
     else {
         setflag(FLAG_HIDE_PRODEMIA_UMBRA_GRUNTS)
         setflag(FLAG_HIDE_PRODEMIA_UMBRA_THIEF)
+        setflag(FLAG_HIDE_SALLY_HOLLY_PRODEMIA)
     }
 }
 
@@ -41,36 +45,45 @@ script ProdemiaCity_EventScript_UmbraGruntF {
     release
 }
 
-script ProdemiaCity_Trigger_ThiefLeft {
+script ProdemiaCity_Trigger_ThiefBottom {
     lockall
     setvar(VAR_TEMP_1, 0)
     goto(ProdemiaCity_EventScript_Thief)
     end
 }
 
-script ProdemiaCity_Trigger_ThiefMid {
+script ProdemiaCity_Trigger_ThiefMidBottom {
     lockall
     setvar(VAR_TEMP_1, 1)
     goto(ProdemiaCity_EventScript_Thief)
     end
 }
 
-script ProdemiaCity_Trigger_ThiefRight {
+script ProdemiaCity_Trigger_ThiefMidTop {
     lockall
     setvar(VAR_TEMP_1, 2)
     goto(ProdemiaCity_EventScript_Thief)
     end
 }
 
+script ProdemiaCity_Trigger_ThiefTop {
+    lockall
+    setvar(VAR_TEMP_1, 3)
+    goto(ProdemiaCity_EventScript_Thief)
+    end
+}
+
 script ProdemiaCity_EventScript_Thief {
-    playbgm(MUS_ENCOUNTER_MAGMA, FALSE)
+    playbgm(MUS_ENCOUNTER_MAGMA, TRUE)
     switch(var(VAR_TEMP_1)) {
         case 0:
-            applymovement(LOCALID_PLAYER, moves(walk_right, face_up))
+            applymovement(LOCALID_PLAYER, moves(walk_up, face_left))
         case 1:
-            applymovement(LOCALID_PLAYER, moves(face_up))
+            applymovement(LOCALID_PLAYER, moves(face_left))
         case 2:
-            applymovement(LOCALID_PLAYER, moves(walk_left, face_up))
+            applymovement(LOCALID_PLAYER, moves(walk_down, face_left))
+        case 3:
+            applymovement(LOCALID_PLAYER, moves(walk_down * 2, face_left))
     }
     waitmovement
     msgbox(format("Hehehehe! Mother is sure to be pleased with us for stealing this."))
@@ -78,16 +91,82 @@ script ProdemiaCity_EventScript_Thief {
     applymovement(24, moves(emote_question_mark))
     waitmovement
     delay(40)
-    applymovement(24, moves(face_down))
-    msgbox(format("Hey! This doesn't concern you. The motives of the Umbra Clan are far beyond what your puny brain can comprehend.\pBut you look like you came to fight, so a fight is what you'll get!"))
-    applymovement(24, moves(walk_down))
+    applymovement(24, moves(face_right))
+    msgbox(format("Hey! This doesn't concern you.\pThe motives of the Umbra Clan are far beyond what your puny brain can comprehend.\pBut you look like you came to fight, so a fight is what you'll get!"))
+    applymovement(24, moves(walk_right))
     waitmovement
-    trainerbattle_no_intro(TRAINER_UMBRA_GRUNT_F_PRODEMIA, format("What?! Impossible!"))
+    trainerbattle_no_intro(TRAINER_UMBRA_CLAN_F_PRODEMIA, format("What?! Impossible!"))
     msgbox(format("Grrr, you're stronger than you look.\pBut you're too late. My partner has the book, and he's long gone!\pThe Umbra Clan will not rest until Meddoh is engulfed in darkness!"))
-    applymovement(24, moves(walk_left * 3))
+    closemessage
+    applymovement(24, moves(walk_left))
+    waitmovement
     playse(SE_EXIT)
     removeobject(24)
-    setvar(var(VAR_PRODEMIA_CITY_STATE, 2))
+    fadedefaultbgm
+    delay(40)
+    setvar(VAR_PRODEMIA_CITY_STATE, 2)
+    goto(ProdemiaCity_EventScript_ReceivePokedex)
+}
+
+script ProdemiaCity_EventScript_ReceivePokedex {
+    msgbox(format("{PLAYER}!"))
+    closemessage
+    addobject(25)
+    addobject(26)
+    applymovement(LOCALID_PLAYER, moves(face_right))
+    applymovement(25, moves(walk_left * 7, walk_up * 3, face_left))
+    applymovement(26, moves(walk_left * 8, walk_up * 2, face_left))
+    waitmovement
+    msgbox(format("SALLY: Are your Pok\emon hurt?\pHere, let me heal them."))
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    msgbox(format("HOLLY: Judging by your expression, I assume you couldn't get the book back.\pDon't be hard on yourself, {PLAYER}. Your bravery speaks volumes!"))
+    applymovement(26, moves(face_up))
+    waitmovement
+    msgbox(format("SALLY: Professor, who was that hooded thief? And why do they want that book?"))
+    applymovement(25, moves(face_down))
+    waitmovement
+    msgbox(format("HOLLY: I'm not sure, Sally. I can't say I've even noticed a book like that in the library."))
+    applymovement(25, moves(face_left))
+    applymovement(26, moves(face_left))
+    waitmovement
+    msgbox(format("HOLLY: Regardless! {PLAYER}, I've just met you, but your actions today have proven to me that you are more than deserving of this."))
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(format("Received the Pok\edex!"))
+    waitmessage
+    waitfanfare
+    setflag(FLAG_SYS_POKEDEX_GET)
+    msgbox(format("SALLY: Wow, a real Pok\edex!"))
+    applymovement(25, moves(face_down))
+    applymovement(26, moves(face_up))
+    msgbox(format("HOLLY: Sally, I stand by what I said earlier. You're ready to embark on a journey of your own. You take one as well."))
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(format("Sally received the Pok\edex!"))
+    waitmessage
+    waitfanfare
+    msgbox(format("SALLY: Th-thank you, Professor! I'll make you proud!"))
+    msgbox(format("HOLLY: You already have, my dear!"))
+    applymovement(25, moves(face_left))
+    waitmovement
+    msgbox(format("HOLLY: My mission to you both is to record as much information on Pok\emon as you can.\pExplore every inch of the Meddoh region and take in all that it has to offer.\pBut most importantly, have fun! And support each other when you can."))
+    msgbox(format("SALLY: We will, Professor!"))
+    applymovement(26, moves(face_left))
+    waitmovement
+    msgbox(format("SALLY: {PLAYER}, I've read that one of the best ways to learn about Pok\emon is through battling.\pMaybe we can plan to meet up and battle each other on our journeys. Sorta like rivals!"))
+    msgbox(format("HOLLY: That's a wonderful idea, Sally! Nothing like a little friendly competition to keep you motivated.\pWhile we're on the subject, you can also take on the Meddoh League. The first gym is just to the west of here, in Grodeo Town."))
+    msgbox(format("SALLY: Sounds like a plan! Come to Route 2 once you're ready, {PLAYER}!"))
+    closemessage
+    applymovement(26, moves(walk_left * 2, walk_up, walk_left))
+    waitmovement
+    playse(SE_EXIT)
+    removeobject(26)
+    delay(40)
+    msgbox(format("HOLLY: I've never seen her so excited!\p{PLAYER}, do watch out for her, will you? She's a smart girl, but a bit sheltered.\pA fault of my own overprotectiveness, I suppose.\pAnyway, best of luck to you. I look forward to hearing about your accomplishments!"))
+    closemessage
+    applymovement(25, moves(walk_down * 3, walk_right * 7))
+    waitmovement
+    removeobject(25)
+    setvar(VAR_PRODEMIA_CITY_STATE, 3)
+    delay(40)
     releaseall
 }
 

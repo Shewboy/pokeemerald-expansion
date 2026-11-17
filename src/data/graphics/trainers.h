@@ -472,6 +472,12 @@ const u16 gTrainerPalette_PainterFrlg[] = INCGFX_U16("graphics/trainers/palettes
 const u32 gTrainerFrontPic_FisherboyFrlg[] = INCGFX_U32("graphics/trainers/front_pics/fisherboy_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_FisherboyFrlg[] = INCGFX_U16("graphics/trainers/palettes/fisherboy_frlg.pal", ".gbapal");
 
+const u32 gTrainerFrontPic_UmbraClanMFrlg[] = INCGFX_U32("graphics/trainers/front_pics/umbra_clan_m.png", ".4bpp.smol");
+const u16 gTrainerPalette_UmbraClanMFrlg[] = INCGFX_U16("graphics/trainers/palettes/umbra_clan_m.pal", ".gbapal");
+
+const u32 gTrainerFrontPic_UmbraClanFFrlg[] = INCGFX_U32("graphics/trainers/front_pics/umbra_clan_f.png", ".4bpp.smol");
+const u16 gTrainerPalette_UmbraClanFFrlg[] = INCGFX_U16("graphics/trainers/palettes/umbra_clan_f.pal", ".gbapal");
+
 static const u8 gTrainerBackPic_None[] = INCGFX_U8("graphics/trainers/back_pics/none.png", ".4bpp");
 const u8 gTrainerBackPic_Brendan[] = INCGFX_U8("graphics/trainers/back_pics/brendan.png", ".4bpp");
 const u8 gTrainerBackPic_May[] = INCGFX_U8("graphics/trainers/back_pics/may.png", ".4bpp");
@@ -1232,5 +1238,13 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_FISHERBOY_FRLG] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_FisherboyFrlg, gTrainerPalette_FisherboyFrlg),
+    },
+    [TRAINER_PIC_UMBRA_CLAN_M_FRLG] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_UmbraClanMFrlg, gTrainerPalette_UmbraClanMFrlg),
+    },
+    [TRAINER_PIC_UMBRA_CLAN_F_FRLG] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_UmbraClanFFrlg, gTrainerPalette_UmbraClanFFrlg),
     },
 };

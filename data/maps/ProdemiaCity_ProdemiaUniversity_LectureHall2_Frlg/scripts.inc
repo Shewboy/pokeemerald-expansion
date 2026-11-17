@@ -118,6 +118,8 @@ ProdemiaUniversity_LectureHall2_OnTransition::
 # 68 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
 	compare VAR_PRODEMIA_CITY_STATE, 1
 	goto_if_eq ProdemiaUniversity_LectureHall2_OnTransition_3
+# 80 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	setflag FLAG_HIDE_NPCS_PRODEMIA_U
 ProdemiaUniversity_LectureHall2_OnTransition_1:
 	end
 
@@ -143,44 +145,112 @@ ProdemiaUniversity_LectureHall2_OnTransition_3:
 
 
 ProdemiaUniversity_EventScript_Chalkboard2::
-# 88 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
-	lock
 # 89 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
-	msgbox ProdemiaUniversity_EventScript_Chalkboard2_Text_0
+	lock
 # 90 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
-	multichoice 0, 0, MULTI_TOD_DESCRIPTIONS, FALSE
+	msgbox ProdemiaUniversity_EventScript_Chalkboard2_Text_0
 # 91 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
-	switch VAR_RESULT
+	multichoice 0, 0, MULTI_TOD_DESCRIPTIONS, FALSE
 # 92 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
-	case 0, ProdemiaUniversity_EventScript_Chalkboard2_3
+	switch VAR_RESULT
 # 93 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
-	case 1, ProdemiaUniversity_EventScript_Chalkboard2_4
+	case 0, ProdemiaUniversity_EventScript_Chalkboard2_3
 # 94 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
-	case 2, ProdemiaUniversity_EventScript_Chalkboard2_5
+	case 1, ProdemiaUniversity_EventScript_Chalkboard2_4
 # 95 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	case 2, ProdemiaUniversity_EventScript_Chalkboard2_5
+# 96 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
 	case MULTI_B_PRESSED, ProdemiaUniversity_EventScript_Chalkboard2_6
 ProdemiaUniversity_EventScript_Chalkboard2_1:
-# 97 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+# 98 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
 	release
 	end
 
 ProdemiaUniversity_EventScript_Chalkboard2_3:
-# 92 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+# 93 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
 	msgbox ProdemiaUniversity_EventScript_Chalkboard2_Text_1
 	goto ProdemiaUniversity_EventScript_Chalkboard2_1
 
 ProdemiaUniversity_EventScript_Chalkboard2_4:
-# 93 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+# 94 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
 	msgbox ProdemiaUniversity_EventScript_Chalkboard2_Text_2
 	goto ProdemiaUniversity_EventScript_Chalkboard2_1
 
 ProdemiaUniversity_EventScript_Chalkboard2_5:
-# 94 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+# 95 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
 	msgbox ProdemiaUniversity_EventScript_Chalkboard2_Text_3
 	goto ProdemiaUniversity_EventScript_Chalkboard2_1
 
 ProdemiaUniversity_EventScript_Chalkboard2_6:
 	end
+
+
+ProdemiaUniversity_EventScript_ProfHolly::
+# 108 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	compare VAR_PRODEMIA_CITY_STATE, 1
+	goto_if_eq ProdemiaUniversity_EventScript_ProfHolly_1
+# 115 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	goto_if_unset FLAG_BADGE01_GET, ProdemiaUniversity_EventScript_ProfHolly_2
+# 121 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	goto_if_set FLAG_BADGE01_GET, ProdemiaUniversity_EventScript_ProfHolly_3
+	return
+
+ProdemiaUniversity_EventScript_ProfHolly_1:
+# 109 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	lock
+# 110 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	faceplayer
+# 111 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	msgbox ProdemiaUniversity_EventScript_ProfHolly_Text_0
+# 112 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	release
+	end
+
+ProdemiaUniversity_EventScript_ProfHolly_2:
+# 116 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	lock
+# 117 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	faceplayer
+# 118 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	msgbox ProdemiaUniversity_EventScript_ProfHolly_Text_1
+# 119 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	release
+	return
+
+ProdemiaUniversity_EventScript_ProfHolly_3:
+# 122 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	lock
+# 123 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	faceplayer
+# 124 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	msgbox ProdemiaUniversity_EventScript_ProfHolly_Text_2
+# 125 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	release
+	return
+
+
+ProdemiaUniversity_EventScript_Sally::
+# 130 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	lock
+# 131 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	faceplayer
+# 132 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	msgbox ProdemiaUniversity_EventScript_Sally_Text_0
+# 133 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	release
+	return
+
+
+ProdemiaUniversity_EventScript_DistraughtMan::
+# 137 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	lock
+# 138 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	faceplayer
+# 139 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	msgbox ProdemiaUniversity_EventScript_DistraughtMan_Text_0
+# 140 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	release
+	return
 
 
 # 14 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
@@ -377,14 +447,14 @@ ProdemiaUniversity_EventScript_ProfessorHollyIntro_Text_13:
 	.string "of you, but please stop that thief!$"
 
 ProdemiaUniversity_EventScript_Chalkboard2_Text_0:
-# 89 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+# 90 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
 	.string "Various Pokémon are categorized into\n"
 	.string "lists.\p"
 	.string "Which description would you like to\n"
 	.string "read?$"
 
 ProdemiaUniversity_EventScript_Chalkboard2_Text_1:
-# 92 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+# 93 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
 	.string "Diurnal Pokémon are primarily active\n"
 	.string "during the day and inactive at night.\p"
 	.string "Humans are also diurnal, which is why\n"
@@ -394,7 +464,7 @@ ProdemiaUniversity_EventScript_Chalkboard2_Text_1:
 	.string "as Ledyba, Skwovet, and Hoppip.$"
 
 ProdemiaUniversity_EventScript_Chalkboard2_Text_2:
-# 93 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+# 94 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
 	.string "Nocturnal Pokémon are primarily active\n"
 	.string "at night and inactive during the day.\p"
 	.string "Research has shown that nocturnal\n"
@@ -405,7 +475,7 @@ ProdemiaUniversity_EventScript_Chalkboard2_Text_2:
 	.string "Pokémon.$"
 
 ProdemiaUniversity_EventScript_Chalkboard2_Text_3:
-# 94 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+# 95 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
 	.string "Crepuscular Pokémon are primarily\n"
 	.string "active during the transition hours of\l"
 	.string "dawn and dusk.\p"
@@ -413,3 +483,28 @@ ProdemiaUniversity_EventScript_Chalkboard2_Text_3:
 	.string "mistaken for being nocturnal.\p"
 	.string "Crepuscular Pokémon include Deerling,\n"
 	.string "Vulpix, and Stunky.$"
+
+ProdemiaUniversity_EventScript_ProfHolly_Text_0:
+# 111 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	.string "{PLAYER}, I know I am asking a lot of\n"
+	.string "you, but please stop that thief!$"
+
+ProdemiaUniversity_EventScript_ProfHolly_Text_1:
+# 118 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	.string "{PLAYER}! What are you waiting for?\p"
+	.string "There's a vast region to explore and\n"
+	.string "endless Pokémon to discover!$"
+
+ProdemiaUniversity_EventScript_ProfHolly_Text_2:
+# 124 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	.string "{PLAYER}! It's nice to see you.\p"
+	.string "How is your Pokédex coming along?$"
+
+ProdemiaUniversity_EventScript_Sally_Text_0:
+# 132 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	.string "Please be careful, {PLAYER}!$"
+
+ProdemiaUniversity_EventScript_DistraughtMan_Text_0:
+# 139 "data/maps/ProdemiaCity_ProdemiaUniversity_LectureHall2_Frlg/scripts.pory"
+	.string "It's one thing to steal a library book,\n"
+	.string "but to threaten me with violence?!$"

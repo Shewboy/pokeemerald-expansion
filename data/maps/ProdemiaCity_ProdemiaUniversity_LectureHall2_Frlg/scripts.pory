@@ -77,6 +77,7 @@ script ProdemiaUniversity_LectureHall2_OnTransition {
         clearflag(FLAG_HIDE_NPCS_PRODEMIA_U)
     }
     else {
+        setflag(FLAG_HIDE_NPCS_PRODEMIA_U)
     }
     end
 }
@@ -101,3 +102,40 @@ script ProdemiaUniversity_EventScript_Chalkboard2 {
 
 
 ### NPCs
+
+
+script ProdemiaUniversity_EventScript_ProfHolly {
+    if (var(VAR_PRODEMIA_CITY_STATE) == 1) {
+        lock
+        faceplayer
+        msgbox(format("{PLAYER}, I know I am asking a lot of you, but please stop that thief!"))
+        release
+        end
+    }
+    elif (!flag(FLAG_BADGE01_GET)) {
+        lock
+        faceplayer
+        msgbox(format("{PLAYER}! What are you waiting for?\pThere's a vast region to explore and endless Pok\emon to discover!"))
+        release
+    }
+    elif (flag(FLAG_BADGE01_GET)) {
+        lock
+        faceplayer
+        msgbox(format("{PLAYER}! It's nice to see you.\pHow is your Pok\edex coming along?"))
+        release
+    }
+}
+
+script ProdemiaUniversity_EventScript_Sally {
+    lock
+    faceplayer
+    msgbox(format("Please be careful, {PLAYER}!"))
+    release
+}
+
+script ProdemiaUniversity_EventScript_DistraughtMan {
+    lock
+    faceplayer
+    msgbox(format("It's one thing to steal a library book, but to threaten me with violence?!"))
+    release
+}

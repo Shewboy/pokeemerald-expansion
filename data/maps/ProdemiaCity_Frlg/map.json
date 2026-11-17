@@ -328,16 +328,44 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_UMBRA_MEMBER_F",
-      "x": 7,
+      "x": 4,
       "y": 21,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_PRODEMIA_UMBRA_THIEF"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_PROF_HOLLY",
+      "x": 14,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_SALLY_HOLLY_PRODEMIA"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_SALLY",
+      "x": 15,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_SALLY_HOLLY_PRODEMIA"
     }
   ],
   "warp_events": [
@@ -409,29 +437,38 @@
     {
       "type": "trigger",
       "x": 6,
-      "y": 23,
+      "y": 22,
       "elevation": 0,
       "var": "VAR_PRODEMIA_CITY_STATE",
       "var_value": "1",
-      "script": "ProdemiaCity_EventScript_Thief"
+      "script": "ProdemiaCity_Trigger_ThiefBottom"
     },
     {
       "type": "trigger",
-      "x": 7,
-      "y": 23,
+      "x": 6,
+      "y": 21,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_PRODEMIA_CITY_STATE",
       "var_value": "1",
-      "script": "ProdemiaCity_EventScript_Thief"
+      "script": "ProdemiaCity_Trigger_ThiefMidBottom"
     },
     {
       "type": "trigger",
-      "x": 8,
-      "y": 23,
+      "x": 6,
+      "y": 20,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_PRODEMIA_CITY_STATE",
       "var_value": "1",
-      "script": "ProdemiaCity_EventScript_Thief"
+      "script": "ProdemiaCity_Trigger_ThiefMidTop"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_PRODEMIA_CITY_STATE",
+      "var_value": "1",
+      "script": "ProdemiaCity_Trigger_ThiefTop"
     }
   ],
   "bg_events": [
